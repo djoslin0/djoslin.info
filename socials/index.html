@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      djoslin :: socials
+    </title>
+    <base href="../">
+    <style>
+
+    :root {
+        --background-01: #EEDFCF;
+        --background-02: #F6E7D8;
+
+        --link-01: #47A;
+        --link-02: #69C;
+        --link-03: #A7A;
+        --link-04: #C9C;
+
+        --color-01: #333;
+        --color-02: #555;
+        --color-03: #666;
+        --color-08: #AAA;
+        --color-10: #CCC;
+        --color-11: #EEE;
+        --color-12: #FFF;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        width: 60rem;
+        max-width: 95%;
+        margin: 0.5rem auto 2.0rem auto;
+    }
+
+    html {
+        overflow-y: scroll;
+        --s: 300px; /* control the size*/
+        --c1: var(--background-02);
+        --c2: var(--background-01);
+
+        --_g: #0000 8%,var(--c1) 0 17%,#0000 0 58%;
+        background: 
+                linear-gradient(135deg,#0000 20.5%,var(--c1) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
+                linear-gradient( 45deg,var(--_g)) calc(var(--s)/2) 0,
+                linear-gradient(135deg,var(--_g),var(--c1) 0 67%,#0000 0),        
+                linear-gradient( 45deg,var(--_g),var(--c1) 0 67%,#0000 0 83%,var(--c1) 0 92%,#0000 0),
+                var(--c2); 
+        background-size: var(--s) var(--s);
+    }
+
+    /* NAV */
+        /* djoslin header */
+        .title {
+                font-size: xx-large;
+                color: var(--color-12);
+                line-height: 0rem;
+                letter-spacing: 0.6rem;
+                margin: 0.5rem;
+                margin-left: 2.5rem;
+        }
+
+        .links {
+                margin-right: 1.5rem;
+        }
+
+        body nav {
+                width: 100%;
+                background-color: var(--color-01);
+                border-radius: 0.25rem 0.25rem 0 0;
+                cursor: default;
+                text-align: center;
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+        }
+
+        body nav div {
+                display:inline-block;
+                padding: 0.1rem;
+        }
+
+        body nav div a {
+                display: inline-block;
+                color: var(--color-12);
+                padding: 0.5rem 1rem;
+                width: 4rem;
+
+
+                border-radius: 0.5rem;
+        }
+
+        @media (max-width: 650px) {
+                body nav { display: block; }
+                .title {
+                        width: 100%;
+                        margin: 0;
+                }
+                .links {
+                        width: 100%;
+                        margin-bottom:1rem;
+                }
+        }
+
+        a { text-decoration: none; }
+        article a { color: var(--link-01); }
+        article a:hover { color: var(--link-02); }
+
+        footer a { color: var(--link-01); }
+        footer a:hover { color: var(--link-02); }
+        
+        body nav,
+        .thumb {
+                -o-transition:.1s;
+                -ms-transition:.1s;
+                -moz-transition:.1s;
+                -webkit-transition:.1s;
+                transition:.1s;
+        }
+
+        body nav a:hover {
+                background-color: var(--color-12);
+                color: var(--color-01);
+        }
+        body nav .active:hover {
+                color: var(--color-01);
+                background-color: var(--color-12);
+        }
+        
+        body nav .active {
+                color: var(--color-01);
+                background-color: var(--color-12);
+                font-weight: bold;
+        }
+
+    /* END NAV */
+
+    article {
+    margin: 1.5rem 3.0rem 2.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed #ccc;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    footer p {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        color: var(--color-03);
+        width: 60%;
+    }
+
+    article span {
+        display: block;
+        text-align: justify;
+        line-height: 1.65rem;
+        color: var(--color-01);
+    }
+    article p {
+        text-align: justify;
+        text-indent: 2rem;
+        line-height: 1.65rem;
+        color: var(--color-03);
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    article p .centered {
+        text-indent: 0;
+        text-align: center;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        margin: 0 0.25em 0 0;
+    }
+
+    .media-space {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .media-frame {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .media {
+        max-width: 100%;
+    height: auto;       
+        display: block;
+        margin: 1rem auto;
+        border: 0;
+    }
+
+    .lmedia {
+    float: left;
+    margin-top: 0.4rem;
+    margin-right: 2rem;
+    }
+
+    .rmedia {
+    float: right;
+    margin-top: 0.4rem;
+    margin-left: 2rem;
+    }
+
+    .navtags > span {
+        margin: 1rem;
+        font-size: small;
+        color: var(--color-10);
+    }
+
+    .noselect,
+    body nav ul,
+    .tag,
+    .perma,
+    .inactive,
+    .thumb,
+    .rmedia,
+    .lmedia,
+    .mediabox-thumb,
+    .mediabox-thumbbox,
+    .inside-aspect-ratio,
+    .mediabox-media,
+    .mediabox-fullscreen,
+    .icon {
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .navtags > a {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+
+    .navtags > a:first-of-type {
+        float: left;
+    }
+
+    .navtags > a:last-of-type {
+        float: right;
+    }
+
+    .tag {
+        font-size: small;
+        background-color: var(--color-11);
+        border-radius: 0.25rem;
+        padding: 0.4rem;
+        line-height: 1.25rem;
+
+        -o-transition:.1s;
+        -ms-transition:.1s;
+        -moz-transition:.1s;
+        -webkit-transition:.1s;
+        transition:.1s;
+    }
+
+    a.tag { color: var(--color-02); }
+
+    a:hover.tag {
+        background-color: var(--color-10);
+        color: var(--color-12);
+    }
+
+    article > aside { float: right; }
+
+    .disabled,
+    .inactive {
+        cursor: default;
+        opacity: 0.25;
+    }
+
+    .disabled {
+        background-color: var(--color-11);
+        color: var(--color-10);
+    }
+
+    a:hover.disabled {
+        background-color: var(--color-11);
+        color: var(--color-10);
+    }
+
+    body > div:first-of-type {
+        border: 1px solid var(--color-12);
+        background-color: var(--color-12);
+    }
+
+    article h2 {
+        font-size: x-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h2:first-of-type {
+    margin-top: 0;
+    }
+
+    article time:first-of-type {
+        color: var(--color-08);
+        padding-right: 0.5rem;
+        font-size: small;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    body > div:last-of-type {
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--color-01);
+        border-radius: 0 0 0.25rem 0.25rem;
+    text-align: center;
+    padding-top: 1rem;
+    }
+
+    .perma {
+        float: right;
+    color: var(--color-08);
+    font-size: small;
+    }
+
+    .tagnav
+    {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--color-03);
+    }
+
+    .thumb {
+    width: 55px;
+    height: 55px;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-03);
+    }
+
+    a:hover .thumb {
+        background-color: var(--color-10);
+    }
+
+    blockquote {
+    font-size: small;
+    max-width: 43rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0.5rem;
+    background-color: var(--color-11);
+    color: var(--color-02);
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+        text-align: justify;
+    }
+
+    u { text-decoration: underline; }
+    s { text-decoration: line-through; } 
+    b { font-weight: bold; } 
+    i { font-style: italic; } 
+
+    @media only screen and (max-width: 500px) {
+
+        article {
+            margin: 1.5rem 1.0rem 2.5rem;
+        }
+
+        article .thumb {
+                display: none;
+        }
+        
+        .hideIfSmall { display: none; }
+
+        .lmedia,
+        .rmedia {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+    }
+
+    @media only screen and (max-width: 300px) {
+        .lmedia,
+        .rmedia {
+                display: none;
+        }
+    }
+
+    .aspect-ratio-1-1 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        overflow: hidden;
+    }
+
+    .aspect-ratio-4-3 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 75%;
+        overflow: hidden;
+    }
+
+    .aspect-ratio-16-9 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56%;
+        overflow: hidden;
+    }
+
+    .inside-aspect-ratio {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    </style>
+    <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
+  </head>
+  <body>
+    <nav>
+      <div class="title">
+        <h1>
+          djoslin
+        </h1>
+      </div>
+      <div class="links">
+        <a class="" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="active" href=
+        "socials/">socials</a>
+      </div>
+    </nav>
+    <div>
+      <section>
+        <article>
+          <h2>
+            Socials
+          </h2>
+          <table>
+            <tr>
+              <td>
+                <a href="https://discord.gg/HqWTq9X86g"><img src="socials/images/discord.png"></a>
+              </td>
+              <td>
+                <a href="https://discord.gg/HqWTq9X86g">discord</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.youtube.com/user/InvertedShadow/featured"><img src="socials/images/youtube.png"></a>
+              </td>
+              <td>
+                <a href="https://www.youtube.com/user/InvertedShadow/featured">invertedshadow</a>
+              </td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <footer></footer>
+    </div>
+    <div></div>
+  </body>
+</html>

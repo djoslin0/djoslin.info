@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      djoslin :: news, vektor prix
+    </title>
+    <base href="../../../">
+    <style>
+
+    :root {
+        --background-01: #EEDFCF;
+        --background-02: #F6E7D8;
+
+        --link-01: #47A;
+        --link-02: #69C;
+        --link-03: #A7A;
+        --link-04: #C9C;
+
+        --color-01: #333;
+        --color-02: #555;
+        --color-03: #666;
+        --color-08: #AAA;
+        --color-10: #CCC;
+        --color-11: #EEE;
+        --color-12: #FFF;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        width: 60rem;
+        max-width: 95%;
+        margin: 0.5rem auto 2.0rem auto;
+    }
+
+    html {
+        overflow-y: scroll;
+        --s: 300px; /* control the size*/
+        --c1: var(--background-02);
+        --c2: var(--background-01);
+
+        --_g: #0000 8%,var(--c1) 0 17%,#0000 0 58%;
+        background: 
+                linear-gradient(135deg,#0000 20.5%,var(--c1) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
+                linear-gradient( 45deg,var(--_g)) calc(var(--s)/2) 0,
+                linear-gradient(135deg,var(--_g),var(--c1) 0 67%,#0000 0),        
+                linear-gradient( 45deg,var(--_g),var(--c1) 0 67%,#0000 0 83%,var(--c1) 0 92%,#0000 0),
+                var(--c2); 
+        background-size: var(--s) var(--s);
+    }
+
+    /* NAV */
+        /* djoslin header */
+        .title {
+                font-size: xx-large;
+                color: var(--color-12);
+                line-height: 0rem;
+                letter-spacing: 0.6rem;
+                margin: 0.5rem;
+                margin-left: 2.5rem;
+        }
+
+        .links {
+                margin-right: 1.5rem;
+        }
+
+        body nav {
+                width: 100%;
+                background-color: var(--color-01);
+                border-radius: 0.25rem 0.25rem 0 0;
+                cursor: default;
+                text-align: center;
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+        }
+
+        body nav div {
+                display:inline-block;
+                padding: 0.1rem;
+        }
+
+        body nav div a {
+                display: inline-block;
+                color: var(--color-12);
+                padding: 0.5rem 1rem;
+                width: 4rem;
+
+
+                border-radius: 0.5rem;
+        }
+
+        @media (max-width: 650px) {
+                body nav { display: block; }
+                .title {
+                        width: 100%;
+                        margin: 0;
+                }
+                .links {
+                        width: 100%;
+                        margin-bottom:1rem;
+                }
+        }
+
+        a { text-decoration: none; }
+        article a { color: var(--link-01); }
+        article a:hover { color: var(--link-02); }
+
+        footer a { color: var(--link-01); }
+        footer a:hover { color: var(--link-02); }
+        
+        body nav,
+        .thumb {
+                -o-transition:.1s;
+                -ms-transition:.1s;
+                -moz-transition:.1s;
+                -webkit-transition:.1s;
+                transition:.1s;
+        }
+
+        body nav a:hover {
+                background-color: var(--color-12);
+                color: var(--color-01);
+        }
+        body nav .active:hover {
+                color: var(--color-01);
+                background-color: var(--color-12);
+        }
+        
+        body nav .active {
+                color: var(--color-01);
+                background-color: var(--color-12);
+                font-weight: bold;
+        }
+
+    /* END NAV */
+
+    article {
+    margin: 1.5rem 3.0rem 2.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed #ccc;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    footer p {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        color: var(--color-03);
+        width: 60%;
+    }
+
+    article span {
+        display: block;
+        text-align: justify;
+        line-height: 1.65rem;
+        color: var(--color-01);
+    }
+    article p {
+        text-align: justify;
+        text-indent: 2rem;
+        line-height: 1.65rem;
+        color: var(--color-03);
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    article p .centered {
+        text-indent: 0;
+        text-align: center;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        margin: 0 0.25em 0 0;
+    }
+
+    .media-space {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .media-frame {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .media {
+        max-width: 100%;
+    height: auto;       
+        display: block;
+        margin: 1rem auto;
+        border: 0;
+    }
+
+    .lmedia {
+    float: left;
+    margin-top: 0.4rem;
+    margin-right: 2rem;
+    }
+
+    .rmedia {
+    float: right;
+    margin-top: 0.4rem;
+    margin-left: 2rem;
+    }
+
+    .navtags > span {
+        margin: 1rem;
+        font-size: small;
+        color: var(--color-10);
+    }
+
+    .noselect,
+    body nav ul,
+    .tag,
+    .perma,
+    .inactive,
+    .thumb,
+    .rmedia,
+    .lmedia,
+    .mediabox-thumb,
+    .mediabox-thumbbox,
+    .inside-aspect-ratio,
+    .mediabox-media,
+    .mediabox-fullscreen,
+    .icon {
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .navtags > a {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+
+    .navtags > a:first-of-type {
+        float: left;
+    }
+
+    .navtags > a:last-of-type {
+        float: right;
+    }
+
+    .tag {
+        font-size: small;
+        background-color: var(--color-11);
+        border-radius: 0.25rem;
+        padding: 0.4rem;
+        line-height: 1.25rem;
+
+        -o-transition:.1s;
+        -ms-transition:.1s;
+        -moz-transition:.1s;
+        -webkit-transition:.1s;
+        transition:.1s;
+    }
+
+    a.tag { color: var(--color-02); }
+
+    a:hover.tag {
+        background-color: var(--color-10);
+        color: var(--color-12);
+    }
+
+    article > aside { float: right; }
+
+    .disabled,
+    .inactive {
+        cursor: default;
+        opacity: 0.25;
+    }
+
+    .disabled {
+        background-color: var(--color-11);
+        color: var(--color-10);
+    }
+
+    a:hover.disabled {
+        background-color: var(--color-11);
+        color: var(--color-10);
+    }
+
+    body > div:first-of-type {
+        border: 1px solid var(--color-12);
+        background-color: var(--color-12);
+    }
+
+    article h2 {
+        font-size: x-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h2:first-of-type {
+    margin-top: 0;
+    }
+
+    article time:first-of-type {
+        color: var(--color-08);
+        padding-right: 0.5rem;
+        font-size: small;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    body > div:last-of-type {
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--color-01);
+        border-radius: 0 0 0.25rem 0.25rem;
+    text-align: center;
+    padding-top: 1rem;
+    }
+
+    .perma {
+        float: right;
+    color: var(--color-08);
+    font-size: small;
+    }
+
+    .tagnav
+    {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--color-03);
+    }
+
+    .thumb {
+    width: 55px;
+    height: 55px;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-03);
+    }
+
+    a:hover .thumb {
+        background-color: var(--color-10);
+    }
+
+    blockquote {
+    font-size: small;
+    max-width: 43rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0.5rem;
+    background-color: var(--color-11);
+    color: var(--color-02);
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+        text-align: justify;
+    }
+
+    u { text-decoration: underline; }
+    s { text-decoration: line-through; } 
+    b { font-weight: bold; } 
+    i { font-style: italic; } 
+
+    @media only screen and (max-width: 500px) {
+
+        article {
+            margin: 1.5rem 1.0rem 2.5rem;
+        }
+
+        article .thumb {
+                display: none;
+        }
+        
+        .hideIfSmall { display: none; }
+
+        .lmedia,
+        .rmedia {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+    }
+
+    @media only screen and (max-width: 300px) {
+        .lmedia,
+        .rmedia {
+                display: none;
+        }
+    }
+
+    .aspect-ratio-1-1 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        overflow: hidden;
+    }
+
+    .aspect-ratio-4-3 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 75%;
+        overflow: hidden;
+    }
+
+    .aspect-ratio-16-9 {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56%;
+        overflow: hidden;
+    }
+
+    .inside-aspect-ratio {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    </style>
+    <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
+  </head>
+  <body>
+    <nav>
+      <div class="title">
+        <h1>
+          djoslin
+        </h1>
+      </div>
+      <div class="links">
+        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
+        "socials/">socials</a>
+      </div>
+    </nav>
+    <div>
+      <section>
+        <article>
+          <aside>
+            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            Added local splitscreen
+            <br>
+            <time datetime="2015-02-15">15 Feb 2015</time>
+          </h2>
+          <p>
+            Now you can grab a gamepad and play against one of your friends on the same screen. It was something I've always
+            wanted to add to Vektor Prix, but the amount of time it would take to adapt the engine properly wasn't worth it.
+            But the more I thought about it, the more I realized that I could just run two instances of the game, resize them,
+            and connect to eachother through multiplayer automatically.
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/vektor-prix/videos/vp2.webm"></video>
+            </div>
+          </div>
+          <p>
+            So I went that route, all that was left to do was polish the transitions and fix the random bugs that pop up from
+            doing something so nonstandard. The only issue left is that Fraps is unable to capture both screens on Windows 8,
+            which means I had to use other tools and deal with a big reduction in recorded video quality. But I'm happy to
+            report that the feature works!
+          </p><span><b>Note</b>: I had no one around to play as player 2 when I recorded these videos just now.</span>
+          <p>
+            As for other changes: I've fixed the menu transitions so they run at a constant speed, the heads up display resizes
+            itself properly for skinny windows, I've slowed down the tutorial bots, fixed resolution options, and fixed a bunch
+            of misc multiplayer bugs.
+          </p><span>Stay tuned, more information coming soon!</span> <a class="perma" title="permanent link" href=
+          "news/vektorprix/added-local-splitscreen/">🔗</a>
+        </article>
+        <article>
+          <aside>
+            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            Two weeks in one
+            <br>
+            <time datetime="2015-01-23">23 Jan 2015</time>
+          </h2>
+          <p class="centered">
+            This past couple of weeks I've been doing some required final touches.
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/vektor-prix/videos/vp5.webm"></video>
+            </div>
+          </div>
+          <p>
+            The first thing I did was zoom the camera out a bit so it is easier to see your surroundings. The camera's zoom
+            amount is adjustable in the options: zooming in will give you better performance, but zooming out will let you see
+            a lot more.
+          </p>
+          <p>
+            I feel like the new camera capabilities will make the game a bit easier to play. I also noticed that people had a
+            tough time knowing which vehicle was theirs when the race started, so now all of the enemies fade in at the
+            starting line. This makes self-identification extremely easy.
+          </p>
+          <p>
+            I've finished implementing the final level's unlockables, and therefore the game is beatable and 'complete'. I
+            still have more polish and bugfixes to attend to, but it's a great feeling getting the game to this stage.
+          </p>
+          <p>
+            The past few weeks I've made a ton of smaller changes as well, such as making the bots more intelligent in close
+            quarters combat, I made the vehicle speed adjustable for custom games, a yolo round where only bots are alive is
+            now skippable (both online and offline), I fixed the force that explosions give vehicles, and adjusted a bunch of
+            particle effects.
+          </p><a class="perma" title="permanent link" href="news/vektorprix/two-weeks-in-one/">🔗</a>
+        </article>
+        <article>
+          <aside>
+            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            A week in review
+            <br>
+            <time datetime="2015-01-10">10 Jan 2015</time>
+          </h2>
+          <p>
+            This past week I've been focusing on the final level and adjustments to make the game easier in easy mode. And I
+            finally bought <a href="http://vektorprix.com">vektorprix.com</a>
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/vektor-prix/videos/vp1.webm"></video>
+            </div>
+          </div>
+          <p>
+            For the final level, I've finally finished all of the dialog as well as the mission structure. I have to finish a
+            couple of the final unlockables, and a bit of polish left to do for the final level, but it is now playable and
+            beatable. Which is pretty exciting for me, since the last chunk of content is finished. Which means it's polish and
+            bugfixing time from here on out.
+          </p>
+          <p>
+            The second thing I've been focusing on is trying to make the game easier to get into. I've noticed a few things
+            from watching new playtesters and now I'm trying to adjust the game accordingly. The first big change was the speed
+            of the vehicles during a race, it seems like things are just moving too quick for someone starting out. Now easy,
+            medium, and hard modes all have slightly different speeds.
+          </p>
+          <p>
+            I've also noticed how discouraging it can be to fall far behind in easy mode. So now bots will miss a turn
+            sometimes, crash into walls, and take a worse route if they're in front of the player in easy mode. I've also upped
+            the damage that a player deals to easy bots.
+          </p><a class="perma" title="permanent link" href="news/vektorprix/a-week-in-review/">🔗</a>
+        </article>
+        <article>
+          <aside>
+            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            Happy new year!
+            <br>
+            <time datetime="2015-01-04">04 Jan 2015</time>
+          </h2>
+          <p>
+            Happy New Year! The past week I've been focusing on polishing online multiplayer and preparing a presskit to send
+            out to journalists. The presskit contains videos, WebMs, screenshots, and lots of information. It took me two full
+            days of work to prepare. If you are a game journalist, or know one that might be interested, please contact me.
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <iframe class="media-frame" src="http://www.youtube.com/embed/ZcjjB8-HtiE"></iframe>
+            </div>
+          </div>
+          <p>
+            I've changed how bots spawn in multiplayer servers. I added a 'minimum players' setting. Let's say it's set to 5,
+            and there is one person in the game: 4 bots would be spawned. If another player enters, one bot will exit. If a
+            player exits, a bot will enter. And if there are five clients connected, no bots will spawn. This allows for a more
+            consistent online experience.
+          </p>
+          <p>
+            I've improved a few other online things as well, such as UDP disconnection detection, max laps and max kills are
+            settable, no more slight vehicle drift when you are idle, the timing of certain things has been tweaked for
+            networking reasons.
+          </p>
+          <p>
+            There have been a ton of small changes too, such as adding lights to the tutorial levels, adding guide arrows for
+            the figure eight level, adding different arrows to the final level, adding the antagonist to the final level as
+            well as coding up a way for him to address the player before returning to his original location.
+          </p><a class="perma" title="permanent link" href="news/vektorprix/happy-new-year/">🔗</a>
+        </article>
+        <article>
+          <aside>
+            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            Christmas week progress
+            <br>
+            <time datetime="2014-12-27">27 Dec 2014</time>
+          </h2>
+          <p class="centered">
+            Happy Holidays!
+          </p>
+          <p>
+            The past week I've been focusing on a few things. First of all I remixed most of the sound files and I added in
+            basic sound panning. So now sounds left of center are louder in the left speaker and vice versa. Was a really
+            simple thing to add, only took a few minutes, and was long overdue.
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/vektor-prix/videos/vp3.webm"></video>
+            </div>
+          </div>
+          <p>
+            The next thing I focused on was the final boss battle. I have the basic 'mission' programmed now, and the new
+            entities required to pull it off have been polished a bit more. I still have quite a bit of work left to do on the
+            final level, but it is at least playable now.
+          </p>
+          <p>
+            The third area that I focused on was multiplayer. It had been awhile since I tested online with more than two
+            people, and was pretty upset to learn that something broke in the meantime. The clients were not syncing position
+            with one another. I dug into the code and soon discovered that I left out a single colon in the serialization code.
+            I added the colon back in and everything was operational.
+          </p>
+          <p>
+            I went on to polish multiplayer some more. I did a lot of testing with a packet tampering program called Clumsy
+            (which I strongly recommend to anyone doing online multiplayer gamedev). The tool unearthed a few bugs that I
+            hadn't noticed, bugs which were quickly fixed.
+          </p>
+          <p>
+            As for other news, Vektor Prix is entering it's second week on greenlight and needs all the support it can get.
+            Votes, tweets, hype, anything you can do to help would be greatly appreciated.
+          </p><a class="perma" title="permanent link" href="news/vektorprix/christmas-week-progress/">🔗</a>
+        </article>
+        <article>
+          <aside>
+            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            Now on Greenlight!
+            <br>
+            <time datetime="2014-12-24">24 Dec 2014</time>
+          </h2>
+          <p>
+            The past week I've been working on extra polish. It started out with a small glow effect that I created, I was
+            pretty happy with it and after applying it to a ton of things I decided to focus on lighting.
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <iframe class="media-frame" src="http://www.youtube.com/embed/xNN8HoAEPtU"></iframe>
+            </div>
+          </div>
+          <p>
+            I created a relatively simple lighting system and attached it to the in-game lamp models. Then I added a nice glow
+            effect at the source of the light and repositioned the lamps on every level. By tinting lamps slightly different
+            colors, I'm able to make different parts of a level stand out.
+          </p>
+          <p>
+            The lights are dynamic as well. I'm able to destroy them (or any other detail object around the level). I know it's
+            a small detail, but I always enjoyed being able to shoot the lights out in certain games. Lights are attached to
+            moving objects as well, vehicles firing weapons, missiles, mines, there are a lot of lights now.
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/vektor-prix/videos/vp4.webm"></video>
+            </div>
+          </div>
+          <p>
+            There have been a ton of other changes as well, small things like rebalancing easy mode to actually be easy again,
+            adding additional display settings, some small progress on the final level, as well as a bucket of bugfixes.
+          </p>
+          <p>
+            As for other news, I've finally set up a Greenlight page for Vektor Prix! I set it up a few days ago, so it's still
+            brand new and could really use your votes, tweets, hype, anything really.
+          </p><a class="perma" title="permanent link" href="news/vektorprix/now-on-greenlight/">🔗</a>
+        </article>
+      </section>
+      <footer>
+        <p class="navtags">
+          <a class="tag disabled">&lt;</a> <span class="navpage">1</span> <a class="tag" title="older news" href=
+          "news/vektorprix/2/">&gt;</a>
+        </p>
+      </footer>
+    </div>
+    <div></div>
+  </body>
+</html>
