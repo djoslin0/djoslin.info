@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -458,25 +494,39 @@
         <article>
           <h2>
             Warning:
-          </h2><span>These mods are out of date and unsupported, sorry!</span> <span></span>
-        </article>
-        <article>
-          <span></span>
+          </h2>
+          <p>
+            These mods are out of date and unsupported, sorry!
+          </p>
           <h2>
             Installation Instructions
-          </h2><span>Keep in mind these mods will only work on a particular version of Minecraft.</span><span><b>1</b>. Locate
-          the <a href=
-          "http://www.minecraftforum.net/topic/55370-mods-finding-minecraftjar-file-181010/">minecraft.jar</a></span><span><b>2</b>.
-          Open minecraft.jar in <a href="http://www.win-rar.com/download.html">WinRAR</a> and delete the META-INF
-          folder.</span><span><b>3</b>. Download & Install the <a href=
-          "http://www.minecraftforum.net/viewtopic.php?f=25&amp;t=80246">Risugami's Modloader</a> for the specified Minecraft
-          version</span><span><b>4</b>. Download & unzip my mod.</span><span><b>5</b>. Copy all of the *.class files from the
-          unzipped folder into your minecraft.jar.</span><span><b>6</b>. If an /imgz/ folder is in the unzipped folder, copy it
-          over to minecraft.jar.</span>
+          </h2>
           <p>
+            Keep in mind these mods will only work on a particular version of Minecraft.
+            <br>
+            <br>
+            <br>
+            <strong>1</strong>. Locate the <a href=
+            "http://www.minecraftforum.net/topic/55370-mods-finding-minecraftjar-file-181010/">minecraft.jar</a>
+            <br>
+            <strong>2</strong>. Open minecraft.jar in <a href="http://www.win-rar.com/download.html">WinRAR</a> and delete the
+            META-INF folder.
+            <br>
+            <strong>3</strong>. Download & Install the <a href=
+            "http://www.minecraftforum.net/viewtopic.php?f=25&amp;t=80246">Risugami's Modloader</a> for the specified Minecraft
+            version
+            <br>
+            <strong>4</strong>. Download & unzip my mod.
+            <br>
+            <strong>5</strong>. Copy all of the *.class files from the unzipped folder into your minecraft.jar.
+            <br>
+            <strong>6</strong>. If an /imgz/ folder is in the unzipped folder, copy it over to minecraft.jar.
+            <br>
+            <br>
+            <br>
             If you're having problems with any of my mods, reinstall ModLoader. Then make sure you deleted META-INF from
             minecraft.jar. If that doesn't work, and you're sure you reinstalled modloader just now, it could be a blockID or
-            itemID conflict. My mods will automatically create a file in (minecraft folder)\mods\DJoslin\, open that file and
+            itemID conflict. My mods will automatically create a file in (minecraft folder)\mods\DJoslin, open that file and
             change the ID to an unused one. If you have trouble with any of these, google the problem first, then you can try
             asking the forums. Mods aren't officially supported so there are a variety of problems people can face, but someone
             else probably had the same problem and posted a solution.

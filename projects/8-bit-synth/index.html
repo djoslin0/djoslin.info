@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -458,7 +494,7 @@
         <article>
           <h2>
             8-bit Synth
-          </h2><img class="rmedia" width="167px" height="108px" src="projects/8-bit-synth/images/arduinologo.png">
+          </h2>
           <p>
             I played a lot of games, especially as a kid. I was conditioned over time to enjoy the sound of old retro games.
             When I bought an Arduino, which is an 8-bit microcontroller, I decided to make a synthesizer as my first project.
@@ -480,11 +516,6 @@
             for me to play around with programming. I have been working on this synthesizer for months off and on, occasionally
             adding to it when I grow tired of other projects.
           </p>
-          <p>
-            This is actually the fourth version of this synthesizer, as I have rewritten it from scratch several times. It has
-            also been encased in many different things: a cardboard box, the case of a digital clock, a hollowed-out spanish
-            book, and for now I have settled on tupperware.
-          </p>
           <div class="media-space">
             <div style="max-width:287px; max-height:209px; margin: auto;">
               <div class="aspect-ratio-4-3">
@@ -492,6 +523,11 @@
               </div>
             </div>
           </div>
+          <p>
+            This is actually the fourth version of this synthesizer, as I have rewritten it from scratch several times. It has
+            also been encased in many different things: a cardboard box, the case of a digital clock, a hollowed-out spanish
+            book, and for now I have settled on tupperware.
+          </p>
           <h2>
             Specification
           </h2>
@@ -501,9 +537,16 @@
             memory. This was a huge feat compared to my earlier prototypes which were unable to even run one voice at a
             consistent rate.
           </p>
+          <div class="media-space">
+            <div style="max-width:202px; max-height:138px; margin: auto;">
+              <div class="aspect-ratio-4-3">
+                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/waves.png">
+              </div>
+            </div>
+          </div>
           <h2>
             Envelopes
-          </h2><img class="lmedia" width="202px" height="138px" src="projects/8-bit-synth/images/waves.png">
+          </h2>
           <p>
             Just like in standard synthesizers, I built envelopes that support attack, decay, sustain, and release. And I have
             low frequency oscillators, with support for many different waveforms. In order to control these envelopes and LFOs,
@@ -513,13 +556,19 @@
           </p>
           <h2>
             MIDI
-          </h2><img class="rmedia" width="250px" height="191px" src="projects/8-bit-synth/images/8bitsynthsmall.png">
+          </h2>
           <p>
             My software is also able to play MIDI files. And therefore I've spent way too much time playing any and all retro
             video game midis I could find. I can't tell you how fun it is to open up songs I've never heard and try to tune the
-            instruments in such a way to make the songs sound good again. <i>(even if it was for a loose definition of
-            good)</i>
+            instruments in such a way to make the songs sound good again. (even if it was for a loose definition of good)
           </p>
+          <div class="media-space">
+            <div style="max-width:250px; max-height:191px; margin: auto;">
+              <div class="aspect-ratio-4-3">
+                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/8bitsynthsmall.png">
+              </div>
+            </div>
+          </div>
           <p>
             After MIDI file support, the next logical step was MIDI input. It not only allows that, but by using a free program
             called LoopBe1, the synthesizer can be controlled using a program like FL Studio.
@@ -546,7 +595,14 @@
           </p>
           <h2>
             Conclusion
-          </h2><img class="rmedia" width="300px" height="225px" src="projects/8-bit-synth/images/synth2small.png">
+          </h2>
+          <div class="media-space">
+            <div style="max-width:300px; max-height:225px; margin: auto;">
+              <div class="aspect-ratio-4-3">
+                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/synth2small.png">
+              </div>
+            </div>
+          </div>
           <p>
             So in conclusion, I'm happy with where this is going. Once I clean up the sound a little with filtering, I think it
             will be awesome. I plan to clean up the code eventually and release it to the public. I enjoyed learning about

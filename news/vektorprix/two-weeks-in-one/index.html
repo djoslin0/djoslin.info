@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -464,8 +500,8 @@
             <br>
             <time datetime="2015-01-23">23 Jan 2015</time>
           </h2>
-          <p class="centered">
-            This past couple of weeks I've been doing some required final touches.
+          <p>
+            [CENTER](This past couple of weeks I've been doing some required final touches.)
           </p>
           <div class="media-space">
             <div class="aspect-ratio-16-9">

@@ -9,6 +9,11 @@
 	cursor: hand;
 	margin: 1%;
 	opacity: 0.8;
+
+	-webkit-filter: grayscale(100%) brightness(75%);
+    -moz-filter:    grayscale(100%) brightness(75%);
+    -ms-filter:     grayscale(100%) brightness(75%);
+    -o-filter:      grayscale(100%) brightness(75%);
 	
 	-o-transition: .1s;
 	-ms-transition: .1s;
@@ -29,11 +34,20 @@
 
 .mediabox-thumb:hover {
 	opacity: 1;
+    -webkit-filter: grayscale(0%) brightness(100%);
+    -moz-filter:    grayscale(0%) brightness(100%);
+    -ms-filter:     grayscale(0%) brightness(100%);
+    -o-filter:      grayscale(0%) brightness(100%);
 }
 
 .mediabox-thumb-selected {
 	opacity: 1;
+    -webkit-filter: grayscale(0%) brightness(100%);
+    -moz-filter:    grayscale(0%) brightness(100%);
+    -ms-filter:     grayscale(0%) brightness(100%);
+    -o-filter:      grayscale(0%) brightness(100%);
 }
+
 .mediabox-thumbbox > .mediabox-thumb:first-of-type {
 	margin-left: 0;
 }

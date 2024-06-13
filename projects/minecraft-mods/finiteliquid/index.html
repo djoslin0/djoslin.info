@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -461,31 +497,31 @@
         <article>
           <h2>
             Warning:
-          </h2><span>This mod is out of date and unsupported, sorry!</span> <span></span>
-        </article>
-        <article>
-          <span></span>
+          </h2>
+          <p>
+            This mod is out of date and unsupported, sorry!
+          </p>
           <h2>
             FiniteLiquid
           </h2>
           <div class="mediabox">
             <div class="aspect-ratio-16-9">
-              <img class="mediabox-media" id="mediabox-14-image" src="" style="visibility:hidden"> <img class=
-              "mediabox-fullscreen" id="mediabox-14-fullscreen" onclick="fullscreenImage('14')" src="" style=
-              "visibility:hidden"> <video class="mediabox-media" id="mediabox-14-webm" autoplay="" loop="" controls="" muted=""
-              src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-14-youtube" frameborder="0"
-              allowfullscreen src="https://www.youtube.com/embed/XlnUXXzc1Fg" name="mediabox-14-youtube"></iframe>
+              <img class="mediabox-media" id="mediabox-17-image" src="" style="visibility:hidden"> <img class=
+              "mediabox-fullscreen" id="mediabox-17-fullscreen" onclick="fullscreenImage('17')" src="" style=
+              "visibility:hidden"> <video class="mediabox-media" id="mediabox-17-webm" autoplay="" loop="" controls="" muted=""
+              src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-17-youtube" frameborder="0"
+              allowfullscreen src="https://www.youtube.com/embed/XlnUXXzc1Fg" name="mediabox-17-youtube"></iframe>
             </div>
-            <div class="mediabox-thumbbox" id="mediabox-14-thumbbox">
+            <div class="mediabox-thumbbox" id="mediabox-17-thumbbox">
               <img class="mediabox-thumb mediabox-thumb-selected" src=
               "projects/minecraft-mods/media/finiteliquid/thumbs/areleasetrailer.png" onclick=
-              "mediaboxYoutube('14', 'XlnUXXzc1Fg', this)"> <img class="mediabox-thumb" src=
+              "mediaboxYoutube('17', 'XlnUXXzc1Fg', this)"> <img class="mediabox-thumb" src=
               "projects/minecraft-mods/media/finiteliquid/thumbs/boceanstuff.png" onclick=
-              "mediaboxYoutube('14', '0x083wzFvRE', this)"> <img class="mediabox-thumb" src=
+              "mediaboxYoutube('17', '0x083wzFvRE', this)"> <img class="mediabox-thumb" src=
               "projects/minecraft-mods/media/finiteliquid/thumbs/captainsparklez.png" onclick=
-              "mediaboxYoutube('14', 'EX5hGbfDfm4', this)"> <img class="mediabox-thumb" src=
+              "mediaboxYoutube('17', 'EX5hGbfDfm4', this)"> <img class="mediabox-thumb" src=
               "projects/minecraft-mods/media/finiteliquid/thumbs/turtlegaming.png" onclick=
-              "mediaboxYoutube('14', '7-u0Jx1eSk4', this)">
+              "mediaboxYoutube('17', '7-u0Jx1eSk4', this)">
             </div>
           </div>
           <p>
@@ -493,11 +529,13 @@
             I've developed an alternative, more realistic, water physics system for Minecraft. Now with FiniteLiquid installed,
             all of the new water created by the map generator will be different.
           </p>
+          <br>
           <p>
             Oceans have an 'infinite' amount of water, this is necessary for your computer to run it. Any water disconnected
             from the ocean and low in mass will be finite and react to changes in volume. If you break a border wall inbetween
             the lake and a cave, the lake will flood downward and drain out.
           </p>
+          <br>
           <p>
             I've also developed pipes and pumps to interact with the liquid further. You can place pipes that will suck up
             liquid when the pump is activated; with a right click or redstone input. Sponges are randomly generated on the map.
@@ -515,13 +553,21 @@
             to pass through, they can be 'closed off' with a redstone input. Water sensor blocks activate connected redstone
             when a neighboring block is finite liquid. Methane will generate underground. Methane either catches on fire or
             explodes.
-          </p><span>Visit the <a href=
-          "http://www.minecraftforum.net/topic/259303-131-finiteliquid-v57-wetter-than-ever/">FiniteLiquid forum thread</a> for
-          discussion and feedback.</span><span><br></span><span>Start with a new map, it doesn't replace the old water in your
-          old maps.</span> <span><b>You must first read the</b> <a href=
-          "projects/minecraft-mods/installation-instructions/">installation instructions</a></span><span>Only works on
-          Minecraft <b>Version 1.5.1</b></span><span><a href=
-          "projects/minecraft-mods/files/finiteliquid.zip">Download</a></span>
+            <br>
+            Visit the <a href="http://www.minecraftforum.net/topic/259303-131-finiteliquid-v57-wetter-than-ever/">FiniteLiquid
+            forum thread</a> for discussion and feedback.
+          </p>
+          <br>
+          <p>
+            Start with a new map, it doesn't replace the old water in your old maps.
+            <br>
+            <strong>You must first read the</strong> <a href="projects/minecraft-mods/installation-instructions/">installation
+            instructions</a>
+            <br>
+            Only works on Minecraft <strong>Version 1.5.1</strong>
+            <br>
+            <a href="projects/minecraft-mods/files/finiteliquid.zip">Download</a>
+          </p>
         </article>
       </section>
       <footer>

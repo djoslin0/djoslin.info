@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -458,14 +494,14 @@
         <article>
           <h2>
             Warning:
-          </h2><span>These mods are out of date and unsupported, sorry!</span><span></span>
-        </article>
-        <article>
-          <span></span>
+          </h2>
+          <p>
+            These mods are out of date and unsupported, sorry!
+          </p>
           <h2>
             Minecraft Mods
           </h2>
-          <div style="display: inline-block;">
+          <div style="display: inline-block; width: 100%;">
             <table style="float: left;">
               <tr>
                 <td>
@@ -589,20 +625,23 @@
             early stage I experienced all of the content quickly. When I learned about the decompilation effort, and saw the
             early mods, I knew I had to give it a shot. I found many aspects of Minecraft fascinating, but each area felt
             underdeveloped, and I was drawn to fleshing out the game.
-          </p>
-          <p>
+            <br>
+            <br>
+            <br>
             My first few mods were simple due to the realities of Minecraft modding at the time. After decompilation, very few
             functions and variables were given names by the community. Most of the useful functions and variables lacked a
             proper name, and it was necessary to dig deep into many different files in order to get an idea of what a single
             function does. Before long, I released my first few mods and received a positive response from the community.
-          </p>
-          <p>
+            <br>
+            <br>
+            <br>
             My mods became increasingly ambitious as I learned more about Minecraft's codebase. My first big success was with
             FiniteLiquid, which hit the front page of Reddit a few times. This popularity brought with it opportunity, and I
             was contracted to make The Spider Queen a reality. The Spider Queen was a hit as well, and after all was said and
             done I had received over 6 million views on YouTube.
-          </p>
-          <p>
+            <br>
+            <br>
+            <br>
             During all of this development, Minecraft was being updated constantly. With each new release of Minecraft, all of
             my mods broke. The codebase was refactored countless times, which forced me into refactoring my code to keep up.
             Eventually I had too much on my plate, too many mods to maintain, and no time to develop anything new. After facing

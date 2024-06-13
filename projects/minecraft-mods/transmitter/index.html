@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -458,16 +494,16 @@
         <article>
           <h2>
             Warning:
-          </h2><span>This mod is out of date and unsupported, sorry!</span> <span></span>
-        </article>
-        <article>
-          <span></span>
+          </h2>
+          <p>
+            This mod is out of date and unsupported, sorry!
+          </p>
           <h2>
             Transmitter
           </h2>
           <div class="media-space">
             <div class="aspect-ratio-16-9">
-              <iframe class="media-frame" src="http://www.youtube.com/embed/2OJCt8gFjbA"></iframe>
+              <iframe class="media-frame" src="http://www.youtube.com/embed/2OJCt8gFjbA" allowfullscreen></iframe>
             </div>
           </div>
           <p>
@@ -475,15 +511,28 @@
             below it it will transmit for 500 blocks. The receiver block 'catches' the signal and activates or deactivates
             redstone that is attached to it. The transmitter can be placed in all six directions.
           </p>
+          <br>
           <p>
             I've thought of several uses for this mod, including checking the status of your mob traps, routing a minecart from
             a station to the correct destination, sending an SOS signal, etc. See the video to understand how to use it.
-          </p><span>The recipe is shown in the video.</span> <span>Visit the <a href=
-          "http://www.minecraftforum.net/topic/187767-131-djoslins-creations-9-of-13-mods-updated/">minecraft forum thread</a>
-          for discussion and feedback.</span><span><br></span><span><b>You must first read the</b> <a href=
-          "projects/minecraft-mods/installation-instructions/">installation instructions</a></span><span>Only works on
-          Minecraft <b>Version 1.5.1</b></span><span><a href=
-          "projects/minecraft-mods/files/transmitter.zip">Download</a></span>
+          </p>
+          <br>
+          <p>
+            The recipe is shown in the video.
+            <br>
+            Visit the <a href=
+            "http://www.minecraftforum.net/topic/187767-131-djoslins-creations-9-of-13-mods-updated/">minecraft forum
+            thread</a> for discussion and feedback.
+          </p>
+          <br>
+          <p>
+            <strong>You must first read the</strong> <a href="projects/minecraft-mods/installation-instructions/">installation
+            instructions</a>
+            <br>
+            Only works on Minecraft <strong>Version 1.5.1</strong>
+            <br>
+            <a href="projects/minecraft-mods/files/transmitter.zip">Download</a>
+          </p>
         </article>
       </section>
       <footer>

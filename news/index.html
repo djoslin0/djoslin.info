@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -457,6 +493,29 @@
       <section>
         <article>
           <aside>
+            <a class="tag" href="news/umk3movelistplugin/">UMK3 Move List Plugin</a>
+          </aside>
+          <h2>
+            UMK3 Move List
+            <br>
+            <time datetime="2024-06-13">13 Jun 2024</time>
+          </h2>
+          <p>
+            I uploaded a plugin for Mame that adds a list of moves for Ultimate Mortal Kombat 3 on the sides of the screen.
+          </p>
+          <p>
+            <a href="projects/umk3-move-list-plugin/">Check it out here</a>
+          </p>
+          <div class="media-space">
+            <div style="max-width:1920px; max-height:1200px; margin: auto;">
+              <div class="aspect-ratio-16-9">
+                <img class="inside-aspect-ratio" src="projects/umk3-move-list-plugin/media/umk3-1.png">
+              </div>
+            </div>
+          </div><a class="perma" title="permanent link" href="news/umk3movelistplugin/umk3-move-list/">🔗</a>
+        </article>
+        <article>
+          <aside>
             <a class="tag" href="news/webstuff/">Web Stuff</a>
           </aside>
           <h2>
@@ -486,7 +545,7 @@
           <p>
             While I doubt I have followed best practices, this page is a big improvement. I wanted to stop using PHP as a
             crutch and make the entire website static, and therefore developed a static site generator using C#. I made sure
-            the website was <i>'responsive'</i> as well, aka it resizes properly when the window gets as thin as a phone.
+            the website was <code>'responsive'</code> as well, aka it resizes properly when the window gets as thin as a phone.
           </p><a class="perma" title="permanent link" href="news/webstuff/a-fresh-new-website/">🔗</a>
         </article>
         <article>
@@ -515,13 +574,18 @@
             doing something so nonstandard. The only issue left is that Fraps is unable to capture both screens on Windows 8,
             which means I had to use other tools and deal with a big reduction in recorded video quality. But I'm happy to
             report that the feature works!
-          </p><span><b>Note</b>: I had no one around to play as player 2 when I recorded these videos just now.</span>
+          </p>
+          <p>
+            <strong>Note</strong>: I had no one around to play as player 2 when I recorded these videos just now.
+          </p>
           <p>
             As for other changes: I've fixed the menu transitions so they run at a constant speed, the heads up display resizes
             itself properly for skinny windows, I've slowed down the tutorial bots, fixed resolution options, and fixed a bunch
             of misc multiplayer bugs.
-          </p><span>Stay tuned, more information coming soon!</span> <a class="perma" title="permanent link" href=
-          "news/vektorprix/added-local-splitscreen/">🔗</a>
+          </p>
+          <p>
+            Stay tuned, more information coming soon!
+          </p><a class="perma" title="permanent link" href="news/vektorprix/added-local-splitscreen/">🔗</a>
         </article>
         <article>
           <aside>
@@ -532,8 +596,8 @@
             <br>
             <time datetime="2015-01-23">23 Jan 2015</time>
           </h2>
-          <p class="centered">
-            This past couple of weeks I've been doing some required final touches.
+          <p>
+            [CENTER](This past couple of weeks I've been doing some required final touches.)
           </p>
           <div class="media-space">
             <div class="aspect-ratio-16-9">
@@ -572,8 +636,7 @@
             <time datetime="2015-01-10">10 Jan 2015</time>
           </h2>
           <p>
-            This past week I've been focusing on the final level and adjustments to make the game easier in easy mode. And I
-            finally bought <a href="http://vektorprix.com">vektorprix.com</a>
+            This past week I've been focusing on the final level and adjustments to make the game easier in easy mode.
           </p>
           <div class="media-space">
             <div class="aspect-ratio-16-9">
@@ -598,42 +661,6 @@
             sometimes, crash into walls, and take a worse route if they're in front of the player in easy mode. I've also upped
             the damage that a player deals to easy bots.
           </p><a class="perma" title="permanent link" href="news/vektorprix/a-week-in-review/">🔗</a>
-        </article>
-        <article>
-          <aside>
-            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
-          </aside>
-          <h2>
-            Happy new year!
-            <br>
-            <time datetime="2015-01-04">04 Jan 2015</time>
-          </h2>
-          <p>
-            Happy New Year! The past week I've been focusing on polishing online multiplayer and preparing a presskit to send
-            out to journalists. The presskit contains videos, WebMs, screenshots, and lots of information. It took me two full
-            days of work to prepare. If you are a game journalist, or know one that might be interested, please contact me.
-          </p>
-          <div class="media-space">
-            <div class="aspect-ratio-16-9">
-              <iframe class="media-frame" src="http://www.youtube.com/embed/ZcjjB8-HtiE"></iframe>
-            </div>
-          </div>
-          <p>
-            I've changed how bots spawn in multiplayer servers. I added a 'minimum players' setting. Let's say it's set to 5,
-            and there is one person in the game: 4 bots would be spawned. If another player enters, one bot will exit. If a
-            player exits, a bot will enter. And if there are five clients connected, no bots will spawn. This allows for a more
-            consistent online experience.
-          </p>
-          <p>
-            I've improved a few other online things as well, such as UDP disconnection detection, max laps and max kills are
-            settable, no more slight vehicle drift when you are idle, the timing of certain things has been tweaked for
-            networking reasons.
-          </p>
-          <p>
-            There have been a ton of small changes too, such as adding lights to the tutorial levels, adding guide arrows for
-            the figure eight level, adding different arrows to the final level, adding the antagonist to the final level as
-            well as coding up a way for him to address the player before returning to his original location.
-          </p><a class="perma" title="permanent link" href="news/vektorprix/happy-new-year/">🔗</a>
         </article>
       </section>
       <footer>

@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -464,7 +500,7 @@
         <article>
           <h2>
             Goldeneye: Source
-          </h2><img class="rmedia" width="146px" height="100px" src="projects/goldeneye-source/images/g007.jpg">
+          </h2>
           <p>
             Goldeneye 007 for the N64 was one of the staples of my childhood. I spent countless hours playing with friends, it
             was one of the first shooters that I got hooked on. It's not much to look at now but back then it was
@@ -498,27 +534,27 @@
           </p>
           <div class="mediabox">
             <div class="aspect-ratio-16-9">
-              <img class="mediabox-media" id="mediabox-10-image" src="projects/goldeneye-source/media/archives/archives1.jpg">
-              <img class="mediabox-fullscreen" id="mediabox-10-fullscreen" src="mediabox/fullscreen.png" onclick=
-              "fullscreenImage('10')"> <video class="mediabox-media" id="mediabox-10-webm" autoplay="" loop="" controls=""
-              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-10-youtube"
-              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-10-youtube"></iframe>
+              <img class="mediabox-media" id="mediabox-13-image" src="projects/goldeneye-source/media/archives/archives1.jpg">
+              <img class="mediabox-fullscreen" id="mediabox-13-fullscreen" src="mediabox/fullscreen.png" onclick=
+              "fullscreenImage('13')"> <video class="mediabox-media" id="mediabox-13-webm" autoplay="" loop="" controls=""
+              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-13-youtube"
+              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-13-youtube"></iframe>
             </div>
-            <div class="mediabox-thumbbox" id="mediabox-10-thumbbox">
+            <div class="mediabox-thumbbox" id="mediabox-13-thumbbox">
               <img class="mediabox-thumb mediabox-thumb-selected" src=
               "projects/goldeneye-source/media/archives/thumbs/archives1.png" onclick=
-              "mediaboxImage('10', 'projects/goldeneye-source/media/archives/archives1.jpg', this)"> <img class=
+              "mediaboxImage('13', 'projects/goldeneye-source/media/archives/archives1.jpg', this)"> <img class=
               "mediabox-thumb" src="projects/goldeneye-source/media/archives/thumbs/archives2.png" onclick=
-              "mediaboxImage('10', 'projects/goldeneye-source/media/archives/archives2.jpg', this)"> <img class=
+              "mediaboxImage('13', 'projects/goldeneye-source/media/archives/archives2.jpg', this)"> <img class=
               "mediabox-thumb" src="projects/goldeneye-source/media/archives/thumbs/archives3.png" onclick=
-              "mediaboxImage('10', 'projects/goldeneye-source/media/archives/archives3.jpg', this)"> <img class=
+              "mediaboxImage('13', 'projects/goldeneye-source/media/archives/archives3.jpg', this)"> <img class=
               "mediabox-thumb" src="projects/goldeneye-source/media/archives/thumbs/archives4.png" onclick=
-              "mediaboxImage('10', 'projects/goldeneye-source/media/archives/archives4.jpg', this)">
+              "mediaboxImage('13', 'projects/goldeneye-source/media/archives/archives4.jpg', this)">
             </div>
           </div>
-          <h2>
+          <h1>
             Temple Classic
-          </h2>
+          </h1>
           <p>
             After completing Archives, I was eager to start on my next level, but I wanted a smaller project. I looked at the
             available choices and began work on Temple Classic. The project allowed for two types of levels: the completely
@@ -530,13 +566,13 @@
           <div class="media-space">
             <div style="max-width:1920px; max-height:1080px; margin: auto;">
               <div class="aspect-ratio-16-9">
-                <img class="inside-aspect-ratio" src="projects/goldeneye-source/images/temple_classic.jpg">
+                <img class="inside-aspect-ratio" src="projects/goldeneye-source/images/temple-classic.jpg">
               </div>
             </div>
           </div>
-          <h2>
+          <h1>
             Aztec
-          </h2>
+          </h1>
           <p>
             After Temple Classic, I was ready for another ambitious level and began work on Aztec. Aztec is a large map with
             many iconic areas, and took a great deal of time to get into a state that I was happy with. I grabbed inspiration
@@ -544,32 +580,33 @@
           </p>
           <div class="mediabox">
             <div class="aspect-ratio-16-9">
-              <img class="mediabox-media" id="mediabox-11-image" src="projects/goldeneye-source/media/aztec/aztec1.jpg">
-              <img class="mediabox-fullscreen" id="mediabox-11-fullscreen" src="mediabox/fullscreen.png" onclick=
-              "fullscreenImage('11')"> <video class="mediabox-media" id="mediabox-11-webm" autoplay="" loop="" controls=""
-              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-11-youtube"
-              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-11-youtube"></iframe>
+              <img class="mediabox-media" id="mediabox-14-image" src="projects/goldeneye-source/media/aztec/aztec1.jpg">
+              <img class="mediabox-fullscreen" id="mediabox-14-fullscreen" src="mediabox/fullscreen.png" onclick=
+              "fullscreenImage('14')"> <video class="mediabox-media" id="mediabox-14-webm" autoplay="" loop="" controls=""
+              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-14-youtube"
+              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-14-youtube"></iframe>
             </div>
-            <div class="mediabox-thumbbox" id="mediabox-11-thumbbox">
+            <div class="mediabox-thumbbox" id="mediabox-14-thumbbox">
               <img class="mediabox-thumb mediabox-thumb-selected" src="projects/goldeneye-source/media/aztec/thumbs/aztec1.png"
-              onclick="mediaboxImage('11', 'projects/goldeneye-source/media/aztec/aztec1.jpg', this)"> <img class=
+              onclick="mediaboxImage('14', 'projects/goldeneye-source/media/aztec/aztec1.jpg', this)"> <img class=
               "mediabox-thumb" src="projects/goldeneye-source/media/aztec/thumbs/aztec2.png" onclick=
-              "mediaboxImage('11', 'projects/goldeneye-source/media/aztec/aztec2.jpg', this)"> <img class="mediabox-thumb" src=
+              "mediaboxImage('14', 'projects/goldeneye-source/media/aztec/aztec2.jpg', this)"> <img class="mediabox-thumb" src=
               "projects/goldeneye-source/media/aztec/thumbs/aztec3.png" onclick=
-              "mediaboxImage('11', 'projects/goldeneye-source/media/aztec/aztec3.jpg', this)"> <img class="mediabox-thumb" src=
+              "mediaboxImage('14', 'projects/goldeneye-source/media/aztec/aztec3.jpg', this)"> <img class="mediabox-thumb" src=
               "projects/goldeneye-source/media/aztec/thumbs/aztec4.png" onclick=
-              "mediaboxImage('11', 'projects/goldeneye-source/media/aztec/aztec4.jpg', this)">
+              "mediaboxImage('14', 'projects/goldeneye-source/media/aztec/aztec4.jpg', this)">
             </div>
           </div>
-          <h2>
+          <h1>
             Retirement
-          </h2>
+          </h1>
           <p>
             After finishing up Aztec, I realized that I had lost the passion I previously had for level design. I was
             programming side projects at the time, and found myself more drawn toward that side of game development. It was at
             this point in 2009 that I stopped working on my levels. I soon retired from the team to pursue programming oriented
             projects.
           </p>
+          <br>
           <p>
             During my time spent on the team, I finished three official levels and had another two on their way to being
             completed. The work was tiring and took a long time but there is a certain feeling that you get when you make
@@ -577,9 +614,9 @@
             Goldeneye: Source team has taught me a lot of valuable information about game development, it showed me all of the
             different things that come together when creating a modern game.
           </p>
-          <h2>
+          <h1>
             Revival
-          </h2>
+          </h1>
           <p>
             In 2016, I was looking for people to help beta test one of my games and invited a bunch of Goldeneye: Source
             developers. They helped out regularly with testing, and I felt that I should return the favor. I was also intrigued
@@ -588,15 +625,11 @@
             getting stuck, standing still, using the wrong weapon, and not knowing where any items are. While the bots are far
             from ideal, the difference is night and day. As a result, I stumbled my way back on to the team and began helping
             out with programming tasks. The new bots shipped in version 5.
-          </p><span></span>
-        </article>
-        <article>
-          <span></span>
-          <center>
-            <h2>
-              <a href="http://goldeneyesource.net">Website</a>
-            </h2>
-          </center>
+          </p>
+          <br>
+          <h3>
+            <a href="http://goldeneyesource.net">Visit Goldeneye: Source's Website</a>
+          </h3>
         </article>
       </section>
       <footer>

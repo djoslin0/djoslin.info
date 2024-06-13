@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -458,7 +494,7 @@
         <article>
           <h2>
             GTA IV Mods
-          </h2><img class="rmedia" width="136px" height="170px" src="projects/gta-iv-mods/images/cover.jpg">
+          </h2>
           <p>
             I've always enjoyed the Grand Theft Auto series. It is the series that introduced me to modifying video games in a
             big way, my first (unreleased and silly) mods were for Grand Theft Auto III. As a weekend distraction, I decided to
@@ -470,7 +506,7 @@
           </h2>
           <div class="media-space">
             <div class="aspect-ratio-16-9">
-              <iframe class="media-frame" src="http://www.youtube.com/embed/hRAJ5dDbLJs"></iframe>
+              <iframe class="media-frame" src="http://www.youtube.com/embed/hRAJ5dDbLJs" allowfullscreen></iframe>
             </div>
           </div>
           <p>
@@ -479,16 +515,13 @@
             victim using your gun sight, the objects that are under your control float their way towards them. They proceed to
             crush your target in a most satisfying manner. Grenades and rockets that you use will be under the same control,
             and therefore can function as homing missiles.
-          </p><span></span>
-        </article>
-        <article>
-          <span></span>
+          </p>
           <h2>
             Car Bodyguard
           </h2>
           <div class="media-space">
             <div class="aspect-ratio-16-9">
-              <iframe class="media-frame" src="http://www.youtube.com/embed/5vw5GCUqLg4"></iframe>
+              <iframe class="media-frame" src="http://www.youtube.com/embed/5vw5GCUqLg4" allowfullscreen></iframe>
             </div>
           </div>
           <p>
@@ -496,24 +529,28 @@
             will spawn up to 7 body guards, pressing delete will kill them one at a time. Your new body guards will find four
             news spots on your vehicle to sit on, and they will stand up and shoot at any enemies nearby. Cars, trucks,
             motorcycles, helicopters, and boats are all supported.
-          </p><span></span>
-        </article>
-        <article>
-          <span></span>
+          </p>
           <h2>
             Download
-          </h2><span>In order to use these mods, <b>you must first</b> download and install:</span><span></span>
+          </h2>
+          <p>
+            In order to use these mods, <strong>you must first</strong> download and install:
+          </p>
           <ul>
             <li>
-              <span><a href="http://www.gtaforums.com/index.php?showtopic=392325">ScriptHook</a></span>
+              <a href="http://www.gtaforums.com/index.php?showtopic=392325">ScriptHook</a>
             </li>
-          </ul><span>Afterwards, copy the files from the mod's zip file and into GTAIV's /scripts/ folder.</span><span></span>
+          </ul>
+          <br>
+          <p>
+            Afterwards, copy the files from the mod's zip file and into GTAIV's <code>/scripts/</code> folder.
+          </p>
           <ul>
             <li>
-              <span><a href="projects/gta-iv-mods/files/objectstorm.zip">Object Storm</a></span>
+              <a href="projects/gta-iv-mods/files/objectstorm.zip">Object Storm</a>
             </li>
             <li>
-              <span><a href="projects/gta-iv-mods/files/carbodyguard.zip">Car Bodyguard</a></span>
+              <a href="projects/gta-iv-mods/files/carbodyguard.zip">Car Bodyguard</a>
             </li>
           </ul>
         </article>

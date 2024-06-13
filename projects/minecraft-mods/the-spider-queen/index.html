@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -461,29 +497,32 @@
         <article>
           <h2>
             Warning:
-          </h2><span>This mod is out of date and unsupported, sorry!</span> <span></span>
-        </article>
-        <article>
-          <span></span>
+          </h2>
+          <p>
+            This mod is out of date and unsupported, sorry!
+          </p>
           <h2>
             The Spider Queen
-          </h2><span>a collaboration with Pullahoko</span>
+          </h2>
+          <p>
+            a collaboration with Pullahoko
+          </p>
           <div class="mediabox">
             <div class="aspect-ratio-16-9">
-              <img class="mediabox-media" id="mediabox-15-image" src="" style="visibility:hidden"> <img class=
-              "mediabox-fullscreen" id="mediabox-15-fullscreen" onclick="fullscreenImage('15')" src="" style=
-              "visibility:hidden"> <video class="mediabox-media" id="mediabox-15-webm" autoplay="" loop="" controls="" muted=""
-              src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-15-youtube" frameborder="0"
-              allowfullscreen src="https://www.youtube.com/embed/zT8XPWT9gTI" name="mediabox-15-youtube"></iframe>
+              <img class="mediabox-media" id="mediabox-18-image" src="" style="visibility:hidden"> <img class=
+              "mediabox-fullscreen" id="mediabox-18-fullscreen" onclick="fullscreenImage('18')" src="" style=
+              "visibility:hidden"> <video class="mediabox-media" id="mediabox-18-webm" autoplay="" loop="" controls="" muted=""
+              src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-18-youtube" frameborder="0"
+              allowfullscreen src="https://www.youtube.com/embed/zT8XPWT9gTI" name="mediabox-18-youtube"></iframe>
             </div>
-            <div class="mediabox-thumbbox" id="mediabox-15-thumbbox">
+            <div class="mediabox-thumbbox" id="mediabox-18-thumbbox">
               <img class="mediabox-thumb mediabox-thumb-selected" src=
-              "projects/minecraft-mods/media/spiderqueen/thumbs/av2.png" onclick="mediaboxYoutube('15', 'zT8XPWT9gTI', this)">
+              "projects/minecraft-mods/media/spiderqueen/thumbs/av2.png" onclick="mediaboxYoutube('18', 'zT8XPWT9gTI', this)">
               <img class="mediabox-thumb" src="projects/minecraft-mods/media/spiderqueen/thumbs/bv5.png" onclick=
-              "mediaboxYoutube('15', 'o2ARebLV3MQ', this)"> <img class="mediabox-thumb" src=
-              "projects/minecraft-mods/media/spiderqueen/thumbs/clp1.png" onclick="mediaboxYoutube('15', 'WGdOKQjR2MI', this)">
+              "mediaboxYoutube('18', 'o2ARebLV3MQ', this)"> <img class="mediabox-thumb" src=
+              "projects/minecraft-mods/media/spiderqueen/thumbs/clp1.png" onclick="mediaboxYoutube('18', 'WGdOKQjR2MI', this)">
               <img class="mediabox-thumb" src="projects/minecraft-mods/media/spiderqueen/thumbs/clp2.png" onclick=
-              "mediaboxYoutube('15', '75rLJlePVj8', this)">
+              "mediaboxYoutube('18', '75rLJlePVj8', this)">
             </div>
           </div>
           <p>
@@ -491,25 +530,43 @@
             human. As the Spider Queen, you will be able to see better in the dark, take control of the classic Giant Spider
             mob as a loyal pet, and even create four new spiders to protect you from danger!
           </p>
+          <br>
           <p>
             With version 5.4, you'll find new mobs such as the water-dwelling octopus, the fearsome Jack the Pumpkin-Head, and
             even a rival queen. Use webbing to climb walls, catch monsters and animals, and even create a webslinger to swing
             from the walls and ceilings! Use the Spider Bait to command your army and move them from place to place. Find
             enormous bee-hives and break them open for some honey, but watch out for angry bees!
           </p>
+          <br>
           <p>
             Explore the darkness to your heart's content. Make friends with the skeletons, creepers, and zombies by giving them
             hearts, skulls, and brains. Befriend the creatures of the night! Snack on juicy flies by picking them right out of
             the air, but be on the lookout for angry hornets. Battle roving bands of humans, or be friends with them. Create an
             army and a family! Be a monster today.
-          </p><span>Unfortunately the complete guide was lost.</span><span>For the time being, watch some Spider Queen youtube
-          videos to understand all of the features.</span> <span><br></span><span><b>You must first read the</b> <a href=
-          "projects/minecraft-mods/installation-instructions/">installation instructions</a></span><span>Only works on
-          Minecraft <b>Version 1.2.5</b></span><span><a href=
-          "projects/minecraft-mods/files/spiderqueen.zip">Download</a></span> <span><br></span><span>This mod has been
-          <b>recreated</b> by the community!</span><span>Follow their progress <a href=
-          "http://www.minecraftforum.net/topic/2682638-172-forge-spider-queen-reborn-v100-a-blast-from-the-past/#entry31548263">
-          here</a>.</span>
+          </p>
+          <br>
+          <p>
+            Unfortunately the complete guide was lost.
+            <br>
+            For the time being, watch some Spider Queen youtube videos to understand all of the features.
+          </p>
+          <br>
+          <p>
+            <strong>You must first read the</strong> <a href="projects/minecraft-mods/installation-instructions/">installation
+            instructions</a>
+            <br>
+            Only works on Minecraft <strong>Version 1.2.5</strong>
+            <br>
+            <a href="projects/minecraft-mods/files/spiderqueen.zip">Download</a>
+          </p>
+          <br>
+          <p>
+            This mod has been <strong>recreated</strong> by the community!
+            <br>
+            Follow their progress <a href=
+            "http://www.minecraftforum.net/topic/2682638-172-forge-spider-queen-reborn-v100-a-blast-from-the-past/#entry31548263">
+            here</a>.
+          </p>
         </article>
       </section>
       <footer>

@@ -137,11 +137,17 @@
         }
 
     /* END NAV */
+    hr {
+        border: 0;
+        border-bottom: 1px dashed #ccc;
+        margin: 1rem;
+    }
 
     article {
     margin: 1.5rem 3.0rem 2.5rem;
         padding-bottom: 2rem;
         border-bottom: 1px dashed #ccc;
+        color: var(--color-03);
     }
 
     footer {
@@ -159,24 +165,41 @@
         width: 60%;
     }
 
+    article > * {
+        margin-top: 0.33rem;
+        margin-bottom: 0.33rem;
+    }
+
     article span {
         display: block;
         text-align: justify;
         line-height: 1.65rem;
         color: var(--color-01);
     }
+
     article p {
         text-align: justify;
-        text-indent: 2rem;
         line-height: 1.65rem;
-        color: var(--color-03);
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
     }
 
     article p .centered {
-        text-indent: 0;
         text-align: center;
+    }
+
+    article code {
+        background-color: var(--color-11);
+        font-family: monospace, monospace;
+        padding: 0rem 0.2rem 0rem 0.2rem;
+    }
+
+    article pre {
+        background-color: var(--color-11);
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+        font-family: monospace, monospace;
+    }
+
+    article pre code {
+        padding: 0;
     }
 
     .icon {
@@ -301,6 +324,19 @@
     body > div:first-of-type {
         border: 1px solid var(--color-12);
         background-color: var(--color-12);
+    }
+
+    article h1 {
+        font-size: xx-large;
+        font-weight: bold;
+        color: var(--color-03);
+        margin: 0;
+    margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    article h1:first-of-type {
+    margin-top: 0;
     }
 
     article h2 {
@@ -461,35 +497,39 @@
         <article>
           <h2>
             Warning:
-          </h2><span>This mod is out of date and unsupported, sorry!</span> <span></span>
-        </article>
-        <article>
-          <span></span>
+          </h2>
+          <p>
+            This mod is out of date and unsupported, sorry!
+          </p>
           <h2>
             Creepy Kingdom
-          </h2><span>a collaboration with Pullahoko</span>
+          </h2>
+          <p>
+            a collaboration with Pullahoko
+          </p>
           <div class="mediabox">
             <div class="aspect-ratio-16-9">
-              <img class="mediabox-media" id="mediabox-13-image" src="" style="visibility:hidden"> <img class=
-              "mediabox-fullscreen" id="mediabox-13-fullscreen" onclick="fullscreenImage('13')" src="" style=
-              "visibility:hidden"> <video class="mediabox-media" id="mediabox-13-webm" autoplay="" loop="" controls="" muted=""
-              src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-13-youtube" frameborder="0"
-              allowfullscreen src="https://www.youtube.com/embed/VmlBSoEJEtQ" name="mediabox-13-youtube"></iframe>
+              <img class="mediabox-media" id="mediabox-16-image" src="" style="visibility:hidden"> <img class=
+              "mediabox-fullscreen" id="mediabox-16-fullscreen" onclick="fullscreenImage('16')" src="" style=
+              "visibility:hidden"> <video class="mediabox-media" id="mediabox-16-webm" autoplay="" loop="" controls="" muted=""
+              src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-16-youtube" frameborder="0"
+              allowfullscreen src="https://www.youtube.com/embed/VmlBSoEJEtQ" name="mediabox-16-youtube"></iframe>
             </div>
-            <div class="mediabox-thumbbox" id="mediabox-13-thumbbox">
+            <div class="mediabox-thumbbox" id="mediabox-16-thumbbox">
               <img class="mediabox-thumb mediabox-thumb-selected" src=
-              "projects/minecraft-mods/media/creepykingdom/thumbs/0.png" onclick="mediaboxYoutube('13', 'VmlBSoEJEtQ', this)">
+              "projects/minecraft-mods/media/creepykingdom/thumbs/0.png" onclick="mediaboxYoutube('16', 'VmlBSoEJEtQ', this)">
               <img class="mediabox-thumb" src="projects/minecraft-mods/media/creepykingdom/thumbs/1.png" onclick=
-              "mediaboxYoutube('13', 'Qe2InFB-Fi4', this)"> <img class="mediabox-thumb" src=
-              "projects/minecraft-mods/media/creepykingdom/thumbs/2.png" onclick="mediaboxYoutube('13', 'szL3LwKS5BI', this)">
+              "mediaboxYoutube('16', 'Qe2InFB-Fi4', this)"> <img class="mediabox-thumb" src=
+              "projects/minecraft-mods/media/creepykingdom/thumbs/2.png" onclick="mediaboxYoutube('16', 'szL3LwKS5BI', this)">
               <img class="mediabox-thumb" src="projects/minecraft-mods/media/creepykingdom/thumbs/3.png" onclick=
-              "mediaboxYoutube('13', '1TCySw3O7T0', this)">
+              "mediaboxYoutube('16', '1TCySw3O7T0', this)">
             </div>
           </div>
           <p>
             Creepy Kingdom was the beginning of a new type of Real Time Strategy game for Minecraft. You will be assuming the
             role of a monster, allowing you to commune with skeletons, creepers, zombies, and more.
           </p>
+          <br>
           <p>
             Using your Command Ball items, you can select units and assign them to specific tasks. This includes attacking
             certain targets and moving to certain spots, as well as gathering materials from the surroundings and building two
@@ -498,10 +538,18 @@
             fans to experiment with the tools we have created and get a feel for what the mod will be like in the future. The
             command items are added to your inventory automatically. You will also receive an Egg used to spawn in the special
             mobs that the command items are controlled with. They are labeled "Select," "Move," and "Stop."
-          </p><span><br></span><span><b>You must first read the</b> <a href=
-          "projects/minecraft-mods/installation-instructions/">installation instructions</a></span><span>Only works on
-          Minecraft <b>Version 1.1.0</b></span><span><a href=
-          "projects/minecraft-mods/files/creepykingdom.zip">Download</a></span>
+          </p>
+          <br>
+          <p>
+            <strong>You must first read the</strong> <a href="projects/minecraft-mods/installation-instructions/">installation
+            instructions</a>
+          </p>
+          <p>
+            Only works on Minecraft <strong>Version 1.1.0</strong>
+          </p>
+          <p>
+            <a href="projects/minecraft-mods/files/creepykingdom.zip">Download</a>
+          </p>
         </article>
       </section>
       <footer>
