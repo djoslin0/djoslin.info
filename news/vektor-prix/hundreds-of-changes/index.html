@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      djoslin :: projects
+      djoslin :: Hundreds of changes
     </title>
-    <base href="../../">
+    <base href="../../../">
     <style>
 
     :root {
@@ -477,24 +477,6 @@
     </style>
     <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
   </head>
   <body>
     <nav>
@@ -504,7 +486,7 @@
         </h1>
       </div>
       <div class="links">
-        <a class="" href="news/">news</a> <a class="active" href="projects/">projects</a> <a class="" href=
+        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
         "socials/">socials</a>
       </div>
     </nav>
@@ -512,90 +494,37 @@
       <section>
         <article>
           <aside>
-            <a class="tag" href="projects/mod/">Mod</a>
-          </aside><a href="projects/umk3-move-list-plugin/"><img class="thumb" src=
-          "projects/umk3-move-list-plugin/images/thumb.png"></a>
-          <div style="display:inline-block;vertical-align:top">
-            <h2>
-              <a href="projects/umk3-move-list-plugin/">UMK3 Move List</a>
-              <br>
-              <time datetime="yyyy">2022</time>
-            </h2>
-          </div>
-          <blockquote>
-            A MAME 'scripted layout' for Ultimate Mortal Kombat 3 that displays a list of moves.
-          </blockquote>
-        </article>
-        <article>
-          <aside>
-            <a class="tag" href="projects/game/">Game</a>
-          </aside><a href="projects/robo-hockey-league/"><img class="thumb" src=
-          "projects/robo-hockey-league/images/thumb.png"></a>
-          <div style="display:inline-block;vertical-align:top">
-            <h2>
-              <a href="projects/robo-hockey-league/">Robo Hockey League</a>
-              <br>
-              <time datetime="yyyy">2018</time>
-            </h2>
-          </div>
-          <blockquote>
-            A free multiplayer hockey game with a deadly puck.
-          </blockquote>
-        </article>
-        <article>
-          <aside>
-            <a class="tag" href="projects/game/">Game</a>
-          </aside><a href="projects/vektor-prix/"><img class="thumb" src="projects/vektor-prix/images/thumb.png"></a>
-          <div style="display:inline-block;vertical-align:top">
-            <h2>
-              <a href="projects/vektor-prix/">Vektor Prix</a>
-              <br>
-              <time datetime="yyyy">2011-2016</time>
-            </h2>
-          </div>
-          <blockquote>
-            A fast-paced combat racing game that supports singleplayer and online multiplayer, AI opponents with adjustable
-            difficulty, a variety of weapons and levels, controller support, and gamemodes such as racing, deathmatch or team
-            deathmatch.
-          </blockquote>
-        </article>
-        <article>
-          <aside>
-            <a class="tag" href="projects/mod/">Mod</a>
-          </aside><a href="projects/goldeneye-source/"><img class="thumb" src="projects/goldeneye-source/images/thumb.png"></a>
-          <div style="display:inline-block;vertical-align:top">
-            <h2>
-              <a href="projects/goldeneye-source/">Goldeneye: Source</a>
-              <br>
-              <time datetime="yyyy">2006-2009, 2016</time>
-            </h2>
-          </div>
-          <blockquote>
-            A recreation of the classic N64 game on a modern engine. I joined the team initially as a level designer, and
-            created three multiplayer maps. After a long hiatus, I rejoined the team as a programmer.
-          </blockquote>
-        </article>
-        <article>
-          <aside>
-            <a class="tag" href="projects/game/">Game</a>
-          </aside><a href="projects/blooprent/"><img class="thumb" src="projects/blooprent/images/thumb.png"></a>
-          <div style="display:inline-block;vertical-align:top">
-            <h2>
-              <a href="projects/blooprent/">Blooprent</a>
-              <br>
-              <time datetime="yyyy">2011-2013</time>
-            </h2>
-          </div>
-          <blockquote>
-            A free particle physics puzzle game. The objective is to move the cluster of dots over to a button using a
-            combination of solid blocks, ice, conveyor belts, fans, moving hydraulic parts, and much more.
-          </blockquote>
+            <a class="tag" href="news/vektor-prix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            Hundreds of changes
+            <br>
+            <time datetime="2014-11-29">29 Nov 2014</time>
+          </h2>
+          <p>
+            It's been a long time since I've updated you guys on Vektor Prix. I'm happy to say progress has been going
+            incredibly well. I've made hundreds of changes, most of them have been small bug fixes or polish. However, the most
+            substantial change has been the switch to OpenGL.
+          </p>
+          <p>
+            I was using simple windows line drawing routines before, and found a simple way to wrap that into DirectDraw to
+            give me VSync. However, Windows 8 dropped support for DirectDraw which basically cut my FPS in half. This was not
+            good. So I wrote a wrapper for OpenGL that would draw lines in a very similar fashion to my old routines so that I
+            could swap all of my line drawing out.
+          </p>
+          <p>
+            The result was a huge FPS boost as well as 2x - 16x fullscreen antialiasing. I'm pretty happy about it. There is
+            very little left to be done. I have an incredibly small todo list, so things are getting exciting. Yesterday I
+            playtested deathmatch with my friend for about 20 minutes:
+          </p>
+          <p>
+            Stay tuned, I'll be doing a semipublic alpha in the near future.
+          </p><a class="perma" title="permanent link" href="news/vektor-prix/hundreds-of-changes/">🔗</a>
         </article>
       </section>
       <footer>
-        <p class="navtags">
-          <a class="tag disabled">&lt;</a> <span class="navpage">1</span> <a class="tag" title="older projects" href=
-          "projects/2/">&gt;</a>
+        <p>
+          <a href="news/">↶ News</a>
         </p>
       </footer>
     </div>
