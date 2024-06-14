@@ -209,6 +209,8 @@
     }
 
     .media-space {
+        display: flex;
+        justify-content: center; /* Centers the image horizontally */
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
@@ -467,9 +469,8 @@
     }
 
     .inside-aspect-ratio {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
 
 
@@ -500,11 +501,7 @@
             When I bought an Arduino, which is an 8-bit microcontroller, I decided to make a synthesizer as my first project.
           </p>
           <div class="media-space">
-            <div style="max-width:350px; max-height:282px; margin: auto;">
-              <div class="aspect-ratio-4-3">
-                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/synth1.jpg">
-              </div>
-            </div>
+            <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/synth1.jpg">
           </div>
           <h2>
             Background
@@ -517,11 +514,7 @@
             adding to it when I grow tired of other projects.
           </p>
           <div class="media-space">
-            <div style="max-width:287px; max-height:209px; margin: auto;">
-              <div class="aspect-ratio-4-3">
-                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/notabombsmall.jpg">
-              </div>
-            </div>
+            <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/notabombsmall.jpg">
           </div>
           <p>
             This is actually the fourth version of this synthesizer, as I have rewritten it from scratch several times. It has
@@ -538,11 +531,7 @@
             consistent rate.
           </p>
           <div class="media-space">
-            <div style="max-width:202px; max-height:138px; margin: auto;">
-              <div class="aspect-ratio-4-3">
-                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/waves.png">
-              </div>
-            </div>
+            <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/waves.png">
           </div>
           <h2>
             Envelopes
@@ -563,11 +552,7 @@
             instruments in such a way to make the songs sound good again. (even if it was for a loose definition of good)
           </p>
           <div class="media-space">
-            <div style="max-width:250px; max-height:191px; margin: auto;">
-              <div class="aspect-ratio-4-3">
-                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/8bitsynthsmall.png">
-              </div>
-            </div>
+            <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/8bitsynthsmall.png">
           </div>
           <p>
             After MIDI file support, the next logical step was MIDI input. It not only allows that, but by using a free program
@@ -597,11 +582,7 @@
             Conclusion
           </h2>
           <div class="media-space">
-            <div style="max-width:300px; max-height:225px; margin: auto;">
-              <div class="aspect-ratio-4-3">
-                <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/synth2small.png">
-              </div>
-            </div>
+            <img class="inside-aspect-ratio" src="projects/8-bit-synth/images/synth2small.png">
           </div>
           <p>
             So in conclusion, I'm happy with where this is going. Once I clean up the sound a little with filtering, I think it

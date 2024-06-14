@@ -209,6 +209,8 @@
     }
 
     .media-space {
+        display: flex;
+        justify-content: center; /* Centers the image horizontally */
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
@@ -467,9 +469,8 @@
     }
 
     .inside-aspect-ratio {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
 
 
@@ -491,6 +492,35 @@
     </nav>
     <div>
       <section>
+        <article>
+          <aside>
+            <a class="tag" href="news/vektorprix/">Vektor Prix</a>
+          </aside>
+          <h2>
+            Hundreds of changes
+            <br>
+            <time datetime="2014-11-29">29 Nov 2014</time>
+          </h2>
+          <p>
+            It's been a long time since I've updated you guys on Vektor Prix. I'm happy to say progress has been going
+            incredibly well. I've made hundreds of changes, most of them have been small bug fixes or polish. However, the most
+            substantial change has been the switch to OpenGL.
+          </p>
+          <p>
+            I was using simple windows line drawing routines before, and found a simple way to wrap that into DirectDraw to
+            give me VSync. However, Windows 8 dropped support for DirectDraw which basically cut my FPS in half. This was not
+            good. So I wrote a wrapper for OpenGL that would draw lines in a very similar fashion to my old routines so that I
+            could swap all of my line drawing out.
+          </p>
+          <p>
+            The result was a huge FPS boost as well as 2x - 16x fullscreen antialiasing. I'm pretty happy about it. There is
+            very little left to be done. I have an incredibly small todo list, so things are getting exciting. Yesterday I
+            playtested deathmatch with my friend for about 20 minutes:
+          </p>
+          <p>
+            Stay tuned, I'll be doing a semipublic alpha in the near future.
+          </p><a class="perma" title="permanent link" href="news/vektorprix/hundreds-of-changes/">🔗</a>
+        </article>
         <article>
           <aside>
             <a class="tag" href="news/webstuff/">Web Stuff</a>
