@@ -36,7 +36,7 @@ function mediaboxYoutube(mediaId, youtubeId, thumb) {
 	var mbWebm = document.getElementById("mediabox-" + mediaId + "-webm")
 	var mbFullscreen = document.getElementById("mediabox-" + mediaId + "-fullscreen")
 	
-	var newSrc = "http://www.youtube.com/embed/" + youtubeId + "?autoplay=1"
+	var newSrc = "https://www.youtube.com/embed/" + youtubeId + "?autoplay=1"
 	
 	if(mbYoutube.src !== newSrc){
 		mbYoutube.src = newSrc
