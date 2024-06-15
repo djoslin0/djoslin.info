@@ -26,6 +26,7 @@ body {
 }
 
 html {
+	overflow-x: hidden;
 	overflow-y: scroll;
 	--s: 300px; /* control the size*/
 	--c1: var(--background-02);
