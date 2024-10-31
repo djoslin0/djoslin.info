@@ -43,6 +43,10 @@ html {
 	background-size: var(--s) var(--s);
 }
 
+td {
+	padding: 4px;
+}
+
 /* NAV */
 	/* djoslin header */
 	.title {
