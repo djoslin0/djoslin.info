@@ -15,9 +15,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      djoslin :: Blooprent
+      djoslin :: news, nitro thrash, page 2
     </title>
-    <base href="../../">
+    <base href="../../../../">
     <style>
 
     :root {
@@ -494,9 +494,6 @@
     </style>
     <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
   </head>
   <body>
     <nav>
@@ -506,85 +503,98 @@
         </h1>
       </div>
       <div class="links">
-        <a class="" href="news/">news</a> <a class="active" href="projects/">projects</a> <a class="" href=
+        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
         "socials/">socials</a>
       </div>
     </nav>
     <div>
       <section>
         <article>
-          <h1>
-            Blooprent
-          </h1>
+          <aside>
+            <a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
+          </aside>
+          <h2>
+            Nitro Thrash Status 1
+            <br>
+            <time datetime="2024-09-24">24 Sep 2024</time>
+          </h2>
           <p>
-            Blooprent is my take on the puzzle physics genre. The objective is to move the cluster of dots over to a button
-            using a combination of solid blocks, ice, conveyor belts, fans, moving hydraulic parts, and much more. As you
-            progress through the game, you are introduced to increasingly complex entities and puzzles.
+            In the past month, I've made 137 commits.
           </p>
           <div class="media-space">
-            <img class="inside-aspect-ratio" src="projects/blooprent/images/level1.gif">
-          </div>
-          <h1>
-            Development
-          </h1>
-          <p>
-            Blooprent was the result of many iterations on a concept that I found interesting, and the first complete game that
-            I have released. Building up a complicated <code>'machine'</code>, then sitting back and watching it work, can be
-            really satisfying. After creating the first sandbox prototype, I had to figure out how to transform it into a game
-            with a goal.
-          </p>
-          <br>
-          <p>
-            After a few half-hearted attempts I settled on creating <code>'machines'</code> with missing parts, and allowing
-            the player to fill in the gaps with specified pieces. Early on I rejected the idea of keeping the player strictly
-            on-rails, and made sure all levels past the first few could be completed in many different ways. In order to earn
-            gold stars in every category, the player has to out-smart the puzzle, guiding the dots in a completely different
-            direction than implied.
-          </p>
-          <h1>
-            Media
-          </h1>
-          <div class="mediabox">
             <div class="aspect-ratio-16-9">
-              <img class="mediabox-media" id="mediabox-27-image" src="" style="visibility:hidden"> <img class=
-              "mediabox-fullscreen" id="mediabox-27-fullscreen" onclick="fullscreenImage('27')" src="" style=
-              "visibility:hidden"> <video class="mediabox-media" id="mediabox-27-webm" autoplay="" loop="" controls="" muted=""
-              src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-27-youtube" frameborder="0"
-              allowfullscreen src="https://www.youtube.com/embed/-vM5-CIVgh8" name="mediabox-27-youtube"></iframe>
-            </div>
-            <div class="mediabox-thumbbox" id="mediabox-27-thumbbox">
-              <img class="mediabox-thumb mediabox-thumb-selected" src="projects/blooprent/media/thumbs/officialtrailer.png"
-              onclick="mediaboxYoutube('27', '-vM5-CIVgh8', this)"> <img class="mediabox-thumb" src=
-              "projects/blooprent/media/thumbs/review.png" onclick="mediaboxYoutube('27', 'SyLNpUpbhcU', this)"> <img class=
-              "mediabox-thumb" src="projects/blooprent/media/thumbs/ydraegast.png" onclick=
-              "mediaboxYoutube('27', 'RR6hYTeAjvg', this)"> <img class="mediabox-thumb" src=
-              "projects/blooprent/media/thumbs/zrockleesmile.png" onclick="mediaboxYoutube('27', 'xHOOkm2LpR4', this)">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/nitro-thrash/media/status-1.mp4"></video>
             </div>
           </div>
-          <h1>
-            Postmortem
-          </h1>
           <p>
-            Throughout the course of this project, I learned a lot about game development. First, I learned how difficult and
-            time consuming releasing a game can be, even one with a relatively small scope. I wanted to learn everything I
-            could about how a game is put together, so I built my own engine, and fought every battle that comes with it. I
-            learned a lot about puzzle design. Discovering what was satisfying and what wasn't took a lot of trial and error.
-            <br>
-            Overall I'm happy with how the game came together in the end, and enjoyed watching it reviewed or played on
-            YouTube. One of my biggest takeaways was how important proper testing is. It is vital to thoroughly test games with
-            people who have not been exposed to it, and without direct communication with them while they are playing. Through
-            watching videos of the game, I realized I had never taught the player how to delete entities (with the delete key),
-            and how easily I could have solved the problem.
+            Here are some notable changes I've made to the game:
           </p>
-          <br>
-          <h3>
-            <a href="projects/blooprent/files/Blooprent.exe">Download Blooprent</a>
-          </h3>
+          <p>
+            created mission system
+          </p>
+          <ul>
+            <li>currently 4 types of missions: Trick-over-gap, Own-the-spot, Timed-total-score, Destruction
+            </li>
+            <li>added painted arrows when mission is active
+            </li>
+          </ul>
+          <p>
+            created a mission select preview menu
+          </p>
+          <ul>
+            <li>shows preview of a replay from multiple camera angles
+            </li>
+          </ul>
+          <p>
+            created a breakable lackluster sign
+          </p>
+          <ul>
+            <li>created a system to synchronize each letter online
+            </li>
+          </ul>
+          <p>
+            misc:
+          </p>
+          <ul>
+            <li>redesigned the heads up display
+            </li>
+            <li>created a new pause menu
+            </li>
+            <li>a ton of small model adjustments to level02
+            </li>
+            <li>added 57 gaps to level02 (many more to go)
+            </li>
+            <li>a lot of tweaks to make physics more consistent
+            </li>
+            <li>split up the levels and made a temporary main menu
+            </li>
+            <li>added rock/grass/wood particles
+            </li>
+            <li>rewrote out-of-bounds detection/teleport
+            </li>
+            <li>optimized out 1.5kb of allocations every frame (now doesn't allocate at all during a steady-state)
+            </li>
+            <li>added save/load position buttons to easily retry a trick
+            </li>
+            <li>added wall-plant support / manual support to gaps
+            </li>
+            <li>improved camera behavior
+            </li>
+            <li>added fountain and tire impact sound
+            </li>
+            <li>made dumpster lids bounce when you grind them
+            </li>
+            <li>detected more tricks: shuvit, tippie toe, casper, anti-casper, big air, aussie-spin, revert, nail slide, dark
+            5-0, dark nosegrind
+            </li>
+          </ul><a class="perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-1/">🔗</a>
         </article>
       </section>
       <footer>
-        <p>
-          <a href="projects/">↶ Projects</a>
+        <p class="navtags">
+          <a class="tag" title="newer news" href="news/nitro-thrash/">&lt;</a> <span class="navpage">2</span> <a class=
+          "tag disabled">&gt;</a>
         </p>
       </footer>
     </div>
