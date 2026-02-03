@@ -176,6 +176,8 @@ article span {
 article p {
 	text-align: justify;
 	line-height: 1.65rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 article p .centered {

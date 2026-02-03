@@ -1,0 +1,1118 @@
+[1mdiff --git a/news/2/index.html b/news/2/index.html[m
+[1mindex 6a8f891..99e0134 100644[m
+[1m--- a/news/2/index.html[m
+[1m+++ b/news/2/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/3/index.html b/news/3/index.html[m
+[1mindex 938df32..83faf05 100644[m
+[1m--- a/news/3/index.html[m
+[1m+++ b/news/3/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/3drad-games/3drad-games/index.html b/news/3drad-games/3drad-games/index.html[m
+[1mindex 770a9ff..ec12366 100644[m
+[1m--- a/news/3drad-games/3drad-games/index.html[m
+[1m+++ b/news/3drad-games/3drad-games/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/3drad-games/index.html b/news/3drad-games/index.html[m
+[1mindex 7d22313..c65b885 100644[m
+[1m--- a/news/3drad-games/index.html[m
+[1m+++ b/news/3drad-games/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/4/index.html b/news/4/index.html[m
+[1mindex e7527dd..c89b9c2 100644[m
+[1m--- a/news/4/index.html[m
+[1m+++ b/news/4/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/5/index.html b/news/5/index.html[m
+[1mindex bc608c0..0bb5968 100644[m
+[1m--- a/news/5/index.html[m
+[1m+++ b/news/5/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/index.html b/news/index.html[m
+[1mindex da659b8..53f69c7 100644[m
+[1m--- a/news/index.html[m
+[1m+++ b/news/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/2/index.html b/news/nitro-thrash/2/index.html[m
+[1mindex c308162..ab38dc4 100644[m
+[1m--- a/news/nitro-thrash/2/index.html[m
+[1m+++ b/news/nitro-thrash/2/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/index.html b/news/nitro-thrash/index.html[m
+[1mindex 7e00181..7a91ea6 100644[m
+[1m--- a/news/nitro-thrash/index.html[m
+[1m+++ b/news/nitro-thrash/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-01/index.html b/news/nitro-thrash/nitro-thrash-status-01/index.html[m
+[1mindex 387fe74..1873593 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-01/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-01/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-02/index.html b/news/nitro-thrash/nitro-thrash-status-02/index.html[m
+[1mindex b94a333..83131a2 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-02/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-02/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-03/index.html b/news/nitro-thrash/nitro-thrash-status-03/index.html[m
+[1mindex 69ee13f..86fd354 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-03/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-03/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-04/index.html b/news/nitro-thrash/nitro-thrash-status-04/index.html[m
+[1mindex 8c8bdc5..39d0546 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-04/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-04/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-05/index.html b/news/nitro-thrash/nitro-thrash-status-05/index.html[m
+[1mindex 19467dc..d0bbda1 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-05/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-05/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-06/index.html b/news/nitro-thrash/nitro-thrash-status-06/index.html[m
+[1mindex 80076a8..f96bbb1 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-06/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-06/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-07/index.html b/news/nitro-thrash/nitro-thrash-status-07/index.html[m
+[1mindex f80cecd..17913e1 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-07/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-07/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-08/index.html b/news/nitro-thrash/nitro-thrash-status-08/index.html[m
+[1mindex 1635867..4c23c48 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-08/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-08/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-09/index.html b/news/nitro-thrash/nitro-thrash-status-09/index.html[m
+[1mindex 7298a84..a493444 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-09/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-09/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash-status-10/index.html b/news/nitro-thrash/nitro-thrash-status-10/index.html[m
+[1mindex 2673910..fec55f3 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash-status-10/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash-status-10/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/nitro-thrash/nitro-thrash/index.html b/news/nitro-thrash/nitro-thrash/index.html[m
+[1mindex 05d1799..1c8988e 100644[m
+[1m--- a/news/nitro-thrash/nitro-thrash/index.html[m
+[1m+++ b/news/nitro-thrash/nitro-thrash/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/robo-hockey-league/index.html b/news/robo-hockey-league/index.html[m
+[1mindex 10dd0e2..80efa28 100644[m
+[1m--- a/news/robo-hockey-league/index.html[m
+[1m+++ b/news/robo-hockey-league/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/robo-hockey-league/robo-hockey-league/index.html b/news/robo-hockey-league/robo-hockey-league/index.html[m
+[1mindex 90bb776..8bf5887 100644[m
+[1m--- a/news/robo-hockey-league/robo-hockey-league/index.html[m
+[1m+++ b/news/robo-hockey-league/robo-hockey-league/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/umk3-move-list/index.html b/news/umk3-move-list/index.html[m
+[1mindex 29d9ee1..49b1496 100644[m
+[1m--- a/news/umk3-move-list/index.html[m
+[1m+++ b/news/umk3-move-list/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/umk3-move-list/umk3-move-list/index.html b/news/umk3-move-list/umk3-move-list/index.html[m
+[1mindex ab77afd..3e64ab1 100644[m
+[1m--- a/news/umk3-move-list/umk3-move-list/index.html[m
+[1m+++ b/news/umk3-move-list/umk3-move-list/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vb6-games/index.html b/news/vb6-games/index.html[m
+[1mindex 33973fb..46950e1 100644[m
+[1m--- a/news/vb6-games/index.html[m
+[1m+++ b/news/vb6-games/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vb6-games/vb6-games/index.html b/news/vb6-games/vb6-games/index.html[m
+[1mindex 4d24251..0cdca9c 100644[m
+[1m--- a/news/vb6-games/vb6-games/index.html[m
+[1m+++ b/news/vb6-games/vb6-games/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vb6-utils/index.html b/news/vb6-utils/index.html[m
+[1mindex 63a2e51..e8cec53 100644[m
+[1m--- a/news/vb6-utils/index.html[m
+[1m+++ b/news/vb6-utils/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vb6-utils/vb6-utils/index.html b/news/vb6-utils/vb6-utils/index.html[m
+[1mindex b8f3873..6f18efb 100644[m
+[1m--- a/news/vb6-utils/vb6-utils/index.html[m
+[1m+++ b/news/vb6-utils/vb6-utils/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/2/index.html b/news/vektor-prix/2/index.html[m
+[1mindex 455423c..470ca3d 100644[m
+[1m--- a/news/vektor-prix/2/index.html[m
+[1m+++ b/news/vektor-prix/2/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/a-week-in-review/index.html b/news/vektor-prix/a-week-in-review/index.html[m
+[1mindex 28e6e57..9433957 100644[m
+[1m--- a/news/vektor-prix/a-week-in-review/index.html[m
+[1m+++ b/news/vektor-prix/a-week-in-review/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/added-local-splitscreen/index.html b/news/vektor-prix/added-local-splitscreen/index.html[m
+[1mindex 2a8fcec..80cece1 100644[m
+[1m--- a/news/vektor-prix/added-local-splitscreen/index.html[m
+[1m+++ b/news/vektor-prix/added-local-splitscreen/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/christmas-week-progress/index.html b/news/vektor-prix/christmas-week-progress/index.html[m
+[1mindex 6bba4c1..28af47e 100644[m
+[1m--- a/news/vektor-prix/christmas-week-progress/index.html[m
+[1m+++ b/news/vektor-prix/christmas-week-progress/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/happy-new-year/index.html b/news/vektor-prix/happy-new-year/index.html[m
+[1mindex e1d8720..db7f577 100644[m
+[1m--- a/news/vektor-prix/happy-new-year/index.html[m
+[1m+++ b/news/vektor-prix/happy-new-year/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/hundreds-of-changes/index.html b/news/vektor-prix/hundreds-of-changes/index.html[m
+[1mindex 9f4b959..85612f9 100644[m
+[1m--- a/news/vektor-prix/hundreds-of-changes/index.html[m
+[1m+++ b/news/vektor-prix/hundreds-of-changes/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/index.html b/news/vektor-prix/index.html[m
+[1mindex a867475..f7c3251 100644[m
+[1m--- a/news/vektor-prix/index.html[m
+[1m+++ b/news/vektor-prix/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/now-on-greenlight/index.html b/news/vektor-prix/now-on-greenlight/index.html[m
+[1mindex 99cdade..ca4a5c4 100644[m
+[1m--- a/news/vektor-prix/now-on-greenlight/index.html[m
+[1m+++ b/news/vektor-prix/now-on-greenlight/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/vektor-prix/two-weeks-in-one/index.html b/news/vektor-prix/two-weeks-in-one/index.html[m
+[1mindex 79d9aff..3e3f0d5 100644[m
+[1m--- a/news/vektor-prix/two-weeks-in-one/index.html[m
+[1m+++ b/news/vektor-prix/two-weeks-in-one/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/web-stuff/a-fresh-new-website/index.html b/news/web-stuff/a-fresh-new-website/index.html[m
+[1mindex 4086b67..d2330f5 100644[m
+[1m--- a/news/web-stuff/a-fresh-new-website/index.html[m
+[1m+++ b/news/web-stuff/a-fresh-new-website/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/web-stuff/fixed-the-news/index.html b/news/web-stuff/fixed-the-news/index.html[m
+[1mindex 136072c..d610aeb 100644[m
+[1m--- a/news/web-stuff/fixed-the-news/index.html[m
+[1m+++ b/news/web-stuff/fixed-the-news/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/web-stuff/index.html b/news/web-stuff/index.html[m
+[1mindex fe5a6a2..c4001d9 100644[m
+[1m--- a/news/web-stuff/index.html[m
+[1m+++ b/news/web-stuff/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/news/web-stuff/resurrection/index.html b/news/web-stuff/resurrection/index.html[m
+[1mindex 1da9b5d..9cc72e1 100644[m
+[1m--- a/news/web-stuff/resurrection/index.html[m
+[1m+++ b/news/web-stuff/resurrection/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/2/index.html b/projects/2/index.html[m
+[1mindex 4e87fbe..7c766e7 100644[m
+[1m--- a/projects/2/index.html[m
+[1m+++ b/projects/2/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/3drad-games/index.html b/projects/3drad-games/index.html[m
+[1mindex fa424f5..192e618 100644[m
+[1m--- a/projects/3drad-games/index.html[m
+[1m+++ b/projects/3drad-games/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/8-bit-synth/index.html b/projects/8-bit-synth/index.html[m
+[1mindex f7c8a11..c00e3ec 100644[m
+[1m--- a/projects/8-bit-synth/index.html[m
+[1m+++ b/projects/8-bit-synth/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/blooprent/index.html b/projects/blooprent/index.html[m
+[1mindex 6e10e85..fd3dde2 100644[m
+[1m--- a/projects/blooprent/index.html[m
+[1m+++ b/projects/blooprent/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/game/index.html b/projects/game/index.html[m
+[1mindex 661bb4e..fe2b5a4 100644[m
+[1m--- a/projects/game/index.html[m
+[1m+++ b/projects/game/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/goldeneye-source/index.html b/projects/goldeneye-source/index.html[m
+[1mindex c3f0940..ee70ae0 100644[m
+[1m--- a/projects/goldeneye-source/index.html[m
+[1m+++ b/projects/goldeneye-source/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/gta-iv-mods/index.html b/projects/gta-iv-mods/index.html[m
+[1mindex 391a26c..208e438 100644[m
+[1m--- a/projects/gta-iv-mods/index.html[m
+[1m+++ b/projects/gta-iv-mods/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/hardware/index.html b/projects/hardware/index.html[m
+[1mindex 5366e97..3f10790 100644[m
+[1m--- a/projects/hardware/index.html[m
+[1m+++ b/projects/hardware/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/hidden/index.html b/projects/hidden/index.html[m
+[1mindex f7228e4..1acc7b6 100644[m
+[1m--- a/projects/hidden/index.html[m
+[1m+++ b/projects/hidden/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/index.html b/projects/index.html[m
+[1mindex cc38191..a28c833 100644[m
+[1m--- a/projects/index.html[m
+[1m+++ b/projects/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/bait-box/index.html b/projects/minecraft-mods/bait-box/index.html[m
+[1mindex 39f71f1..a489ae2 100644[m
+[1m--- a/projects/minecraft-mods/bait-box/index.html[m
+[1m+++ b/projects/minecraft-mods/bait-box/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/cannon-powder/index.html b/projects/minecraft-mods/cannon-powder/index.html[m
+[1mindex 1283232..ae411a7 100644[m
+[1m--- a/projects/minecraft-mods/cannon-powder/index.html[m
+[1m+++ b/projects/minecraft-mods/cannon-powder/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/creepy-kingdom/index.html b/projects/minecraft-mods/creepy-kingdom/index.html[m
+[1mindex e96bb27..cac614d 100644[m
+[1m--- a/projects/minecraft-mods/creepy-kingdom/index.html[m
+[1m+++ b/projects/minecraft-mods/creepy-kingdom/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/finiteliquid/index.html b/projects/minecraft-mods/finiteliquid/index.html[m
+[1mindex b868a5d..9aba159 100644[m
+[1m--- a/projects/minecraft-mods/finiteliquid/index.html[m
+[1m+++ b/projects/minecraft-mods/finiteliquid/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/glass-light/index.html b/projects/minecraft-mods/glass-light/index.html[m
+[1mindex fd4cba6..617d025 100644[m
+[1m--- a/projects/minecraft-mods/glass-light/index.html[m
+[1m+++ b/projects/minecraft-mods/glass-light/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/index.html b/projects/minecraft-mods/index.html[m
+[1mindex aa55b4f..bea90e4 100644[m
+[1m--- a/projects/minecraft-mods/index.html[m
+[1m+++ b/projects/minecraft-mods/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/insta-wire/index.html b/projects/minecraft-mods/insta-wire/index.html[m
+[1mindex 20f7065..34ac6b3 100644[m
+[1m--- a/projects/minecraft-mods/insta-wire/index.html[m
+[1m+++ b/projects/minecraft-mods/insta-wire/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/installation-instructions/index.html b/projects/minecraft-mods/installation-instructions/index.html[m
+[1mindex 1ac2e5c..e1054aa 100644[m
+[1m--- a/projects/minecraft-mods/installation-instructions/index.html[m
+[1m+++ b/projects/minecraft-mods/installation-instructions/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/motion-detector/index.html b/projects/minecraft-mods/motion-detector/index.html[m
+[1mindex 6d0812d..f3a7442 100644[m
+[1m--- a/projects/minecraft-mods/motion-detector/index.html[m
+[1m+++ b/projects/minecraft-mods/motion-detector/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/pitfall/index.html b/projects/minecraft-mods/pitfall/index.html[m
+[1mindex 7f5385f..13d1aeb 100644[m
+[1m--- a/projects/minecraft-mods/pitfall/index.html[m
+[1m+++ b/projects/minecraft-mods/pitfall/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/rope/index.html b/projects/minecraft-mods/rope/index.html[m
+[1mindex a8b4ee6..b5aa777 100644[m
+[1m--- a/projects/minecraft-mods/rope/index.html[m
+[1m+++ b/projects/minecraft-mods/rope/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/telescope/index.html b/projects/minecraft-mods/telescope/index.html[m
+[1mindex b3ed2d6..42bd59c 100644[m
+[1m--- a/projects/minecraft-mods/telescope/index.html[m
+[1m+++ b/projects/minecraft-mods/telescope/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/the-spider-queen/index.html b/projects/minecraft-mods/the-spider-queen/index.html[m
+[1mindex c754442..7ceae09 100644[m
+[1m--- a/projects/minecraft-mods/the-spider-queen/index.html[m
+[1m+++ b/projects/minecraft-mods/the-spider-queen/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/transmitter/index.html b/projects/minecraft-mods/transmitter/index.html[m
+[1mindex 3259868..f78ad0c 100644[m
+[1m--- a/projects/minecraft-mods/transmitter/index.html[m
+[1m+++ b/projects/minecraft-mods/transmitter/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/turret/index.html b/projects/minecraft-mods/turret/index.html[m
+[1mindex d85fefb..cb5be88 100644[m
+[1m--- a/projects/minecraft-mods/turret/index.html[m
+[1m+++ b/projects/minecraft-mods/turret/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/minecraft-mods/vertical-redstone/index.html b/projects/minecraft-mods/vertical-redstone/index.html[m
+[1mindex a0eff23..6e01857 100644[m
+[1m--- a/projects/minecraft-mods/vertical-redstone/index.html[m
+[1m+++ b/projects/minecraft-mods/vertical-redstone/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/mod/index.html b/projects/mod/index.html[m
+[1mindex 3d21bfc..1291f0a 100644[m
+[1m--- a/projects/mod/index.html[m
+[1m+++ b/projects/mod/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/nitro-thrash/index.html b/projects/nitro-thrash/index.html[m
+[1mindex c03b216..9e96939 100644[m
+[1m--- a/projects/nitro-thrash/index.html[m
+[1m+++ b/projects/nitro-thrash/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/robo-hockey-league/index.html b/projects/robo-hockey-league/index.html[m
+[1mindex 28da3ef..56bc8d7 100644[m
+[1m--- a/projects/robo-hockey-league/index.html[m
+[1m+++ b/projects/robo-hockey-league/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/software/index.html b/projects/software/index.html[m
+[1mindex c8e2cf7..446c47e 100644[m
+[1m--- a/projects/software/index.html[m
+[1m+++ b/projects/software/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/umk3-move-list-plugin/index.html b/projects/umk3-move-list-plugin/index.html[m
+[1mindex 202f54e..749b08e 100644[m
+[1m--- a/projects/umk3-move-list-plugin/index.html[m
+[1m+++ b/projects/umk3-move-list-plugin/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-games/ghetto-tanks/index.html b/projects/vb6-games/ghetto-tanks/index.html[m
+[1mindex 51fd9f1..728b480 100644[m
+[1m--- a/projects/vb6-games/ghetto-tanks/index.html[m
+[1m+++ b/projects/vb6-games/ghetto-tanks/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-games/index.html b/projects/vb6-games/index.html[m
+[1mindex fea29ac..ec6e13e 100644[m
+[1m--- a/projects/vb6-games/index.html[m
+[1m+++ b/projects/vb6-games/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-games/shooter/index.html b/projects/vb6-games/shooter/index.html[m
+[1mindex f342132..34eef86 100644[m
+[1m--- a/projects/vb6-games/shooter/index.html[m
+[1m+++ b/projects/vb6-games/shooter/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-games/streets-rpg/index.html b/projects/vb6-games/streets-rpg/index.html[m
+[1mindex a43b503..678fb12 100644[m
+[1m--- a/projects/vb6-games/streets-rpg/index.html[m
+[1m+++ b/projects/vb6-games/streets-rpg/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-utils/discovery/index.html b/projects/vb6-utils/discovery/index.html[m
+[1mindex 84efc52..a8d951c 100644[m
+[1m--- a/projects/vb6-utils/discovery/index.html[m
+[1m+++ b/projects/vb6-utils/discovery/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-utils/early-graphics-programs/index.html b/projects/vb6-utils/early-graphics-programs/index.html[m
+[1mindex cad112b..38717da 100644[m
+[1m--- a/projects/vb6-utils/early-graphics-programs/index.html[m
+[1m+++ b/projects/vb6-utils/early-graphics-programs/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-utils/index.html b/projects/vb6-utils/index.html[m
+[1mindex ed8a606..3c55ba6 100644[m
+[1m--- a/projects/vb6-utils/index.html[m
+[1m+++ b/projects/vb6-utils/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-utils/macro/index.html b/projects/vb6-utils/macro/index.html[m
+[1mindex 5c27afa..b14db91 100644[m
+[1m--- a/projects/vb6-utils/macro/index.html[m
+[1m+++ b/projects/vb6-utils/macro/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-utils/mouse-overheating/index.html b/projects/vb6-utils/mouse-overheating/index.html[m
+[1mindex 4ab2bae..0ccf3a5 100644[m
+[1m--- a/projects/vb6-utils/mouse-overheating/index.html[m
+[1m+++ b/projects/vb6-utils/mouse-overheating/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vb6-utils/physics/index.html b/projects/vb6-utils/physics/index.html[m
+[1mindex 13f94a2..75eba1a 100644[m
+[1m--- a/projects/vb6-utils/physics/index.html[m
+[1m+++ b/projects/vb6-utils/physics/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/vektor-prix/index.html b/projects/vektor-prix/index.html[m
+[1mindex 9b2e130..1186801 100644[m
+[1m--- a/projects/vektor-prix/index.html[m
+[1m+++ b/projects/vektor-prix/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/projects/web-stuff/index.html b/projects/web-stuff/index.html[m
+[1mindex 541bdc3..f1242e7 100644[m
+[1m--- a/projects/web-stuff/index.html[m
+[1m+++ b/projects/web-stuff/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/socials/index.html b/socials/index.html[m
+[1mindex 69d506f..0f88107 100644[m
+[1m--- a/socials/index.html[m
+[1m+++ b/socials/index.html[m
+[36m@@ -197,6 +197,8 @@[m
+     article p {[m
+         text-align: justify;[m
+         line-height: 1.65rem;[m
+[32m+[m[32m        margin-top: 1rem;[m[41m[m
+[32m+[m[32m        margin-bottom: 1rem;[m[41m[m
+     }[m
+ [m
+     article p .centered {[m
+[1mdiff --git a/style.css b/style.css[m
+[1mindex f3485f0..5c3b930 100644[m
+[1m--- a/style.css[m
+[1m+++ b/style.css[m
+[36m@@ -176,6 +176,8 @@[m [marticle span {[m
+ article p {[m
+ 	text-align: justify;[m
+ 	line-height: 1.65rem;[m
+[32m+[m	[32mmargin-top: 1rem;[m[41m[m
+[32m+[m	[32mmargin-bottom: 1rem;[m[41m[m
+ }[m
+ [m
+ article p .centered {[m
