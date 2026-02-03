@@ -15,9 +15,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      djoslin :: UMK3 Move List
+      djoslin :: Nitro Thrash Status 07
     </title>
-    <base href="../../">
+    <base href="../../../">
     <style>
 
     :root {
@@ -513,70 +513,171 @@
         </h1>
       </div>
       <div class="links">
-        <a class="" href="news/">news</a> <a class="active" href="projects/">projects</a> <a class="" href=
+        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
         "socials/">socials</a>
       </div>
     </nav>
     <div>
       <section>
         <article>
+          <aside>
+            <a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
+          </aside>
           <h2>
-            UMK3 Move List
+            Nitro Thrash Status 07
+            <br>
+            <time datetime="2025-04-01">01 Apr 2025</time>
           </h2>
           <p>
-            I made a MAME 'scripted layout' for Ultimate Mortal Kombat 3 that displays a list of moves for each player on the
-            sides of the screen. This is because I built an arcade machine and loved playing it but hated remembering the moves
-            every month or two.
+            In the past month, I've made 39 commits.
           </p>
           <div class="mediabox">
-            <div class="aspect-ratio" style="padding-bottom: 62%;">
-              <img class="mediabox-media" id="mediabox-37-image" src="projects/umk3-move-list-plugin/media/umk3-1.png">
-              <img class="mediabox-fullscreen" id="mediabox-37-fullscreen" src="mediabox/fullscreen.png" onclick=
-              "fullscreenImage('37')"> <video class="mediabox-media" id="mediabox-37-webm" autoplay="" loop="" controls=""
-              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-37-youtube"
-              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-37-youtube"></iframe>
+            <div class="aspect-ratio" style="padding-bottom: 56%;">
+              <img class="mediabox-media" id="mediabox-19-image" src="" style="visibility:hidden"> <img class=
+              "mediabox-fullscreen" id="mediabox-19-fullscreen" src="mediabox/fullscreen.png" onclick="fullscreenImage('19')">
+              <video class="mediabox-media" id="mediabox-19-webm" autoplay="" loop="" controls="" muted="" src="" style=
+              "visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-19-youtube" frameborder="0"
+              allowfullscreen src="https://www.youtube.com/embed/9EI4FgayU9M" name="mediabox-19-youtube"></iframe>
             </div>
-            <div class="mediabox-thumbbox" id="mediabox-37-thumbbox">
-              <img class="mediabox-thumb mediabox-thumb-selected" src="projects/umk3-move-list-plugin/media/thumbs/umk3-1.png"
-              onclick="mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-1.png', this)"> <img class=
-              "mediabox-thumb" src="projects/umk3-move-list-plugin/media/thumbs/umk3-2.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-2.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-3.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-3.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-4.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-4.png', this)">
+            <div class="mediabox-thumbbox" id="mediabox-19-thumbbox">
+              <img class="mediabox-thumb mediabox-thumb-selected" src=
+              "projects/nitro-thrash/media/nt-status-7/thumbs/a-menu.png" onclick="mediaboxYoutube('19', '9EI4FgayU9M', this)">
+              <img class="mediabox-thumb" src="projects/nitro-thrash/media/nt-status-7/thumbs/grind.png" onclick=
+              "mediaboxYoutube('19', 'SMFVs8-kzKY', this)"> <img class="mediabox-thumb" src=
+              "projects/nitro-thrash/media/nt-status-7/thumbs/y-menu.png" onclick=
+              "mediaboxImage('19', 'projects/nitro-thrash/media/nt-status-7/y-menu.png', this)"> <img class="mediabox-thumb"
+              src="projects/nitro-thrash/media/nt-status-7/thumbs/z-level-select.png" onclick=
+              "mediaboxImage('19', 'projects/nitro-thrash/media/nt-status-7/z-level-select.png', this)">
             </div>
           </div>
           <p>
-            To install:
+            Here are some notable changes I've made to the game:
+          </p>
+          <p>
+            Levels:
           </p>
           <ul>
-            <li>unzip <code>umk3.zip</code>
+            <li>Started creating tutorial level
             </li>
-            <li>move the <code>umk3</code> folder into <code>mame/artwork</code>
+          </ul>
+          <p>
+            Vehicles:
+          </p>
+          <ul>
+            <li>Updates to capo paintjobs
+            </li>
+          </ul>
+          <p>
+            Gameplay:
+          </p>
+          <ul>
+            <li>Jumping during a grind resets the maximum score for that grind
+            </li>
+            <li>Changed uprighting code to prevent uprighting during manuals
+            </li>
+          </ul>
+          <p>
+            Missions / Gamemodes:
+          </p>
+          <ul>
+            <li>Made some HUD elements more clear
+            </li>
+            <li>Added lap counter HUD to racing
+            </li>
+          </ul>
+          <p>
+            Misc:
+          </p>
+          <ul>
+            <li>Rewrote main menu system
+            </li>
+            <li>Added level select UI
+            </li>
+            <li>Added full screen transition animations
+            </li>
+            <li>Made replay system more versatile
+            </li>
+            <li>Added replays to the background of the main menu
+            </li>
+            <li>Cleared full screen vignette in various scenarios
+            </li>
+            <li>Added game save system to save various stats and completed missions, etc
+            </li>
+            <li>Added more trees and foilage
+            </li>
+            <li>Started developing tutorial
+            </li>
+            <li>Made the audio system more advanced
+            </li>
+            <li>Redid how HUD scaling and layout works
+            </li>
+            <li>Added big 3d arrow to HUD
             </li>
           </ul>
           <br>
-          <p>
-            It might just work immediately, if not make sure your <code>mame.ini</code> has these lines:
-          </p>
-          <pre><code>lua 1
-plugins layout
-</code></pre>
+          <hr>
+
           <br>
           <p>
-            You can download the files I used to generate the images <a href=
-            "projects/umk3-move-list-plugin/files/umk3-bezel-src.zip">here</a>.
+            So far 16 bands have signed up to be in Nitro Thrash!
+            <br>
+            Follow them, listen to them, and go to their shows!
           </p>
-          <br>
-          <h3>
-            <a href="projects/umk3-move-list-plugin/files/umk3.zip">Download Scripted Layout</a>
-          </h3>
+          <ul>
+            <li>
+              <a href="https://www.chilledmonkeybrains.org/">Chilled Monkey Brains</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/CasketCulture">Cryptid Culture</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/dialdrive">Dial Drive</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/FuakataOfficial">FUAKATA</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/ifimluckyfl">If I'm Lucky</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/mikeandthenerve">Mike & the Nerve</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/mulvaband">Mulva</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/neverenderflorida/">Never Ender</a>
+            </li>
+            <li>
+              <a href="https://nothinglosttx.com/">Nothing Lost</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/obt_band/">Orange Blossom Trail</a>
+            </li>
+            <li>
+              <a href="https://www.pangolinfl.com/">Pangolin</a>
+            </li>
+            <li>
+              <a href="https://pettytheftsfl.bandcamp.com/">Petty Thefts</a>
+            </li>
+            <li>
+              <a href="https://linktr.ee/plasticflamingos">Plastic Flamingos</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/robotsprevail/">Robots Prevail</a>
+            </li>
+            <li>
+              <a href="https://www.thelongesthall.com/">The Longest Hall</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/whitelighterclubband/">White Lighter Club</a>
+            </li>
+          </ul><a class="perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-07/">🔗</a>
         </article>
       </section>
       <footer>
         <p>
-          <a href="projects/">↶ Projects</a>
+          <a href="news/">↶ News</a>
         </p>
       </footer>
     </div>

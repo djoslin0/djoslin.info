@@ -15,9 +15,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      djoslin :: UMK3 Move List
+      djoslin :: Nitro Thrash Status 04
     </title>
-    <base href="../../">
+    <base href="../../../">
     <style>
 
     :root {
@@ -501,9 +501,6 @@
     </style>
     <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
   </head>
   <body>
     <nav>
@@ -513,70 +510,114 @@
         </h1>
       </div>
       <div class="links">
-        <a class="" href="news/">news</a> <a class="active" href="projects/">projects</a> <a class="" href=
+        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
         "socials/">socials</a>
       </div>
     </nav>
     <div>
       <section>
         <article>
+          <aside>
+            <a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
+          </aside>
           <h2>
-            UMK3 Move List
+            Nitro Thrash Status 04
+            <br>
+            <time datetime="2024-12-28">28 Dec 2024</time>
           </h2>
           <p>
-            I made a MAME 'scripted layout' for Ultimate Mortal Kombat 3 that displays a list of moves for each player on the
-            sides of the screen. This is because I built an arcade machine and loved playing it but hated remembering the moves
-            every month or two.
+            In the past month, I've made 62 commits.
           </p>
-          <div class="mediabox">
-            <div class="aspect-ratio" style="padding-bottom: 62%;">
-              <img class="mediabox-media" id="mediabox-37-image" src="projects/umk3-move-list-plugin/media/umk3-1.png">
-              <img class="mediabox-fullscreen" id="mediabox-37-fullscreen" src="mediabox/fullscreen.png" onclick=
-              "fullscreenImage('37')"> <video class="mediabox-media" id="mediabox-37-webm" autoplay="" loop="" controls=""
-              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-37-youtube"
-              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-37-youtube"></iframe>
-            </div>
-            <div class="mediabox-thumbbox" id="mediabox-37-thumbbox">
-              <img class="mediabox-thumb mediabox-thumb-selected" src="projects/umk3-move-list-plugin/media/thumbs/umk3-1.png"
-              onclick="mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-1.png', this)"> <img class=
-              "mediabox-thumb" src="projects/umk3-move-list-plugin/media/thumbs/umk3-2.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-2.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-3.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-3.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-4.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-4.png', this)">
-            </div>
+          <div class="media-space">
+            <img class="inside-aspect-ratio" src="projects/nitro-thrash/media/status-4.png">
           </div>
           <p>
-            To install:
+            Here are some notable changes I've made to the game:
+          </p>
+          <p>
+            Levels:
           </p>
           <ul>
-            <li>unzip <code>umk3.zip</code>
+            <li>Designed most of level 3, gameplay-wise.
             </li>
-            <li>move the <code>umk3</code> folder into <code>mame/artwork</code>
+            <li>Added a bit more detail to level 2
             </li>
           </ul>
-          <br>
           <p>
-            It might just work immediately, if not make sure your <code>mame.ini</code> has these lines:
+            Vehicles:
           </p>
-          <pre><code>lua 1
-plugins layout
-</code></pre>
-          <br>
+          <ul>
+            <li>Added a shiny finish as a player cosmetic
+            </li>
+            <li>Added new paintjobs for Dambro and Ambassador
+            </li>
+            <li>Enhanced brake light shader to be more noticable
+            </li>
+          </ul>
           <p>
-            You can download the files I used to generate the images <a href=
-            "projects/umk3-move-list-plugin/files/umk3-bezel-src.zip">here</a>.
+            Gameplay:
           </p>
-          <br>
-          <h3>
-            <a href="projects/umk3-move-list-plugin/files/umk3.zip">Download Scripted Layout</a>
-          </h3>
+          <ul>
+            <li>Smashing into a wall now counts as a 'crash' and cancels your current trick and displays a cracked screen
+            </li>
+            <li>Made tilting 'into' a grind slightly more powerful
+            </li>
+            <li>Allowed upside-down and sideways grinds to count
+            </li>
+            <li>Fixed a physics bug where you would rotate too much when hitting a wall while driving on the ground
+            </li>
+            <li>Increased coyote-time for grounded jump direction
+            </li>
+            <li>Cars now stick to walls consistently when driving up them
+            </li>
+            <li>Added manual spins as a trick
+            </li>
+            <li>Fixed tippie-toe detection when very low to the ground
+            </li>
+            <li>Tuned score system to reward non-grinds more
+            </li>
+          </ul>
+          <p>
+            Missions:
+          </p>
+          <ul>
+            <li>Added 'collect Nitro' mission with big floating letters
+            </li>
+            <li>Added 'collect Combo' mission with big floating letters
+            </li>
+            <li>Added high score mission
+            </li>
+            <li>Fixed mission preview for 'shutdown lackluster' mission
+            </li>
+          </ul>
+          <p>
+            Misc:
+          </p>
+          <ul>
+            <li>Recreated all settings menus for the newer menu system
+            </li>
+            <li>Added FOV slider
+            </li>
+            <li>Made using nitro increase your FOV and display speed lines
+            </li>
+            <li>Added misison failed, mission success, combo failed, teleport, and spraypaint sound effects
+            </li>
+            <li>Fixed a networking bug that caused players to go invisible when changing levels
+            </li>
+            <li>Added a new camera mode for replay mode that orbits the target
+            </li>
+            <li>Added button sprites to bind menu
+            </li>
+            <li>Added a bunch of missing button bind sprites
+            </li>
+            <li>Fixed some problems with shadows
+            </li>
+          </ul><a class="perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-04/">🔗</a>
         </article>
       </section>
       <footer>
         <p>
-          <a href="projects/">↶ Projects</a>
+          <a href="news/">↶ News</a>
         </p>
       </footer>
     </div>

@@ -15,9 +15,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      djoslin :: UMK3 Move List
+      djoslin :: Nitro Thrash Status 01
     </title>
-    <base href="../../">
+    <base href="../../../">
     <style>
 
     :root {
@@ -501,9 +501,6 @@
     </style>
     <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
   </head>
   <body>
     <nav>
@@ -513,70 +510,97 @@
         </h1>
       </div>
       <div class="links">
-        <a class="" href="news/">news</a> <a class="active" href="projects/">projects</a> <a class="" href=
+        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
         "socials/">socials</a>
       </div>
     </nav>
     <div>
       <section>
         <article>
+          <aside>
+            <a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
+          </aside>
           <h2>
-            UMK3 Move List
+            Nitro Thrash Status 01
+            <br>
+            <time datetime="2024-09-24">24 Sep 2024</time>
           </h2>
           <p>
-            I made a MAME 'scripted layout' for Ultimate Mortal Kombat 3 that displays a list of moves for each player on the
-            sides of the screen. This is because I built an arcade machine and loved playing it but hated remembering the moves
-            every month or two.
+            In the past month, I've made 137 commits.
           </p>
-          <div class="mediabox">
-            <div class="aspect-ratio" style="padding-bottom: 62%;">
-              <img class="mediabox-media" id="mediabox-37-image" src="projects/umk3-move-list-plugin/media/umk3-1.png">
-              <img class="mediabox-fullscreen" id="mediabox-37-fullscreen" src="mediabox/fullscreen.png" onclick=
-              "fullscreenImage('37')"> <video class="mediabox-media" id="mediabox-37-webm" autoplay="" loop="" controls=""
-              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-37-youtube"
-              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-37-youtube"></iframe>
-            </div>
-            <div class="mediabox-thumbbox" id="mediabox-37-thumbbox">
-              <img class="mediabox-thumb mediabox-thumb-selected" src="projects/umk3-move-list-plugin/media/thumbs/umk3-1.png"
-              onclick="mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-1.png', this)"> <img class=
-              "mediabox-thumb" src="projects/umk3-move-list-plugin/media/thumbs/umk3-2.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-2.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-3.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-3.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-4.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-4.png', this)">
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/nitro-thrash/media/status-1.mp4"></video>
             </div>
           </div>
           <p>
-            To install:
+            Here are some notable changes I've made to the game:
+          </p>
+          <p>
+            created mission system
           </p>
           <ul>
-            <li>unzip <code>umk3.zip</code>
+            <li>currently 4 types of missions: Trick-over-gap, Own-the-spot, Timed-total-score, Destruction
             </li>
-            <li>move the <code>umk3</code> folder into <code>mame/artwork</code>
+            <li>added painted arrows when mission is active
             </li>
           </ul>
-          <br>
           <p>
-            It might just work immediately, if not make sure your <code>mame.ini</code> has these lines:
+            created a mission select preview menu
           </p>
-          <pre><code>lua 1
-plugins layout
-</code></pre>
-          <br>
+          <ul>
+            <li>shows preview of a replay from multiple camera angles
+            </li>
+          </ul>
           <p>
-            You can download the files I used to generate the images <a href=
-            "projects/umk3-move-list-plugin/files/umk3-bezel-src.zip">here</a>.
+            created a breakable lackluster sign
           </p>
-          <br>
-          <h3>
-            <a href="projects/umk3-move-list-plugin/files/umk3.zip">Download Scripted Layout</a>
-          </h3>
+          <ul>
+            <li>created a system to synchronize each letter online
+            </li>
+          </ul>
+          <p>
+            misc:
+          </p>
+          <ul>
+            <li>redesigned the heads up display
+            </li>
+            <li>created a new pause menu
+            </li>
+            <li>a ton of small model adjustments to level02
+            </li>
+            <li>added 57 gaps to level02 (many more to go)
+            </li>
+            <li>a lot of tweaks to make physics more consistent
+            </li>
+            <li>split up the levels and made a temporary main menu
+            </li>
+            <li>added rock/grass/wood particles
+            </li>
+            <li>rewrote out-of-bounds detection/teleport
+            </li>
+            <li>optimized out 1.5kb of allocations every frame (now doesn't allocate at all during a steady-state)
+            </li>
+            <li>added save/load position buttons to easily retry a trick
+            </li>
+            <li>added wall-plant support / manual support to gaps
+            </li>
+            <li>improved camera behavior
+            </li>
+            <li>added fountain and tire impact sound
+            </li>
+            <li>made dumpster lids bounce when you grind them
+            </li>
+            <li>detected more tricks: shuvit, tippie toe, casper, anti-casper, big air, aussie-spin, revert, nail slide, dark
+            5-0, dark nosegrind
+            </li>
+          </ul><a class="perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-01/">🔗</a>
         </article>
       </section>
       <footer>
         <p>
-          <a href="projects/">↶ Projects</a>
+          <a href="news/">↶ News</a>
         </p>
       </footer>
     </div>

@@ -15,9 +15,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-      djoslin :: UMK3 Move List
+      djoslin :: Nitro Thrash Status 02
     </title>
-    <base href="../../">
+    <base href="../../../">
     <style>
 
     :root {
@@ -501,9 +501,6 @@
     </style>
     <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
-    <link rel="stylesheet" href="mediabox/mediabox.css">
-    <script type="text/javascript" src="mediabox/mediabox.js">
-    </script>
   </head>
   <body>
     <nav>
@@ -513,70 +510,149 @@
         </h1>
       </div>
       <div class="links">
-        <a class="" href="news/">news</a> <a class="active" href="projects/">projects</a> <a class="" href=
+        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
         "socials/">socials</a>
       </div>
     </nav>
     <div>
       <section>
         <article>
+          <aside>
+            <a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
+          </aside>
           <h2>
-            UMK3 Move List
+            Nitro Thrash Status 02
+            <br>
+            <time datetime="2024-10-27">27 Oct 2024</time>
           </h2>
           <p>
-            I made a MAME 'scripted layout' for Ultimate Mortal Kombat 3 that displays a list of moves for each player on the
-            sides of the screen. This is because I built an arcade machine and loved playing it but hated remembering the moves
-            every month or two.
+            Steam page launched - <a href="https://store.steampowered.com/app/3290330/Nitro_Thrash/">wishlist it</a>!
           </p>
-          <div class="mediabox">
-            <div class="aspect-ratio" style="padding-bottom: 62%;">
-              <img class="mediabox-media" id="mediabox-37-image" src="projects/umk3-move-list-plugin/media/umk3-1.png">
-              <img class="mediabox-fullscreen" id="mediabox-37-fullscreen" src="mediabox/fullscreen.png" onclick=
-              "fullscreenImage('37')"> <video class="mediabox-media" id="mediabox-37-webm" autoplay="" loop="" controls=""
-              muted="" src="" style="visibility:hidden"></video> <iframe class="mediabox-media" id="mediabox-37-youtube"
-              frameborder="0" allowfullscreen src="" style="visibility:hidden" name="mediabox-37-youtube"></iframe>
-            </div>
-            <div class="mediabox-thumbbox" id="mediabox-37-thumbbox">
-              <img class="mediabox-thumb mediabox-thumb-selected" src="projects/umk3-move-list-plugin/media/thumbs/umk3-1.png"
-              onclick="mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-1.png', this)"> <img class=
-              "mediabox-thumb" src="projects/umk3-move-list-plugin/media/thumbs/umk3-2.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-2.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-3.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-3.png', this)"> <img class="mediabox-thumb" src=
-              "projects/umk3-move-list-plugin/media/thumbs/umk3-4.png" onclick=
-              "mediaboxImage('37', 'projects/umk3-move-list-plugin/media/umk3-4.png', this)">
+          <p>
+            In the past month, I've made 107 commits.
+          </p>
+          <div class="media-space">
+            <div class="aspect-ratio-16-9">
+              <video controls="" muted="" loop="" preload="metadata" class="media-frame" src=
+              "projects/nitro-thrash/media/status-2.mp4"></video>
             </div>
           </div>
           <p>
-            To install:
+            Here are some notable changes I've made to the game:
+          </p>
+          <p>
+            Added a new car, the "Ambassador"
+          </p>
+          <p>
+            Rewrote the car customization system:
           </p>
           <ul>
-            <li>unzip <code>umk3.zip</code>
+            <li>Three different paint styles for each car
             </li>
-            <li>move the <code>umk3</code> folder into <code>mame/artwork</code>
+            <li>Players can pick a primary and secondary color
+            </li>
+            <li>Added a police lightbar as a topper (with siren honk sound)
+            </li>
+            <li>Added police decals to ambassador
+            </li>
+            <li>Brake lights now light up
+            </li>
+            <li>Two different wheels to choose from so far
+            </li>
+            <li>Added prototype garage menu for customization
+            </li>
+            <li>Moved car information outside of unity and into model files
+            </li>
+            <li>Various physics differences will apply when you change your car body
+            </li>
+            <li>Vehicles now load asynchronously which allows for "infinite" options
             </li>
           </ul>
-          <br>
           <p>
-            It might just work immediately, if not make sure your <code>mame.ini</code> has these lines:
+            Created a new replay system:
           </p>
-          <pre><code>lua 1
-plugins layout
-</code></pre>
-          <br>
+          <ul>
+            <li>Always recording
+            </li>
+            <li>Can rewind time up to three minutes
+            </li>
+            <li>Supports recording every vehicle and moving object
+            </li>
+            <li>Works in multiplayer
+            </li>
+            <li>Can save/load a replay file
+            </li>
+            <li>Can trim your current replay file
+            </li>
+            <li>Added three different camera modes
+            </li>
+          </ul>
           <p>
-            You can download the files I used to generate the images <a href=
-            "projects/umk3-move-list-plugin/files/umk3-bezel-src.zip">here</a>.
+            Level2:
           </p>
-          <br>
-          <h3>
-            <a href="projects/umk3-move-list-plugin/files/umk3.zip">Download Scripted Layout</a>
-          </h3>
+          <ul>
+            <li>Added a bunch of gaps
+            </li>
+            <li>Added a mission
+            </li>
+            <li>Redesigned grass section near gas station
+            </li>
+            <li>Fixed up clipping
+            </li>
+          </ul>
+          <p>
+            Bugfixes:
+          </p>
+          <ul>
+            <li>Wires no longer display incorrect particles
+            </li>
+            <li>My physics overrides no longer corrupt themselves
+            </li>
+            <li>Vehicles can now turn away from walls easier
+            </li>
+            <li>Optimized grind code
+            </li>
+            <li>Fixed infinite combo timer bug
+            </li>
+            <li>Fixed grind particles freaking out in a teleport
+            </li>
+            <li>Reduced or removed many memory allocations
+            </li>
+            <li>The camera offset now focuses based on center of mass
+            </li>
+          </ul>
+          <p>
+            Misc:
+          </p>
+          <ul>
+            <li>Added horn honking
+            </li>
+            <li>Started on third vehicle, the "Dambro"
+            </li>
+            <li>Created tools that make marking gaps a lot easier
+            </li>
+            <li>Created a new system that will display your keyboard/controller binds automatically
+            </li>
+            <li>Recreated HUD to prevent constant memory allocation
+            </li>
+            <li>Made primoslide balancing slightly easier
+            </li>
+            <li>Added wallplant as a trick
+            </li>
+            <li>Added 'look behind you' bind
+            </li>
+            <li>Added clean landing detection
+            </li>
+            <li>Fixed misc graphical bugs in level 1
+            </li>
+            <li>Rewrote the vehicle shader
+            </li>
+          </ul><a class="perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-02/">🔗</a>
         </article>
       </section>
       <footer>
         <p>
-          <a href="projects/">↶ Projects</a>
+          <a href="news/">↶ News</a>
         </p>
       </footer>
     </div>
