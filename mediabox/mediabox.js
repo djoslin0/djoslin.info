@@ -16,11 +16,11 @@ function mediaboxImage(mediaId, newSrc, thumb) {
 	var mbFullscreen = document.getElementById("mediabox-" + mediaId + "-fullscreen")
 	
 	mbYoutube.src = ""
-	
-	if(mbImage.src !== newSrc){
-		mbImage.src = newSrc
-		thumb.className += " mediabox-thumb-selected"
-	}
+	mbWebm.pause()
+	mbWebm.src = ""
+
+	mbImage.src = newSrc
+	thumb.className += " mediabox-thumb-selected"
 	
 	mbImage.style.visibility = 'visible'
 	mbFullscreen.style.visibility = 'visible'
@@ -36,12 +36,11 @@ function mediaboxYoutube(mediaId, youtubeId, thumb) {
 	var mbWebm = document.getElementById("mediabox-" + mediaId + "-webm")
 	var mbFullscreen = document.getElementById("mediabox-" + mediaId + "-fullscreen")
 	
-	var newSrc = "https://www.youtube.com/embed/" + youtubeId + "?autoplay=1"
-	
-	if(mbYoutube.src !== newSrc){
-		mbYoutube.src = newSrc
-		thumb.className += " mediabox-thumb-selected"
-	}
+	mbWebm.pause()
+	mbWebm.src = ""
+
+	mbYoutube.src = "https://www.youtube.com/embed/" + youtubeId + "?autoplay=1"
+	thumb.className += " mediabox-thumb-selected"
 	
 	mbYoutube.style.visibility = 'visible'
 	mbFullscreen.style.visibility = 'hidden'
@@ -58,16 +57,20 @@ function mediaboxWebm(mediaId, newSrc, thumb) {
 	var mbFullscreen = document.getElementById("mediabox-" + mediaId + "-fullscreen")
 	
 	mbYoutube.src = ""
-	
-	if(mbWebm.src !== newSrc){
-		mbWebm.src = newSrc
-		thumb.className += " mediabox-thumb-selected"
-	}
+
+	mbWebm.src = newSrc
+	mbWebm.load()
+	mbWebm.play()
+	thumb.className += " mediabox-thumb-selected"
 	
 	mbWebm.style.visibility = 'visible'
 	mbFullscreen.style.visibility = 'hidden'
 	mbYoutube.style.visibility = 'hidden'
 	mbImage.style.visibility = 'hidden'
+}
+
+function mediaboxMp4(mediaId, newSrc, thumb) {
+	mediaboxWebm(mediaId, newSrc, thumb)
 }
 
 function fullscreenImage(mediaId) {

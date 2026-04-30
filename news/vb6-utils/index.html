@@ -1,540 +1,851 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="cf-ray" content="none">
-    <meta name="cloudflare-analytics" content="disable">
-    <title>
-      djoslin :: news, vb6 utils
-    </title>
-    <base href="../../../">
-    <style>
-
-    :root {
-        --background-01: #EEDFCF;
-        --background-02: #F6E7D8;
-
-        --link-01: #47A;
-        --link-02: #69C;
-        --link-03: #A7A;
-        --link-04: #C9C;
-
-        --color-01: #333;
-        --color-02: #555;
-        --color-03: #666;
-        --color-08: #AAA;
-        --color-10: #CCC;
-        --color-11: #EEE;
-        --color-12: #FFF;
-    }
-
-    body {
-        overflow-x: hidden;
-        margin: 0;
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
-        width: 60rem;
-        max-width: 95%;
-        margin: 0.5rem auto 2.0rem auto;
-    }
-
-    html {
-        overflow-x: hidden;
-        overflow-y: scroll;
-        --s: 300px; /* control the size*/
-        --c1: var(--background-02);
-        --c2: var(--background-01);
-
-        --_g: #0000 8%,var(--c1) 0 17%,#0000 0 58%;
-        background: 
-                linear-gradient(135deg,#0000 20.5%,var(--c1) 0 29.5%,#0000 0) 0 calc(var(--s)/4),
-                linear-gradient( 45deg,var(--_g)) calc(var(--s)/2) 0,
-                linear-gradient(135deg,var(--_g),var(--c1) 0 67%,#0000 0),        
-                linear-gradient( 45deg,var(--_g),var(--c1) 0 67%,#0000 0 83%,var(--c1) 0 92%,#0000 0),
-                var(--c2); 
-        background-size: var(--s) var(--s);
-    }
-
-    td {
-        padding: 4px;
-    }
-
-    /* NAV */
-        /* djoslin header */
-        .title {
-                font-size: xx-large;
-                color: var(--color-12);
-                line-height: 0rem;
-                letter-spacing: 0.6rem;
-                margin: 0.5rem;
-                margin-left: 2.5rem;
-        }
-
-        .links {
-                margin-right: 1.5rem;
-        }
-
-        body nav {
-                width: 100%;
-                background-color: var(--color-01);
-                border-radius: 0.25rem 0.25rem 0 0;
-                cursor: default;
-                text-align: center;
-                
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-        }
-
-        body nav div {
-                display:inline-block;
-                padding: 0.1rem;
-        }
-
-        body nav div a {
-                display: inline-block;
-                color: var(--color-12);
-                padding: 0.5rem 1rem;
-                width: 4rem;
-
-
-                border-radius: 0.5rem;
-        }
-
-        @media (max-width: 650px) {
-                body nav { display: block; }
-                .title {
-                        width: 100%;
-                        margin: 0;
-                }
-                .links {
-                        width: 100%;
-                        margin-bottom:1rem;
-                }
-        }
-
-        a { text-decoration: none; }
-        article a { color: var(--link-01); }
-        article a:hover { color: var(--link-02); }
-
-        footer a { color: var(--link-01); }
-        footer a:hover { color: var(--link-02); }
-        
-        body nav,
-        .thumb {
-                -o-transition:.1s;
-                -ms-transition:.1s;
-                -moz-transition:.1s;
-                -webkit-transition:.1s;
-                transition:.1s;
-        }
-
-        body nav a:hover {
-                background-color: var(--color-12);
-                color: var(--color-01);
-        }
-        body nav .active:hover {
-                color: var(--color-01);
-                background-color: var(--color-12);
-        }
-        
-        body nav .active {
-                color: var(--color-01);
-                background-color: var(--color-12);
-                font-weight: bold;
-        }
-
-    /* END NAV */
-    hr {
-        border: 0;
-        border-bottom: 1px dashed #ccc;
-        margin: 1rem;
-    }
-
-    article {
-    margin: 1.5rem 3.0rem 2.5rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px dashed #ccc;
-        color: var(--color-03);
-    }
-
-    footer {
-        width: 100%;
-        text-align: center;
-        padding-bottom: 2rem;
-    }
-
-    footer p {
-        margin-top: 0;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0;
-        color: var(--color-03);
-        width: 60%;
-    }
-
-    article > * {
-        margin-top: 0.33rem;
-        margin-bottom: 0.33rem;
-    }
-
-    article span {
-        display: block;
-        text-align: justify;
-        line-height: 1.65rem;
-        color: var(--color-01);
-    }
-
-    article p {
-        text-align: justify;
-        line-height: 1.65rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    article p .centered {
-        text-align: center;
-    }
-
-    article code {
-        background-color: var(--color-11);
-        font-family: monospace, monospace;
-        padding: 0rem 0.2rem 0rem 0.2rem;
-    }
-
-    article pre {
-        background-color: var(--color-11);
-        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
-        font-family: monospace, monospace;
-    }
-
-    article pre code {
-        padding: 0;
-    }
-
-    .icon {
-        width: 16px;
-        height: 16px;
-        margin: 0 0.25em 0 0;
-    }
-
-    .media-space {
-        display: flex;
-        justify-content: center; /* Centers the image horizontally */
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .media-frame {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-
-    .media {
-        max-width: 100%;
-    height: auto;       
-        display: block;
-        margin: 1rem auto;
-        border: 0;
-    }
-
-    .lmedia {
-    float: left;
-    margin-top: 0.4rem;
-    margin-right: 2rem;
-    }
-
-    .rmedia {
-    float: right;
-    margin-top: 0.4rem;
-    margin-left: 2rem;
-    }
-
-    .navtags > span {
-        margin: 1rem;
-        font-size: small;
-        color: var(--color-10);
-    }
-
-    .noselect,
-    body nav ul,
-    .tag,
-    .perma,
-    .inactive,
-    .thumb,
-    .rmedia,
-    .lmedia,
-    .mediabox-thumb,
-    .mediabox-thumbbox,
-    .inside-aspect-ratio,
-    .mediabox-media,
-    .mediabox-fullscreen,
-    .icon {
-        user-select: none;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-    }
-
-    .navtags > a {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-
-
-    .navtags > a:first-of-type {
-        float: left;
-    }
-
-    .navtags > a:last-of-type {
-        float: right;
-    }
-
-    .tag {
-        font-size: small;
-        background-color: var(--color-11);
-        border-radius: 0.25rem;
-        padding: 0.4rem;
-        line-height: 1.25rem;
-
-        -o-transition:.1s;
-        -ms-transition:.1s;
-        -moz-transition:.1s;
-        -webkit-transition:.1s;
-        transition:.1s;
-    }
-
-    a.tag { color: var(--color-02); }
-
-    a:hover.tag {
-        background-color: var(--color-10);
-        color: var(--color-12);
-    }
-
-    article > aside { float: right; }
-
-    .disabled,
-    .inactive {
-        cursor: default;
-        opacity: 0.25;
-    }
-
-    .disabled {
-        background-color: var(--color-11);
-        color: var(--color-10);
-    }
-
-    a:hover.disabled {
-        background-color: var(--color-11);
-        color: var(--color-10);
-    }
-
-    body > div:first-of-type {
-        border: 1px solid var(--color-12);
-        background-color: var(--color-12);
-    }
-
-    article h1 {
-        font-size: xx-large;
-        font-weight: bold;
-        color: var(--color-03);
-        margin: 0;
-    margin-top: 3rem;
-        margin-bottom: 1rem;
-    }
-
-    article h1:first-of-type {
-    margin-top: 0;
-    }
-
-    article h2 {
-        font-size: x-large;
-        font-weight: bold;
-        color: var(--color-03);
-        margin: 0;
-    margin-top: 3rem;
-        margin-bottom: 1rem;
-    }
-
-    article h2:first-of-type {
-    margin-top: 0;
-    }
-
-    article time:first-of-type {
-        color: var(--color-08);
-        padding-right: 0.5rem;
-        font-size: small;
-    }
-
-    .centered {
-        text-align: center;
-    }
-
-    body > div:last-of-type {
-    width: 100%;
-    height: 0.2rem;
-    background-color: var(--color-01);
-        border-radius: 0 0 0.25rem 0.25rem;
-    text-align: center;
-    padding-top: 1rem;
-    }
-
-    .perma {
-        float: right;
-    color: var(--color-08);
-    font-size: small;
-    }
-
-    .tagnav
-    {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        color: var(--color-03);
-    }
-
-    .thumb {
-    width: 55px;
-    height: 55px;
-    margin-right: 1rem;
-    border-radius: 0.25rem;
-    background-color: var(--color-03);
-    }
-
-    a:hover .thumb {
-        background-color: var(--color-10);
-    }
-
-    blockquote {
-    font-size: small;
-    max-width: 43rem;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 0.5rem;
-    background-color: var(--color-11);
-    color: var(--color-02);
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
-        text-align: justify;
-    }
-
-    u { text-decoration: underline; }
-    s { text-decoration: line-through; } 
-    b { font-weight: bold; } 
-    i { font-style: italic; } 
-
-    @media only screen and (max-width: 500px) {
-
-        article {
-            margin: 1.5rem 1.0rem 2.5rem;
-        }
-
-        article .thumb {
-                display: none;
-        }
-        
-        .hideIfSmall { display: none; }
-
-        .lmedia,
-        .rmedia {
-            float: none;
-            display: block;
-            margin: 0 auto;
-        }
-
-    }
-
-    @media only screen and (max-width: 300px) {
-        .lmedia,
-        .rmedia {
-                display: none;
-        }
-    }
-
-    .aspect-ratio {
-        position: relative;
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .aspect-ratio-1-1 {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 100%;
-        overflow: hidden;
-    }
-
-    .aspect-ratio-4-3 {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 75%;
-        overflow: hidden;
-    }
-
-    .aspect-ratio-16-9 {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56%;
-        overflow: hidden;
-    }
-
-    .inside-aspect-ratio {
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-
-    </style>
-    <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
-  </head>
-  <body>
-    <nav>
-      <div class="title">
-        <h1>
-          djoslin
-        </h1>
-      </div>
-      <div class="links">
-        <a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href=
-        "socials/">socials</a>
-      </div>
-    </nav>
-    <div>
-      <section>
-        <article>
-          <aside>
-            <a class="tag" href="news/vb6-utils/">VB6 Utils</a>
-          </aside>
-          <h2>
-            VB6 Utils
-            <br>
-            <time datetime="2024-06-13">13 Jun 2024</time>
-          </h2>
-          <p>
-            I uploaded a bunch of small utilities that I made in VB6 really early on.
-          </p>
-          <div class="media-space">
-            <img class="inside-aspect-ratio" src="projects/vb6-utils/images/macro.png">
-          </div>
-          <p>
-            <a href="projects/vb6-utils/">Check it out here</a>
-          </p><a class="perma" title="permanent link" href="news/vb6-utils/vb6-utils/">🔗</a>
-        </article>
-      </section>
-      <footer>
-        <p class="navtags">
-          <a class="tag disabled">&lt;</a> <span class="navpage">1</span> <a class="tag disabled">&gt;</a>
-        </p>
-      </footer>
-    </div>
-    <div></div>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="cf-ray" content="none">
+<meta name="cloudflare-analytics" content="disable">
+<title>djoslin :: news, vb6 utils</title>
+<base href="../../../">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap">
+<style>
+:root {
+--bg:         #0B0B0C;
+--surface:    #141416;
+--surface-2:  #1E1E22;
+--surface-3:  #26262B;
+
+/* Blue-family accent — all hues stay in 215°–240° range */
+--accent:         #4A8FD4;
+--accent-dim:     rgba(74,143,212,0.10);
+--accent-border:  rgba(74,143,212,0.25);
+
+--text-1: #DEDEE2;
+--text-2: #adadb6;
+--text-3: #90909c;
+--text-4: #666672;
+
+/* Analogous link palette: blue → indigo (25° shift, no jarring jumps) */
+--link:           #60A5FA;   /* blue-400  hsl(213°,95%,67%) */
+--link-hover:     #93C5FD;   /* blue-300  hsl(213°,97%,78%) */
+--link-visited:   #4E7FB8;   /* blue-600  hsl(213°,42%,52%) — same hue, muted */
+--link-vis-hover: #7AAEE0;   /* blue-400  hsl(213°,62%,67%) — same hue, lighter */
+
+--border:      rgba(255,255,255,0.065);
+--shadow-body: 0 0 0 1px rgba(255,255,255,0.04), 0 24px 64px rgba(0,0,0,0.85);
+--radius: 0.5rem;
+--t: 0.15s ease;
+}
+
+/* ── BASE ─────────────────────────────────────────────────── */
+
+html {
+font-size: 1.2rem;
+overflow-x: hidden;
+overflow-y: scroll;
+background-color: var(--bg);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M0 20 L40 20 M40 60 L80 60 M0 40 L20 40 M60 40 L80 40' stroke='rgba(74,143,212,0.07)' stroke-width='1' fill='none'/%3E%3Cpath d='M40 0 L40 40 M60 0 L60 20 M20 60 L20 80' stroke='rgba(74,143,212,0.07)' stroke-width='1' fill='none'/%3E%3Cpath d='M0 60 L20 60 L20 40 M60 20 L60 40 L80 40' stroke='rgba(74,143,212,0.06)' stroke-width='1' fill='none'/%3E%3Ccircle cx='40' cy='20' r='2.5' fill='none' stroke='rgba(74,143,212,0.13)' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='2.5' fill='none' stroke='rgba(74,143,212,0.13)' stroke-width='1'/%3E%3Ccircle cx='20' cy='60' r='2.5' fill='none' stroke='rgba(74,143,212,0.11)' stroke-width='1'/%3E%3Ccircle cx='60' cy='40' r='2.5' fill='none' stroke='rgba(74,143,212,0.11)' stroke-width='1'/%3E%3Ccircle cx='60' cy='20' r='1.5' fill='rgba(74,143,212,0.09)'/%3E%3Ccircle cx='20' cy='40' r='1.5' fill='rgba(74,143,212,0.09)'/%3E%3C/svg%3E");
+background-size: 80px 80px;
+}
+
+body {
+overflow-x: hidden;
+font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+font-size: 1rem;
+line-height: 1.6;
+width: 60rem;
+max-width: 95%;
+margin: 2rem auto 4rem;
+
+background-color: var(--surface);
+border-radius: var(--radius);
+box-shadow: var(--shadow-body);
+border: 1px solid rgba(255,255,255,0.055);
+}
+
+td { padding: 4px; }
+
+a { text-decoration: none; }
+article a            { color: var(--link);           transition: color var(--t); }
+article a:hover      { color: var(--link-hover); }
+article a:visited    { color: var(--link-visited); }
+article a:visited:hover { color: var(--link-vis-hover); }
+footer  a            { color: var(--link);           transition: color var(--t); }
+footer  a:hover      { color: var(--link-hover); }
+
+
+/* ── NAV ─────────────────────────────────────────────────── */
+
+.title {
+font-size: xx-large;
+color: var(--link);
+line-height: 0;
+letter-spacing: 0.5rem;
+margin: 0.5rem;
+margin-left: 2rem;
+margin-right: auto;
+}
+
+.links {
+margin-right: 1.25rem;
+flex: 0 0 auto;
+padding-bottom: 0.35rem;
+}
+
+body nav {
+width: 100%;
+background-color: transparent;
+border-radius: var(--radius) var(--radius) 0 0;
+cursor: default;
+text-align: center;
+border-bottom: 1px solid var(--border);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+body nav div {
+display: inline-block;
+padding: 0.15rem;
+}
+
+body nav div a {
+display: inline-block;
+color: var(--text-2);
+padding: 0.6rem 1.1rem;
+width: 4.5rem;
+border-radius: calc(var(--radius) - 0.1rem);
+font-size: 0.875rem;
+font-weight: 500;
+transition: background-color var(--t), color var(--t);
+}
+
+body nav a:hover {
+background-color: rgba(255,255,255,0.07);
+color: var(--text-1);
+}
+
+body nav .active:hover {
+color: var(--surface);
+background-color: var(--text-1);
+}
+
+body nav .active {
+color: var(--surface);
+background-color: var(--text-1);
+font-weight: 600;
+}
+
+
+
+
+/* ── LAYOUT ──────────────────────────────────────────────── */
+
+body > div:first-of-type {
+background-color: transparent;
+box-shadow: none;
+}
+
+body > div:last-of-type {
+width: 100%;
+height: 0.25rem;
+background: linear-gradient(90deg, transparent, var(--accent-border), transparent);
+border-radius: 0 0 var(--radius) var(--radius);
+}
+
+hr {
+border: 0;
+border-bottom: 1px solid var(--border);
+margin: 1rem;
+}
+
+/* ── SOCIALS GRID ────────────────────────────────────────── */
+
+.socials-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.65rem;
+margin: 0.5rem 0 1rem;
+}
+
+.social-item {
+display: flex;
+align-items: center;
+gap: 0.75rem;
+padding: 0.7rem 1rem;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+background: var(--surface-2);
+color: var(--text-1);
+text-decoration: none;
+font-size: 0.9rem;
+font-weight: 500;
+transition: background var(--t), border-color var(--t), color var(--t), box-shadow var(--t);
+}
+
+.social-item:hover {
+background: var(--surface-3);
+border-color: rgba(74,143,212,0.35);
+color: var(--link-hover);
+box-shadow: 0 0 0 1px rgba(74,143,212,0.15);
+}
+
+.social-item img {
+width: 28px;
+height: 28px;
+object-fit: contain;
+flex-shrink: 0;
+}
+
+/* Featured items: full-width row, larger, glowing accent border */
+.social-item.featured {
+grid-column: span 2;
+padding: 0.9rem 1.25rem;
+border-color: var(--accent-border);
+background: linear-gradient(135deg, rgba(74,143,212,0.10) 0%, var(--surface-2) 60%);
+font-size: 1rem;
+font-weight: 600;
+box-shadow: inset 0 0 0 1px rgba(74,143,212,0.08);
+}
+
+.social-item.featured img {
+width: 34px;
+height: 34px;
+}
+
+.social-item.featured:hover {
+background: linear-gradient(135deg, rgba(74,143,212,0.18) 0%, var(--surface-3) 60%);
+border-color: rgba(74,143,212,0.55);
+box-shadow: 0 0 12px rgba(74,143,212,0.15), inset 0 0 0 1px rgba(74,143,212,0.12);
+}
+
+footer {
+width: 100%;
+text-align: center;
+padding-bottom: 2rem;
+border-top: 1px solid var(--border);
+margin-top: 1rem;
+}
+
+footer p {
+margin-top: 0.75rem;
+margin-left: auto;
+margin-right: auto;
+padding: 0;
+color: var(--text-3);
+width: 60%;
+}
+
+
+/* ── ARTICLE ─────────────────────────────────────────────── */
+
+article {
+display: flow-root; /* contains floated aside/lmedia/rmedia children */
+margin: 1.75rem 2.5rem 2rem;
+padding-bottom: 1.75rem;
+border-bottom: 1px solid var(--border);
+color: var(--text-2);
+font-size: 0.9375rem;
+}
+
+article:last-of-type {
+border-bottom: none;
+padding-bottom: 0;
+}
+
+article > * {
+margin-top: 0.4rem;
+margin-bottom: 0.4rem;
+}
+
+article span {
+display: block;
+text-align: left;
+line-height: 1.75;
+color: var(--text-1);
+}
+
+article p {
+text-align: left;
+line-height: 1.75;
+margin-top: 0.8rem;
+margin-bottom: 0.8rem;
+color: var(--text-2);
+}
+
+article p .centered {
+text-align: center;
+}
+
+article ul,
+article ol {
+padding-left: 1.5rem;
+margin: 0.5rem 0 0.75rem;
+color: var(--text-2);
+}
+
+article li {
+line-height: 1.65;
+margin-bottom: 0.3rem;
+padding-left: 0.1rem;
+}
+
+article li:last-child { margin-bottom: 0; }
+
+article ul  { list-style-type: disc; }
+article ol  { list-style-type: decimal; }
+
+article h1 {
+font-size: 1.55rem;
+font-weight: 700;
+letter-spacing: -0.02em;
+color: var(--text-1);
+margin: 0 0 0.6rem;
+}
+
+article h1:not(:first-child) { margin-top: 2rem; }
+
+article h2 {
+font-size: 1.15rem;
+font-weight: 600;
+letter-spacing: -0.01em;
+color: var(--text-1);
+margin: 0 0 0.5rem;
+}
+
+article h2:not(:first-child) { margin-top: 1.75rem; }
+
+article h2 a {
+color: var(--text-1);
+transition: color var(--t);
+}
+
+article h2 a:hover {
+color: var(--link-hover);
+}
+
+article time:first-of-type {
+color: var(--text-4);
+padding-right: 0.5rem;
+font-size: 0.8rem;
+font-weight: 400;
+letter-spacing: 0.01em;
+}
+
+article code {
+background-color: var(--surface-2);
+font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+font-size: 0.85em;
+padding: 0.1rem 0.35rem;
+border-radius: 0.25rem;
+border: 1px solid var(--border);
+color: var(--text-1);
+}
+
+article pre {
+background-color: var(--surface-2);
+padding: 0.85rem 1.1rem;
+border-radius: 0.4rem;
+font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+font-size: 0.85rem;
+line-height: 1.6;
+overflow-x: auto;
+border: 1px solid var(--border);
+margin: 0.75rem 0;
+}
+
+article pre code {
+padding: 0;
+border: 0;
+background: none;
+}
+
+article > aside { float: right; }
+
+blockquote {
+font-size: 0.9rem;
+line-height: 1.7;
+margin: 0.9rem 0;
+border-radius: 0 0.4rem 0.4rem 0;
+background-color: var(--surface-2);
+color: var(--text-2);
+padding: 0.65rem 1rem 0.65rem 1.1rem;
+border-left: 3px solid var(--accent);
+}
+
+u { text-decoration: underline; }
+s { text-decoration: line-through; }
+b { font-weight: 600; }
+i { font-style: italic; }
+
+
+/* ── TAGS ────────────────────────────────────────────────── */
+
+.tag {
+font-size: 0.75rem;
+font-weight: 500;
+background-color: var(--accent-dim);
+border-radius: 2rem;
+padding: 0.25rem 0.7rem;
+line-height: 1.4rem;
+letter-spacing: 0.01em;
+border: 1px solid var(--accent-border);
+transition: background-color var(--t), color var(--t), border-color var(--t);
+}
+
+a.tag { color: var(--link); }
+
+a:hover.tag {
+background-color: var(--accent);
+color: #fff;
+border-color: var(--accent);
+}
+
+.navtags > span {
+margin: 1rem;
+font-size: small;
+color: var(--text-3);
+}
+
+.navtags > a {
+width: 1.25rem;
+height: 1.25rem;
+}
+
+.navtags > a:first-of-type { float: left; }
+.navtags > a:last-of-type  { float: right; }
+
+.tagnav {
+margin-top: 2rem;
+margin-bottom: 1rem;
+color: var(--text-2);
+}
+
+
+/* ── THUMB ───────────────────────────────────────────────── */
+
+.thumb {
+width: 62px;
+height: 62px;
+margin-right: 1rem;
+border-radius: var(--radius);
+background-color: var(--surface-3);
+box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+transition: box-shadow var(--t), opacity var(--t);
+}
+
+a:hover .thumb {
+box-shadow: 0 3px 12px rgba(0,0,0,0.6);
+opacity: 0.82;
+}
+
+
+/* ── MEDIA ───────────────────────────────────────────────── */
+
+.icon {
+width: 16px;
+height: 16px;
+margin: 0 0.25em 0 0;
+}
+
+/* Standalone image inside an article (not a mediabox) */
+.media-space {
+display: block;
+text-align: center;
+margin: 1.5rem 0;
+}
+
+.inside-aspect-ratio {
+max-width: 100%;
+height: auto;
+display: inline-block;
+border-radius: var(--radius);
+}
+
+/* Aspect-ratio wrapper for embedded videos / iframes */
+.aspect-ratio {
+position: relative;
+width: 100%;
+height: 0;
+overflow: hidden;
+}
+
+.aspect-ratio-16-9 {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 56.25%;
+overflow: hidden;
+border-radius: var(--radius);
+}
+
+/* Absolutely-positioned content inside any aspect-ratio wrapper */
+.media-frame {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 0;
+}
+
+.media {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 1rem auto;
+border: 0;
+}
+
+.lmedia {
+float: left;
+max-width: 45%;
+height: auto;
+margin-top: 0.4rem;
+margin-right: 1.75rem;
+margin-bottom: 0.5rem;
+border-radius: calc(var(--radius) / 2);
+}
+
+.rmedia {
+float: right;
+max-width: 45%;
+height: auto;
+margin-top: 0.4rem;
+margin-left: 1.75rem;
+margin-bottom: 0.5rem;
+border-radius: calc(var(--radius) / 2);
+}
+
+.centered { text-align: center; }
+
+.perma {
+float: right;
+color: var(--text-3);
+font-size: 0.8rem;
+opacity: 0;
+transition: opacity var(--t), color var(--t);
+}
+
+article:hover .perma {
+opacity: 1;
+}
+
+.perma:hover {
+color: var(--text-1);
+}
+
+.disabled,
+.inactive {
+cursor: default;
+opacity: 0.25;
+}
+
+.disabled {
+background-color: var(--surface-3);
+color: var(--text-3);
+}
+
+a:hover.disabled {
+background-color: var(--surface-3);
+color: var(--text-3);
+}
+
+
+/* ── NO-SELECT ───────────────────────────────────────────── */
+
+.noselect,
+body nav ul,
+.tag,
+.perma,
+.inactive,
+.thumb,
+.rmedia,
+.lmedia,
+.mediabox-thumb,
+.mediabox-thumbbox,
+.inside-aspect-ratio,
+.mediabox-media,
+.mediabox-fullscreen,
+.icon {
+user-select: none;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+}
+
+
+/* ── PROJECT CARDS ───────────────────────────────────────── */
+
+.card-grid {
+display: flex;
+flex-direction: column;
+gap: 0.6rem;
+padding: 1.25rem 1.75rem 2rem;
+}
+
+.project-card {
+position: relative;
+background: var(--surface-2);
+border-radius: var(--radius);
+border: 1px solid var(--border);
+overflow: hidden;
+display: flex;
+flex-direction: row;
+align-items: stretch;
+transition: border-color var(--t), box-shadow var(--t), transform var(--t);
+/* reset article defaults */
+margin: 0;
+padding-bottom: 0;
+border-bottom: none;
+}
+
+.project-card:hover {
+border-color: var(--accent-border);
+box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+transform: translateX(3px);
+}
+
+@keyframes card-shine {
+  0%   { transform: translate3d(-120%, 0, 0) skewX(-18deg); }
+  100% { transform: translate3d(660%,  0, 0) skewX(-18deg); }
+}
+
+.project-card.featured {
+border-color: var(--accent-border);
+background: linear-gradient(135deg, rgba(74,143,212,0.10) 50%, var(--surface-2) 100%);
+box-shadow: inset 0 0 0 1px rgba(74,143,212,0.08), 0 2px 12px rgba(0,0,0,0.4);
+position: relative;
+clip-path: inset(0 round var(--radius));
+}
+
+.project-card.featured::before {
+content: '';
+position: absolute;
+top: -5%; left: 0;
+width: 35%;
+height: 110%;
+background: linear-gradient(
+  90deg,
+  transparent 0%,
+  rgba(255,255,255,0.01) 40%,
+  rgba(255,255,255,0.04) 50%,
+  rgba(255,255,255,0.01) 60%,
+  transparent 100%
+);
+transform: translate3d(-120%, 0, 0) skewX(-18deg);
+will-change: transform;
+animation: card-shine 2.5s ease-in-out infinite;
+animation-delay: 1s;
+pointer-events: none;
+}
+
+.project-card.featured:hover {
+background: linear-gradient(135deg, rgba(74,143,212,0.18) 50%, var(--surface-3) 100%);
+border-color: rgba(74,143,212,0.55);
+box-shadow: 0 0 16px rgba(74,143,212,0.18), inset 0 0 0 1px rgba(74,143,212,0.14);
+}
+
+.project-card.featured .project-card-title-link {
+font-size: 1.15em;
+font-weight: 700;
+}
+
+.project-card:last-of-type {
+border-bottom: none;
+padding-bottom: 0;
+}
+
+.project-card-hero {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+width: 4rem;
+padding: 0.6rem;
+}
+
+.project-card-hero img {
+width: 55px;
+height: 55px;
+object-fit: contain;
+display: block;
+border-radius: 0.35rem;
+transition: opacity var(--t), transform 0.3s ease;
+}
+
+.project-card:hover .project-card-hero img {
+opacity: 0.85;
+transform: scale(1.08);
+}
+
+.project-card-body {
+padding: 0.6rem 1rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 0.2rem;
+flex: 1;
+min-width: 0;
+}
+
+.project-card-header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 0.5rem;
+}
+
+.project-card-title-group {
+display: flex;
+align-items: baseline;
+gap: 0.5rem;
+flex-wrap: wrap;
+}
+
+.project-card-date {
+color: var(--text-4);
+font-size: 0.78rem;
+white-space: nowrap;
+}
+
+.project-card h2 {
+font-size: 1.25rem;
+font-weight: 600;
+margin: 0;
+line-height: 1.3;
+letter-spacing: 0;
+}
+
+.project-card-title-link {
+color: var(--link);
+transition: color var(--t);
+}
+.project-card-title-link:visited {
+color: var(--link);
+}
+
+/* stretch-link: makes the entire card clickable via the title anchor */
+.project-card-title-link::before {
+content: '';
+position: absolute;
+inset: 0;
+z-index: 0;
+}
+
+.project-card:hover .project-card-title-link {
+color: var(--link-hover);
+}
+
+.project-card-desc {
+color: var(--text-3);
+font-size: 0.9rem;
+line-height: 1.5;
+margin: 0;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+/* tag and other in-card links sit above the stretch-link layer */
+.project-card .tag {
+position: relative;
+z-index: 1;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+
+@media only screen and (max-width: 750px) {
+.title {
+flex: 0 0 100%;
+text-align: center;
+margin-left: 0;
+margin-right: 0;
+}
+}
+
+@media only screen and (max-width: 500px) {
+article {
+margin: 1.5rem 1rem 2.5rem;
+font-size: 0.9rem;
+}
+
+article .thumb {
+display: none;
+}
+
+.hideIfSmall { display: none; }
+
+.lmedia,
+.rmedia {
+float: none;
+max-width: 100%;
+display: block;
+margin: 0.75rem auto;
+}
+}
+
+@media only screen and (max-width: 300px) {
+.lmedia,
+.rmedia {
+display: none;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.project-card-hero {
+width: 3.5rem;
+padding: 0.4rem;
+}
+.project-card-hero img {
+width: 40px;
+height: 40px;
+}
+.project-card-desc {
+display: none;
+}
+}
+
+</style>
+<link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
+</head>
+<body>
+<nav>
+<div class="title">
+<h1>djoslin</h1>
+</div>
+<div class="links">
+<a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href="socials/">socials</a>
+</div>
+</nav>
+<div>
+<section>
+<article>
+<aside>
+<a class="tag" href="news/vb6-utils/">VB6 Utils</a>
+</aside>
+<h2>VB6 Utils
+<br>
+<time datetime="2024-06-13">13 Jun 2024</time></h2>
+<p>I uploaded a bunch of small utilities that I made in VB6 really early on.</p>
+<div class="media-space"><img class="inside-aspect-ratio" src="projects/vb6-utils/images/macro.png"></div>
+<p><a href="projects/vb6-utils/">Check it out here</a></p><a class="perma" title="permanent link" href=
+"news/vb6-utils/vb6-utils/">🔗</a>
+</article>
+</section>
+<footer>
+<p class="navtags"><a class="tag disabled">&lt;</a> <span class="navpage">1</span> <a class="tag disabled">&gt;</a></p>
+</footer>
+</div>
+<div></div>
+</body>
 </html>
