@@ -15,9 +15,9 @@ function mediaboxImage(mediaId, newSrc, thumb) {
 	var mbWebm = document.getElementById("mediabox-" + mediaId + "-webm")
 	var mbFullscreen = document.getElementById("mediabox-" + mediaId + "-fullscreen")
 	
-	mbYoutube.src = ""
+	mbYoutube.removeAttribute('src')
 	mbWebm.pause()
-	mbWebm.src = ""
+	mbWebm.removeAttribute('src')
 
 	mbImage.src = newSrc
 	thumb.className += " mediabox-thumb-selected"
@@ -37,7 +37,7 @@ function mediaboxYoutube(mediaId, youtubeId, thumb) {
 	var mbFullscreen = document.getElementById("mediabox-" + mediaId + "-fullscreen")
 	
 	mbWebm.pause()
-	mbWebm.src = ""
+	mbWebm.removeAttribute('src')
 
 	mbYoutube.src = "https://www.youtube.com/embed/" + youtubeId + "?autoplay=1"
 	thumb.className += " mediabox-thumb-selected"
@@ -56,7 +56,7 @@ function mediaboxWebm(mediaId, newSrc, thumb) {
 	var mbWebm = document.getElementById("mediabox-" + mediaId + "-webm")
 	var mbFullscreen = document.getElementById("mediabox-" + mediaId + "-fullscreen")
 	
-	mbYoutube.src = ""
+	mbYoutube.removeAttribute('src')
 
 	mbWebm.src = newSrc
 	mbWebm.load()
