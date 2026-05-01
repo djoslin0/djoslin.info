@@ -791,6 +791,52 @@ max-width: 100%;
 display: block;
 margin: 0.75rem auto;
 }
+
+/* project cards on small phones */
+.project-card-hero {
+width: 3.25rem;
+padding: 0.45rem;
+}
+
+.project-card-hero img {
+width: 44px;
+height: 44px;
+}
+
+.project-card-body {
+padding: 0.5rem 0.65rem;
+gap: 0.15rem;
+}
+
+.project-card h2 {
+font-size: 1rem;
+}
+
+.project-card-header {
+flex-wrap: nowrap;
+align-items: flex-start;
+gap: 0.3rem;
+}
+
+.project-card-title-group {
+flex: 1;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.1rem;
+}
+
+.project-card-date {
+font-size: 0.72rem;
+}
+
+.project-card-desc {
+font-size: 0.82rem;
+}
+
+.project-card .tag {
+font-size: 0.72rem;
+white-space: nowrap;
+}
 }
 
 @media only screen and (max-width: 300px) {
@@ -800,19 +846,7 @@ display: none;
 }
 }
 
-@media only screen and (max-width: 500px) {
-.project-card-hero {
-width: 3.5rem;
-padding: 0.4rem;
-}
-.project-card-hero img {
-width: 40px;
-height: 40px;
-}
-.project-card-desc {
-display: none;
-}
-}
+
 
 </style>
 <link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
@@ -851,13 +885,13 @@ id="mediabox-42-youtube" frameborder="0" allowfullscreen src="https://www.youtub
 "mediabox-42-youtube"></iframe>
 </div>
 <div class="mediabox-thumbbox" id="mediabox-42-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
-"projects/sm64ex-coop/media/mb1/thumbs/1-coop.png" width="142" height="142" loading="eager" decoding="async" onclick=
+"projects/sm64ex-coop/media/mb1/thumbs/1-coop.png" width="640" height="640" loading="eager" decoding="async" onclick=
 "mediaboxYoutube('42', 'WMfxW773XKA', this)"> <img class="mediabox-thumb" src=
-"projects/sm64ex-coop/media/mb1/thumbs/2-arena.png" width="142" height="142" loading="lazy" decoding="async" onclick=
+"projects/sm64ex-coop/media/mb1/thumbs/2-arena.png" width="640" height="640" loading="lazy" decoding="async" onclick=
 "mediaboxYoutube('42', 'FRMD3Sdj1uQ', this)"> <img class="mediabox-thumb" src=
-"projects/sm64ex-coop/media/mb1/thumbs/3-bowling.png" width="142" height="142" loading="lazy" decoding="async" onclick=
+"projects/sm64ex-coop/media/mb1/thumbs/3-bowling.png" width="640" height="640" loading="lazy" decoding="async" onclick=
 "mediaboxYoutube('42', '2zS6SsoKqsA', this)"> <img class="mediabox-thumb" src=
-"projects/sm64ex-coop/media/mb1/thumbs/4-creepycanyon.png" width="142" height="142" loading="lazy" decoding="async" onclick=
+"projects/sm64ex-coop/media/mb1/thumbs/4-creepycanyon.png" width="640" height="640" loading="lazy" decoding="async" onclick=
 "mediaboxYoutube('42', 'aqiQlXTgKPI', this)"></div>
 </div>
 <hr>
@@ -868,9 +902,9 @@ code, which caught my interest.</p>
 <p>Part of my motivation came from being disappointed with Net64. It only synchronized basic player state like position,
 facing, and animation, so many world interactions stayed local to each player. I wanted coins, switches, objects, and scripted
 events to be shared between players, not just player positions.</p>
-<p>I started without any planning. I crudely hacked in a second player and made got the game to stop crashing. Before
-networking existed, I spent a few days altering the engine so that two players could exist at once: animations were separated,
-held objects began to track ownership, and most enemies and interactive objects were adjusted to be multiple-player-aware.</p>
+<p>I started without any planning. I crudely hacked in a second player and got the game to stop crashing. Before networking
+existed, I spent a few days altering the engine so that two players could exist at once: animations were separated, held
+objects began to track ownership, and most enemies and interactive objects were adjusted to be multiple-player-aware.</p>
 <p>Once two players could exist locally, I started adding networking for players. Next was the long process of synchronized
 objects and events one by one: coins, teleports, star collection, chain chomp, moving platforms, puzzle switches, small
 enemies, and many level-specific behaviors. Many objects required different approaches, and different trade offs were made.
@@ -910,7 +944,7 @@ level could be compiled through DynOS, and a mod author could ship a complete cu
 physics or animation glitches. To accomplish this feature the renderer now interpolates object positions, animation frames,
 camera movement, and UI elements. After my work was implemented Altiami figured out the proper way to interpolate rotation
 matrices, and now you can run uncapped framerates seamlessly.</p>
-<p>When Discord announced the end of its Game SDK, I decided to build my own replacedment called CoopNet. CoopNet is a P2P
+<p>When Discord announced the end of its Game SDK, I decided to build my own replacement called CoopNet. CoopNet is a P2P
 networking library built on top of libjuice for peer discovery, NAT traversal, lobby management, and data transport. CoopNet
 allows the project to have full control over the connection layer.</p>
 <p>Shortly afterward, I added lag compensation to make PvP feel responsive, and I built an Arena game mode inspired by Quake
