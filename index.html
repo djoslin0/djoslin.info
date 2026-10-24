@@ -869,27 +869,168 @@ display: none;
 <aside>
 <a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
 </aside>
+<h2>Nitro Thrash Status 12
+<br>
+<time datetime="2026-10-24">24 Oct 2026</time></h2>
+<p>Since the last devlog I made 322 commits.</p>
+<div class="mediabox">
+<div class="aspect-ratio" style="padding-bottom: 56%;">
+<img class="mediabox-media" id="mediabox-1-image" src="projects/nitro-thrash/media/nt-status-12/1-bruiser.png"> <img class=
+"mediabox-fullscreen" id="mediabox-1-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('1')"> <video class=
+"mediabox-media" id="mediabox-1-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
+<iframe class="mediabox-media" id="mediabox-1-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
+"mediabox-1-youtube"></iframe>
+</div>
+<div class="mediabox-thumbbox" id="mediabox-1-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+"projects/nitro-thrash/media/nt-status-12/thumbs/1-bruiser.png" width="640" height="640" loading="eager" decoding="async"
+onclick="mediaboxImage('1', 'projects/nitro-thrash/media/nt-status-12/1-bruiser.png', this)"> <img class="mediabox-thumb" src=
+"projects/nitro-thrash/media/nt-status-12/thumbs/2-falconer.png" width="640" height="640" loading="lazy" decoding="async"
+onclick="mediaboxImage('1', 'projects/nitro-thrash/media/nt-status-12/2-falconer.png', this)"> <img class="mediabox-thumb" src=
+"projects/nitro-thrash/media/nt-status-12/thumbs/3-boardwalk.png" width="640" height="640" loading="lazy" decoding="async"
+onclick="mediaboxImage('1', 'projects/nitro-thrash/media/nt-status-12/3-boardwalk.png', this)"> <img class="mediabox-thumb"
+src="projects/nitro-thrash/media/nt-status-12/thumbs/4-mod.png" width="640" height="640" loading="lazy" decoding="async"
+onclick="mediaboxImage('1', 'projects/nitro-thrash/media/nt-status-12/4-mod.png', this)"></div>
+</div>
+<p>This is a big one, so I'll start with the highlights.</p>
+<p>I've made significant progress on what will be the final level before release: the boardwalk. It's a seaside theme park with
+working rides loosely based on the one in Santa Cruz. There are gondolas you can ride (or knock off their wire), two roller
+coasters, a turning ferris wheel with swinging carts, a pirate ship ride and a drop tower that free-falls. You can drive onto
+all of them, grind them, and they stay in sync online and in replays. Getting a car to drive properly on top of something
+that's moving took a lot of work, but it's really fun now.</p>
+<p>The game now supports mods. You can make your own cars, wheels, toppers, horns, engine sounds, paint jobs, music and maps in
+Blender, or replace any of the stock textures and models. Modded maps can have props, smashable debris, lights, sounds and
+their own skies. These mods can be published to the Steam Workshop from inside the game, and if you join a game on a map you
+don't have, it downloads automatically. The same goes for other players' modded cars.</p>
+<p>Multiplayer got a lot of attention too. Lobbies now hold up to 16 players, and there's text chat, Steam voice chat,
+spectating, ping bars, and kicking/banning. There's a new Flag Tag gamemode, and every gamemode received more polish.</p>
+<p>Bulletpoints:</p>
+<p>Levels:</p>
+<ul>
+<li>started the boardwalk level (still a work in progress), with gondolas, two roller coasters, a ferris wheel, a pirate ship
+and a drop tower</li>
+<li>Added a cinematic flyover when you enter each level</li>
+<li>Level 2's fountain now splashes and ripples when you drive through it</li>
+<li>Added flags that wave in the wind</li>
+<li>Every level now has reverb based on its surroundings, so alleys echo and open areas don't</li>
+<li>Skidmarks on grass are now muddy</li>
+<li>Fixed chain-link fence visual artifacts</li>
+</ul>
+<p>Vehicles:</p>
+<ul>
+<li>Added two new cars, the "Bruiser" and the "Falconer"</li>
+<li>Added horns as a garage cosmetic, with eight to choose from</li>
+<li>Engine sounds can now be picked in the garage, and they're a lot more realistic</li>
+<li>Engines react to what the car is doing: climbing hills, coasting, hard landings, hitting the rev limiter in the air</li>
+<li>Added 3 car slots to the garage so you can switch between so you can store a few different designs at a time</li>
+<li>Retook every garage photo with a new photo tool</li>
+<li>The garage now plays a sound when you change a part or the paint</li>
+</ul>
+<p>Gameplay:</p>
+<ul>
+<li>Added new tricks: Drop In, Transfer, Fakie, Drifting and Smash</li>
+<li>Grinds are named much more accurately and no longer flicker between tricks</li>
+<li>Grinds sound different depending on material</li>
+<li>Landing a big combo now plays a sound</li>
+<li>Going out of bounds now looks like a bail, with a puff of smoke and a random taunt like "Where are you going?"</li>
+<li>There's always a save point now, starting at the spawn point</li>
+<li>Added camera shake for landings and crashes</li>
+<li>Added a far camera toggle so you can see over ledges</li>
+<li>Fixed cars bouncing off walls when hit at a slight angle</li>
+<li>Fixed cars creeping down slopes when parked</li>
+<li>Fixed cars getting thrown off thin geometry</li>
+</ul>
+<p>Cheats:</p>
+<ul>
+<li>Added unlockable cheat codes, entered while driving</li>
+<li>Hid graffiti hints for each cheat around the levels</li>
+<li>Cheats so far: Infinite Nitro, Moon Physics, Monster Truck, RC Car, Air Nitro, Sticky Tires, Infinite Air Jump, No Speed
+Cap, Low Friction, No Out of Bounds, a cash cheat, and a secret ice cream truck</li>
+<li>In multiplayer the host controls which cheats are on</li>
+</ul>
+<p>Missions / Gamemodes:</p>
+<ul>
+<li>Added a Flag Tag gamemode: bump the flag holder to steal it, and hold it to score</li>
+<li>Races show your live position and the 3d arrow points to the next checkpoint</li>
+<li>Every gamemode now ends with a TIME'S UP banner and a big 1ST/2ND/3RD banner</li>
+<li>Online races no longer wait forever for the last player to finish</li>
+<li>Finished the tutorial: nitro, balancing, save points and more missions</li>
+</ul>
+<p>Multiplayer:</p>
+<ul>
+<li>Lobbies now hold up to 16 players</li>
+<li>Added text chat</li>
+<li>Added voice chat with per-player muting</li>
+<li>Added spectating other players</li>
+<li>Added kicking and banning</li>
+<li>Added ping bars to the lobby and scoreboard</li>
+<li>Players now spawn spread out instead of on top of each other</li>
+<li>Remote cars are much smoother now instead of jumping between packets</li>
+<li>Players who join mid-game now stay in the running gamemode</li>
+</ul>
+<p>HUD:</p>
+<ul>
+<li>Notifications are now banners that stack instead of overwriting each other</li>
+<li>Restyled the scoreboard to match the HUD</li>
+<li>Added an air jump indicator to the speedometer</li>
+<li>The speedometer flashes when you gain nitro or lose speed suddenly</li>
+<li>Redrew the HUD so it stays sharp at high resolutions</li>
+<li>The HUD now fades in and out behind menus</li>
+<li>Speed lines now show at high speeds, not just with nitro</li>
+</ul>
+<p>Menus:</p>
+<ul>
+<li>Added a career menu with a ton more stats</li>
+<li>Added multiple save slots</li>
+<li>Added a camera settings menu (distance, sensitivity, invert Y, shake)</li>
+<li>Added keyboard turn sensitivity</li>
+<li>Added bind presets, including a Car Soccer one</li>
+<li>Added a shoutouts menu to credit the assets used</li>
+<li>Fixed a bunch of menu navigation bugs</li>
+</ul>
+<p>Performance / Settings:</p>
+<ul>
+<li>Added a particle quality setting</li>
+<li>Added a high level of detail setting</li>
+<li>Default video settings are now picked from your graphics card</li>
+<li>Shadows blend between distances now, so there's less pop-in</li>
+<li>Music now streams instead of loading all at once, which fixes a stutter when songs change</li>
+<li>Fixed a number of memory leaks when changing cars</li>
+</ul>
+<p>Misc:</p>
+<ul>
+<li>Fixed a bunch of replay viewer bugs</li>
+<li>Pausing now stops rumble</li>
+<li>Lots of build pipeline work for the demo</li>
+</ul>
+<p>That's a lot of changes, and there are plenty more I didn't list. Still working away at it. I may have underestimated how
+much work it takes to finish a game :P</p><a class="perma" title="permanent link" href=
+"news/nitro-thrash/nitro-thrash-status-12/">🔗</a>
+</article>
+<article>
+<aside>
+<a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
+</aside>
 <h2>Nitro Thrash Status 11
 <br>
 <time datetime="2026-04-30">30 Apr 2026</time></h2>
 <p>Since the last devlog I made 40 commits (but they were on the larger side).</p>
 <div class="mediabox">
 <div class="aspect-ratio" style="padding-bottom: 56%">
-<img class="mediabox-media" id="mediabox-1-image" style="visibility:hidden"> <img class="mediabox-fullscreen" id=
-"mediabox-1-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('1')"> <video class="mediabox-media" id=
-"mediabox-1-webm" autoplay="" loop="" controls="" muted="" src="projects/nitro-thrash/media/nt-status-11/1-menus.mp4"></video>
-<iframe class="mediabox-media" id="mediabox-1-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
-"mediabox-1-youtube"></iframe>
+<img class="mediabox-media" id="mediabox-2-image" style="visibility:hidden"> <img class="mediabox-fullscreen" id=
+"mediabox-2-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('2')"> <video class="mediabox-media" id=
+"mediabox-2-webm" autoplay="" loop="" controls="" muted="" src="projects/nitro-thrash/media/nt-status-11/1-menus.mp4"></video>
+<iframe class="mediabox-media" id="mediabox-2-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
+"mediabox-2-youtube"></iframe>
 </div>
-<div class="mediabox-thumbbox" id="mediabox-1-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+<div class="mediabox-thumbbox" id="mediabox-2-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
 "projects/nitro-thrash/media/nt-status-11/thumbs/1-menus.png" width="640" height="640" loading="eager" decoding="async"
-onclick="mediaboxMp4('1', 'projects/nitro-thrash/media/nt-status-11/1-menus.mp4', this)"> <img class="mediabox-thumb" src=
+onclick="mediaboxMp4('2', 'projects/nitro-thrash/media/nt-status-11/1-menus.mp4', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-11/thumbs/2-job-complete.png" width="640" height="640" loading="lazy" decoding="async"
-onclick="mediaboxMp4('1', 'projects/nitro-thrash/media/nt-status-11/2-job-complete.mp4', this)"> <img class="mediabox-thumb"
+onclick="mediaboxMp4('2', 'projects/nitro-thrash/media/nt-status-11/2-job-complete.mp4', this)"> <img class="mediabox-thumb"
 src="projects/nitro-thrash/media/nt-status-11/thumbs/3-gameplay.png" width="640" height="640" loading="lazy" decoding="async"
-onclick="mediaboxImage('1', 'projects/nitro-thrash/media/nt-status-11/3-gameplay.png', this)"> <img class="mediabox-thumb" src=
+onclick="mediaboxImage('2', 'projects/nitro-thrash/media/nt-status-11/3-gameplay.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-11/thumbs/4-gamepad.png" width="640" height="640" loading="lazy" decoding="async"
-onclick="mediaboxImage('1', 'projects/nitro-thrash/media/nt-status-11/4-gamepad.png', this)"></div>
+onclick="mediaboxImage('2', 'projects/nitro-thrash/media/nt-status-11/4-gamepad.png', this)"></div>
 </div>
 <p>The biggest recent change was updating from Unity 5 to Unity 6. The upgrade broke so many things, and getting everything
 back into a working state was a bit of a nightmare. Unity 6 brings a lot of bug fixes and useful features so I think overall it
@@ -931,21 +1072,21 @@ satisfying paper-shuffle sounds and animation on transition. The old UI toolkit-
 <p>Since the last devlog I made 76 commits</p>
 <div class="mediabox">
 <div class="aspect-ratio" style="padding-bottom: 56%;">
-<img class="mediabox-media" id="mediabox-2-image" src="projects/nitro-thrash/media/nt-status-10/01.png"> <img class=
-"mediabox-fullscreen" id="mediabox-2-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('2')"> <video class=
-"mediabox-media" id="mediabox-2-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
-<iframe class="mediabox-media" id="mediabox-2-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
-"mediabox-2-youtube"></iframe>
+<img class="mediabox-media" id="mediabox-3-image" src="projects/nitro-thrash/media/nt-status-10/01.png"> <img class=
+"mediabox-fullscreen" id="mediabox-3-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('3')"> <video class=
+"mediabox-media" id="mediabox-3-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
+<iframe class="mediabox-media" id="mediabox-3-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
+"mediabox-3-youtube"></iframe>
 </div>
-<div class="mediabox-thumbbox" id="mediabox-2-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+<div class="mediabox-thumbbox" id="mediabox-3-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
 "projects/nitro-thrash/media/nt-status-10/thumbs/01.png" width="640" height="640" loading="eager" decoding="async" onclick=
-"mediaboxImage('2', 'projects/nitro-thrash/media/nt-status-10/01.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-10/01.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-10/thumbs/02.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('2', 'projects/nitro-thrash/media/nt-status-10/02.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-10/02.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-10/thumbs/03.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('2', 'projects/nitro-thrash/media/nt-status-10/03.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-10/03.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-10/thumbs/04.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('2', 'projects/nitro-thrash/media/nt-status-10/04.png', this)"></div>
+"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-10/04.png', this)"></div>
 </div>
 <p>I've been singularly focused on putting together a demo, and putting every task that isn't necessary for what I imagine the
 demo to be on hold.</p>
@@ -985,23 +1126,23 @@ levels so far.</p>
 <p>This past month I made 25 commits.</p>
 <div class="mediabox">
 <div class="aspect-ratio" style="padding-bottom: 112%;">
-<img class="mediabox-media" id="mediabox-3-image" src="projects/nitro-thrash/media/nt-status-9/01.jpg"> <img class=
-"mediabox-fullscreen" id="mediabox-3-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('3')"> <video class=
-"mediabox-media" id="mediabox-3-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
-<iframe class="mediabox-media" id="mediabox-3-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
-"mediabox-3-youtube"></iframe>
+<img class="mediabox-media" id="mediabox-4-image" src="projects/nitro-thrash/media/nt-status-9/01.jpg"> <img class=
+"mediabox-fullscreen" id="mediabox-4-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('4')"> <video class=
+"mediabox-media" id="mediabox-4-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
+<iframe class="mediabox-media" id="mediabox-4-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
+"mediabox-4-youtube"></iframe>
 </div>
-<div class="mediabox-thumbbox" id="mediabox-3-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+<div class="mediabox-thumbbox" id="mediabox-4-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
 "projects/nitro-thrash/media/nt-status-9/thumbs/01.png" width="640" height="640" loading="eager" decoding="async" onclick=
-"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-9/01.jpg', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-9/01.jpg', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-9/thumbs/02.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-9/02.jpg', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-9/02.jpg', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-9/thumbs/03.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-9/03.jpg', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-9/03.jpg', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-9/thumbs/04.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-9/04.jpg', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-9/04.jpg', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-9/thumbs/05.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('3', 'projects/nitro-thrash/media/nt-status-9/05.jpg', this)"></div>
+"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-9/05.jpg', this)"></div>
 </div>
 <p>This past month has mostly been focused on continuing the detail pass on the second level and optimizing these new details.
 I didn't keep detailed notes on every change this past month, so I'll keep it general and show pictures of a few key areas
@@ -1018,21 +1159,21 @@ instead. This detail pass is almost finished, I only have a few more areas to to
 <p>Since the last post I made 159 commits</p>
 <div class="mediabox">
 <div class="aspect-ratio" style="padding-bottom: 49%;">
-<img class="mediabox-media" id="mediabox-4-image" src="projects/nitro-thrash/media/nt-status-8-1/1.png"> <img class=
-"mediabox-fullscreen" id="mediabox-4-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('4')"> <video class=
-"mediabox-media" id="mediabox-4-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
-<iframe class="mediabox-media" id="mediabox-4-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
-"mediabox-4-youtube"></iframe>
+<img class="mediabox-media" id="mediabox-5-image" src="projects/nitro-thrash/media/nt-status-8-1/1.png"> <img class=
+"mediabox-fullscreen" id="mediabox-5-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('5')"> <video class=
+"mediabox-media" id="mediabox-5-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
+<iframe class="mediabox-media" id="mediabox-5-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
+"mediabox-5-youtube"></iframe>
 </div>
-<div class="mediabox-thumbbox" id="mediabox-4-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+<div class="mediabox-thumbbox" id="mediabox-5-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
 "projects/nitro-thrash/media/nt-status-8-1/thumbs/1.png" width="640" height="640" loading="eager" decoding="async" onclick=
-"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-8-1/1.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-1/1.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-8-1/thumbs/2.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-8-1/2.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-1/2.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-8-1/thumbs/3.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-8-1/3.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-1/3.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-8-1/thumbs/4.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('4', 'projects/nitro-thrash/media/nt-status-8-1/4.png', this)"></div>
+"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-1/4.png', this)"></div>
 </div>
 <p>Here are some notable changes I've made to the game:</p>
 <p>Levels:</p>
@@ -1072,21 +1213,21 @@ instead. This detail pass is almost finished, I only have a few more areas to to
 </ul>
 <div class="mediabox">
 <div class="aspect-ratio" style="padding-bottom: 49%;">
-<img class="mediabox-media" id="mediabox-5-image" src="projects/nitro-thrash/media/nt-status-8-2/1.png"> <img class=
-"mediabox-fullscreen" id="mediabox-5-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('5')"> <video class=
-"mediabox-media" id="mediabox-5-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
-<iframe class="mediabox-media" id="mediabox-5-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
-"mediabox-5-youtube"></iframe>
+<img class="mediabox-media" id="mediabox-6-image" src="projects/nitro-thrash/media/nt-status-8-2/1.png"> <img class=
+"mediabox-fullscreen" id="mediabox-6-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('6')"> <video class=
+"mediabox-media" id="mediabox-6-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
+<iframe class="mediabox-media" id="mediabox-6-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
+"mediabox-6-youtube"></iframe>
 </div>
-<div class="mediabox-thumbbox" id="mediabox-5-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+<div class="mediabox-thumbbox" id="mediabox-6-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
 "projects/nitro-thrash/media/nt-status-8-2/thumbs/1.png" width="640" height="640" loading="eager" decoding="async" onclick=
-"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-2/1.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('6', 'projects/nitro-thrash/media/nt-status-8-2/1.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-8-2/thumbs/2.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-2/2.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('6', 'projects/nitro-thrash/media/nt-status-8-2/2.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-8-2/thumbs/3.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-2/3.png', this)"> <img class="mediabox-thumb" src=
+"mediaboxImage('6', 'projects/nitro-thrash/media/nt-status-8-2/3.png', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-8-2/thumbs/4.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('5', 'projects/nitro-thrash/media/nt-status-8-2/4.png', this)"></div>
+"mediaboxImage('6', 'projects/nitro-thrash/media/nt-status-8-2/4.png', this)"></div>
 </div><a class="perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-08/">🔗</a>
 </article>
 <article>
@@ -1099,17 +1240,17 @@ instead. This detail pass is almost finished, I only have a few more areas to to
 <p>In the past month, I've made 39 commits.</p>
 <div class="mediabox">
 <div class="aspect-ratio" style="padding-bottom: 56%">
-<img class="mediabox-media" id="mediabox-6-image" style="visibility:hidden"> <img class="mediabox-fullscreen" id=
-"mediabox-6-fullscreen" onclick="fullscreenImage('6')" src="" style="visibility:hidden"> <video class="mediabox-media" id=
-"mediabox-6-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video> <iframe class="mediabox-media"
-id="mediabox-6-youtube" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/9EI4FgayU9M" name=
-"mediabox-6-youtube"></iframe>
+<img class="mediabox-media" id="mediabox-7-image" style="visibility:hidden"> <img class="mediabox-fullscreen" id=
+"mediabox-7-fullscreen" onclick="fullscreenImage('7')" src="" style="visibility:hidden"> <video class="mediabox-media" id=
+"mediabox-7-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video> <iframe class="mediabox-media"
+id="mediabox-7-youtube" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/9EI4FgayU9M" name=
+"mediabox-7-youtube"></iframe>
 </div>
-<div class="mediabox-thumbbox" id="mediabox-6-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+<div class="mediabox-thumbbox" id="mediabox-7-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
 "projects/nitro-thrash/media/nt-status-7/thumbs/a-menu.png" width="640" height="640" loading="eager" decoding="async" onclick=
-"mediaboxYoutube('6', '9EI4FgayU9M', this)"> <img class="mediabox-thumb" src=
+"mediaboxYoutube('7', '9EI4FgayU9M', this)"> <img class="mediabox-thumb" src=
 "projects/nitro-thrash/media/nt-status-7/thumbs/grind.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxYoutube('6', 'SMFVs8-kzKY', this)"></div>
+"mediaboxYoutube('7', 'SMFVs8-kzKY', this)"></div>
 </div>
 <p>Here are some notable changes I've made to the game:</p>
 <p>Levels:</p>
@@ -1170,79 +1311,6 @@ Follow them, listen to them, and go to their shows!</p>
 <li><a href="https://www.thelongesthall.com/">The Longest Hall</a></li>
 <li><a href="https://www.instagram.com/whitelighterclubband/">White Lighter Club</a></li>
 </ul><a class="perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-07/">🔗</a>
-</article>
-<article>
-<aside>
-<a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
-</aside>
-<h2>Nitro Thrash Status 06
-<br>
-<time datetime="2025-03-02">02 Mar 2025</time></h2>
-<p>In the past month, I've made 56 commits.</p>
-<div class="mediabox">
-<div class="aspect-ratio" style="padding-bottom: 49%;">
-<img class="mediabox-media" id="mediabox-7-image" src="projects/nitro-thrash/media/nt-status-6/1.png"> <img class=
-"mediabox-fullscreen" id="mediabox-7-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('7')"> <video class=
-"mediabox-media" id="mediabox-7-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
-<iframe class="mediabox-media" id="mediabox-7-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
-"mediabox-7-youtube"></iframe>
-</div>
-<div class="mediabox-thumbbox" id="mediabox-7-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
-"projects/nitro-thrash/media/nt-status-6/thumbs/1.png" width="640" height="640" loading="eager" decoding="async" onclick=
-"mediaboxImage('7', 'projects/nitro-thrash/media/nt-status-6/1.png', this)"> <img class="mediabox-thumb" src=
-"projects/nitro-thrash/media/nt-status-6/thumbs/2.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('7', 'projects/nitro-thrash/media/nt-status-6/2.png', this)"> <img class="mediabox-thumb" src=
-"projects/nitro-thrash/media/nt-status-6/thumbs/3.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('7', 'projects/nitro-thrash/media/nt-status-6/3.png', this)"> <img class="mediabox-thumb" src=
-"projects/nitro-thrash/media/nt-status-6/thumbs/4.png" width="640" height="640" loading="lazy" decoding="async" onclick=
-"mediaboxImage('7', 'projects/nitro-thrash/media/nt-status-6/4.png', this)"></div>
-</div>
-<p>Here are some notable changes I've made to the game:</p>
-<p>Levels:</p>
-<ul>
-<li>Finished "phase 2" of Level 3 - meaning it looks good enough to film now but it's quite done.</li>
-<li>Created destructible dynamic light objects</li>
-<li>Started making foliage for the levels</li>
-</ul>
-<p>Vehicles:</p>
-<ul>
-<li>Added a new car "capo"</li>
-<li>Added pizza sign topper</li>
-<li>Refined the original car to be smoother</li>
-<li>Adjusted rim textures</li>
-</ul>
-<p>Gameplay:</p>
-<ul>
-<li>Air rolling while on the ground no longer messes up your turning</li>
-</ul>
-<p>Missions / Gamemodes:</p>
-<ul>
-<li>Added 'highest combo' gamemode</li>
-<li>Prevented cheating in race modes by setting the teleport to the checkpoint</li>
-</ul>
-<p>Misc:</p>
-<ul>
-<li>Online player indicators now show the player's secondary color too</li>
-<li>Fixed replay bugs surrounding checkpoints and objects</li>
-<li>Significantly improved the workflow surrounding level importing</li>
-<li>Refactored level shaders to be easier to change</li>
-<li>Added dynamic light support to level and vehicle shaders</li>
-<li>Rewrote smoke shader to prevent stutters in game</li>
-<li>Added "portrait mode" toggle for the HUD to record shorts</li>
-<li>Started making a new main menu</li>
-</ul>
-<hr>
-<p>As for things that are surrounding the game, I have further news.</p>
-<p>I've finally formed an LLC so things are getting pretty official.</p>
-<p>Pangolin, a band from Florida, reached out to me about adding their music to the game. And I think they're a great fit so I
-now have permission to add three of their songs to the game!</p>
-<p><a href="https://www.pangolinfl.com/">You should check them out and support them</a>!</p>
-<p>They then got in contact with more bands and so far Nitro Thrash will feature <a href=
-"https://linktr.ee/whitelighterclub">White Lighter Club</a> and <a href="https://linktr.ee/ifimluckyfl">If I'm Lucky</a>.
-<br>
-So go out and support them too!</p>
-<p>Discussions are happening behind the scenes with more bands. It's looking like the sound track will kick ass.</p><a class=
-"perma" title="permanent link" href="news/nitro-thrash/nitro-thrash-status-06/">🔗</a>
 </article>
 </section>
 <footer>

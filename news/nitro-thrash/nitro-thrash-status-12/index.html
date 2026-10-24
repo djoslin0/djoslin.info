@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="cf-ray" content="none">
+<meta name="cloudflare-analytics" content="disable">
+<title>djoslin :: Nitro Thrash Status 12</title>
+<base href="../../../">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap">
+<style>
+:root {
+--bg:         #0B0B0C;
+--surface:    #141416;
+--surface-2:  #1E1E22;
+--surface-3:  #26262B;
+
+/* Blue-family accent — all hues stay in 215°–240° range */
+--accent:         #4A8FD4;
+--accent-dim:     rgba(74,143,212,0.10);
+--accent-border:  rgba(74,143,212,0.25);
+
+--text-1: #DEDEE2;
+--text-2: #adadb6;
+--text-3: #90909c;
+--text-4: #666672;
+
+/* Analogous link palette: blue → indigo (25° shift, no jarring jumps) */
+--link:           #60A5FA;   /* blue-400  hsl(213°,95%,67%) */
+--link-hover:     #93C5FD;   /* blue-300  hsl(213°,97%,78%) */
+--link-visited:   #4E7FB8;   /* blue-600  hsl(213°,42%,52%) — same hue, muted */
+--link-vis-hover: #7AAEE0;   /* blue-400  hsl(213°,62%,67%) — same hue, lighter */
+
+--border:      rgba(255,255,255,0.065);
+--shadow-body: 0 0 0 1px rgba(255,255,255,0.04), 0 24px 64px rgba(0,0,0,0.85);
+--radius: 0.5rem;
+--t: 0.15s ease;
+}
+
+/* ── BASE ─────────────────────────────────────────────────── */
+
+html {
+font-size: 1.2rem;
+overflow-x: hidden;
+overflow-y: scroll;
+background-color: var(--bg);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M0 20 L40 20 M40 60 L80 60 M0 40 L20 40 M60 40 L80 40' stroke='rgba(74,143,212,0.07)' stroke-width='1' fill='none'/%3E%3Cpath d='M40 0 L40 40 M60 0 L60 20 M20 60 L20 80' stroke='rgba(74,143,212,0.07)' stroke-width='1' fill='none'/%3E%3Cpath d='M0 60 L20 60 L20 40 M60 20 L60 40 L80 40' stroke='rgba(74,143,212,0.06)' stroke-width='1' fill='none'/%3E%3Ccircle cx='40' cy='20' r='2.5' fill='none' stroke='rgba(74,143,212,0.13)' stroke-width='1'/%3E%3Ccircle cx='40' cy='40' r='2.5' fill='none' stroke='rgba(74,143,212,0.13)' stroke-width='1'/%3E%3Ccircle cx='20' cy='60' r='2.5' fill='none' stroke='rgba(74,143,212,0.11)' stroke-width='1'/%3E%3Ccircle cx='60' cy='40' r='2.5' fill='none' stroke='rgba(74,143,212,0.11)' stroke-width='1'/%3E%3Ccircle cx='60' cy='20' r='1.5' fill='rgba(74,143,212,0.09)'/%3E%3Ccircle cx='20' cy='40' r='1.5' fill='rgba(74,143,212,0.09)'/%3E%3C/svg%3E");
+background-size: 80px 80px;
+}
+
+body {
+overflow-x: hidden;
+font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+font-size: 1rem;
+line-height: 1.6;
+width: 60rem;
+max-width: 95%;
+margin: 2rem auto 4rem;
+
+background-color: var(--surface);
+border-radius: var(--radius);
+box-shadow: var(--shadow-body);
+border: 1px solid rgba(255,255,255,0.055);
+}
+
+td { padding: 4px; }
+
+a { text-decoration: none; }
+article a            { color: var(--link);           transition: color var(--t); }
+article a:hover      { color: var(--link-hover); }
+article a:visited    { color: var(--link-visited); }
+article a:visited:hover { color: var(--link-vis-hover); }
+footer  a            { color: var(--link);           transition: color var(--t); }
+footer  a:hover      { color: var(--link-hover); }
+
+
+/* ── NAV ─────────────────────────────────────────────────── */
+
+.title {
+font-size: xx-large;
+color: var(--link);
+line-height: 0;
+letter-spacing: 0.5rem;
+margin: 0.5rem;
+margin-left: 2rem;
+margin-right: auto;
+}
+
+.links {
+margin-right: 1.25rem;
+flex: 0 0 auto;
+padding-bottom: 0.35rem;
+}
+
+body nav {
+width: 100%;
+background-color: transparent;
+border-radius: var(--radius) var(--radius) 0 0;
+cursor: default;
+text-align: center;
+border-bottom: 1px solid var(--border);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+body nav div {
+display: inline-block;
+padding: 0.15rem;
+}
+
+body nav div a {
+display: inline-block;
+color: var(--text-2);
+padding: 0.6rem 1.1rem;
+width: 4.5rem;
+border-radius: calc(var(--radius) - 0.1rem);
+font-size: 0.875rem;
+font-weight: 500;
+transition: background-color var(--t), color var(--t);
+}
+
+body nav a:hover {
+background-color: rgba(255,255,255,0.07);
+color: var(--text-1);
+}
+
+body nav .active:hover {
+color: var(--surface);
+background-color: var(--text-1);
+}
+
+body nav .active {
+color: var(--surface);
+background-color: var(--text-1);
+font-weight: 600;
+}
+
+
+
+
+/* ── LAYOUT ──────────────────────────────────────────────── */
+
+body > div:first-of-type {
+background-color: transparent;
+box-shadow: none;
+}
+
+body > div:last-of-type {
+width: 100%;
+height: 0.25rem;
+background: linear-gradient(90deg, transparent, var(--accent-border), transparent);
+border-radius: 0 0 var(--radius) var(--radius);
+}
+
+hr {
+border: 0;
+border-bottom: 1px solid var(--border);
+margin: 1rem;
+}
+
+/* ── SOCIALS GRID ────────────────────────────────────────── */
+
+.socials-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.65rem;
+margin: 0.5rem 0 1rem;
+}
+
+.social-item {
+display: flex;
+align-items: center;
+gap: 0.75rem;
+padding: 0.7rem 1rem;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+background: var(--surface-2);
+color: var(--text-1);
+text-decoration: none;
+font-size: 0.9rem;
+font-weight: 500;
+transition: background var(--t), border-color var(--t), color var(--t), box-shadow var(--t);
+}
+
+.social-item:hover {
+background: var(--surface-3);
+border-color: rgba(74,143,212,0.35);
+color: var(--link-hover);
+box-shadow: 0 0 0 1px rgba(74,143,212,0.15);
+}
+
+.social-item img {
+width: 28px;
+height: 28px;
+object-fit: contain;
+flex-shrink: 0;
+}
+
+/* Featured items: full-width row, larger, glowing accent border */
+.social-item.featured {
+grid-column: span 2;
+padding: 0.9rem 1.25rem;
+border-color: var(--accent-border);
+background: linear-gradient(135deg, rgba(74,143,212,0.10) 0%, var(--surface-2) 60%);
+font-size: 1rem;
+font-weight: 600;
+box-shadow: inset 0 0 0 1px rgba(74,143,212,0.08);
+}
+
+.social-item.featured img {
+width: 34px;
+height: 34px;
+}
+
+.social-item.featured:hover {
+background: linear-gradient(135deg, rgba(74,143,212,0.18) 0%, var(--surface-3) 60%);
+border-color: rgba(74,143,212,0.55);
+box-shadow: 0 0 12px rgba(74,143,212,0.15), inset 0 0 0 1px rgba(74,143,212,0.12);
+}
+
+footer {
+width: 100%;
+text-align: center;
+padding-bottom: 2rem;
+border-top: 1px solid var(--border);
+margin-top: 1rem;
+}
+
+footer p {
+margin-top: 0.75rem;
+margin-left: auto;
+margin-right: auto;
+padding: 0;
+color: var(--text-3);
+width: 60%;
+}
+
+
+/* ── ARTICLE ─────────────────────────────────────────────── */
+
+article {
+display: flow-root; /* contains floated aside/lmedia/rmedia children */
+margin: 1.75rem 2.5rem 2rem;
+padding-bottom: 1.75rem;
+border-bottom: 1px solid var(--border);
+color: var(--text-2);
+font-size: 0.9375rem;
+}
+
+article:last-of-type {
+border-bottom: none;
+padding-bottom: 0;
+}
+
+article > * {
+margin-top: 0.4rem;
+margin-bottom: 0.4rem;
+}
+
+article span {
+display: block;
+text-align: left;
+line-height: 1.75;
+color: var(--text-1);
+}
+
+article p {
+text-align: left;
+line-height: 1.75;
+margin-top: 0.8rem;
+margin-bottom: 0.8rem;
+color: var(--text-2);
+}
+
+article p .centered {
+text-align: center;
+}
+
+article ul,
+article ol {
+padding-left: 1.5rem;
+margin: 0.5rem 0 0.75rem;
+color: var(--text-2);
+}
+
+article li {
+line-height: 1.65;
+margin-bottom: 0.3rem;
+padding-left: 0.1rem;
+}
+
+article li:last-child { margin-bottom: 0; }
+
+article ul  { list-style-type: disc; }
+article ol  { list-style-type: decimal; }
+
+article h1 {
+font-size: 1.55rem;
+font-weight: 700;
+letter-spacing: -0.02em;
+color: var(--text-1);
+margin: 0 0 0.6rem;
+}
+
+article h1:not(:first-child) { margin-top: 2rem; }
+
+article h2 {
+font-size: 1.15rem;
+font-weight: 600;
+letter-spacing: -0.01em;
+color: var(--text-1);
+margin: 0 0 0.5rem;
+}
+
+article h2:not(:first-child) { margin-top: 1.75rem; }
+
+article h2 a {
+color: var(--text-1);
+transition: color var(--t);
+}
+
+article h2 a:hover {
+color: var(--link-hover);
+}
+
+article time:first-of-type {
+color: var(--text-4);
+padding-right: 0.5rem;
+font-size: 0.8rem;
+font-weight: 400;
+letter-spacing: 0.01em;
+}
+
+article code {
+background-color: var(--surface-2);
+font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+font-size: 0.85em;
+padding: 0.1rem 0.35rem;
+border-radius: 0.25rem;
+border: 1px solid var(--border);
+color: var(--text-1);
+}
+
+article pre {
+background-color: var(--surface-2);
+padding: 0.85rem 1.1rem;
+border-radius: 0.4rem;
+font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+font-size: 0.85rem;
+line-height: 1.6;
+overflow-x: auto;
+border: 1px solid var(--border);
+margin: 0.75rem 0;
+}
+
+article pre code {
+padding: 0;
+border: 0;
+background: none;
+}
+
+article > aside { float: right; }
+
+blockquote {
+font-size: 0.9rem;
+line-height: 1.7;
+margin: 0.9rem 0;
+border-radius: 0 0.4rem 0.4rem 0;
+background-color: var(--surface-2);
+color: var(--text-2);
+padding: 0.65rem 1rem 0.65rem 1.1rem;
+border-left: 3px solid var(--accent);
+}
+
+u { text-decoration: underline; }
+s { text-decoration: line-through; }
+b { font-weight: 600; }
+i { font-style: italic; }
+
+
+/* ── TAGS ────────────────────────────────────────────────── */
+
+.tag {
+font-size: 0.75rem;
+font-weight: 500;
+background-color: var(--accent-dim);
+border-radius: 2rem;
+padding: 0.25rem 0.7rem;
+line-height: 1.4rem;
+letter-spacing: 0.01em;
+border: 1px solid var(--accent-border);
+transition: background-color var(--t), color var(--t), border-color var(--t);
+}
+
+a.tag { color: var(--link); }
+
+a:hover.tag {
+background-color: var(--accent);
+color: #fff;
+border-color: var(--accent);
+}
+
+.navtags > span {
+margin: 1rem;
+font-size: small;
+color: var(--text-3);
+}
+
+.navtags > a {
+width: 1.25rem;
+height: 1.25rem;
+}
+
+.navtags > a:first-of-type { float: left; }
+.navtags > a:last-of-type  { float: right; }
+
+.tagnav {
+margin-top: 2rem;
+margin-bottom: 1rem;
+color: var(--text-2);
+}
+
+
+/* ── THUMB ───────────────────────────────────────────────── */
+
+.thumb {
+width: 62px;
+height: 62px;
+margin-right: 1rem;
+border-radius: var(--radius);
+background-color: var(--surface-3);
+box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+transition: box-shadow var(--t), opacity var(--t);
+}
+
+a:hover .thumb {
+box-shadow: 0 3px 12px rgba(0,0,0,0.6);
+opacity: 0.82;
+}
+
+
+/* ── MEDIA ───────────────────────────────────────────────── */
+
+.icon {
+width: 16px;
+height: 16px;
+margin: 0 0.25em 0 0;
+}
+
+/* Standalone image inside an article (not a mediabox) */
+.media-space {
+display: block;
+text-align: center;
+margin: 1.5rem 0;
+}
+
+.inside-aspect-ratio {
+max-width: 100%;
+height: auto;
+display: inline-block;
+border-radius: var(--radius);
+}
+
+/* Aspect-ratio wrapper for embedded videos / iframes */
+.aspect-ratio {
+position: relative;
+width: 100%;
+height: 0;
+overflow: hidden;
+}
+
+.aspect-ratio-16-9 {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 56.25%;
+overflow: hidden;
+border-radius: var(--radius);
+}
+
+/* Absolutely-positioned content inside any aspect-ratio wrapper */
+.media-frame {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 0;
+}
+
+.media {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 1rem auto;
+border: 0;
+}
+
+.lmedia {
+float: left;
+max-width: 45%;
+height: auto;
+margin-top: 0.4rem;
+margin-right: 1.75rem;
+margin-bottom: 0.5rem;
+border-radius: calc(var(--radius) / 2);
+}
+
+.rmedia {
+float: right;
+max-width: 45%;
+height: auto;
+margin-top: 0.4rem;
+margin-left: 1.75rem;
+margin-bottom: 0.5rem;
+border-radius: calc(var(--radius) / 2);
+}
+
+.centered { text-align: center; }
+
+.perma {
+float: right;
+color: var(--text-3);
+font-size: 0.8rem;
+opacity: 0;
+transition: opacity var(--t), color var(--t);
+}
+
+article:hover .perma {
+opacity: 1;
+}
+
+.perma:hover {
+color: var(--text-1);
+}
+
+.disabled,
+.inactive {
+cursor: default;
+opacity: 0.25;
+}
+
+.disabled {
+background-color: var(--surface-3);
+color: var(--text-3);
+}
+
+a:hover.disabled {
+background-color: var(--surface-3);
+color: var(--text-3);
+}
+
+
+/* ── NO-SELECT ───────────────────────────────────────────── */
+
+.noselect,
+body nav ul,
+.tag,
+.perma,
+.inactive,
+.thumb,
+.rmedia,
+.lmedia,
+.mediabox-thumb,
+.mediabox-thumbbox,
+.inside-aspect-ratio,
+.mediabox-media,
+.mediabox-fullscreen,
+.icon {
+user-select: none;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+}
+
+
+/* ── PROJECT CARDS ───────────────────────────────────────── */
+
+.card-grid {
+display: flex;
+flex-direction: column;
+gap: 0.6rem;
+padding: 1.25rem 1.75rem 2rem;
+}
+
+.project-card {
+position: relative;
+background: var(--surface-2);
+border-radius: var(--radius);
+border: 1px solid var(--border);
+overflow: hidden;
+display: flex;
+flex-direction: row;
+align-items: stretch;
+transition: border-color var(--t), box-shadow var(--t), transform var(--t);
+/* reset article defaults */
+margin: 0;
+padding-bottom: 0;
+border-bottom: none;
+}
+
+.project-card:hover {
+border-color: var(--accent-border);
+box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+transform: translateX(3px);
+}
+
+@keyframes card-shine {
+  0%   { transform: translate3d(-120%, 0, 0) skewX(-18deg); }
+  100% { transform: translate3d(660%,  0, 0) skewX(-18deg); }
+}
+
+.project-card.featured {
+border-color: var(--accent-border);
+background: linear-gradient(135deg, rgba(74,143,212,0.10) 50%, var(--surface-2) 100%);
+box-shadow: inset 0 0 0 1px rgba(74,143,212,0.08), 0 2px 12px rgba(0,0,0,0.4);
+position: relative;
+clip-path: inset(0 round var(--radius));
+}
+
+.project-card.featured::before {
+content: '';
+position: absolute;
+top: -5%; left: 0;
+width: 35%;
+height: 110%;
+background: linear-gradient(
+  90deg,
+  transparent 0%,
+  rgba(255,255,255,0.01) 40%,
+  rgba(255,255,255,0.04) 50%,
+  rgba(255,255,255,0.01) 60%,
+  transparent 100%
+);
+transform: translate3d(-120%, 0, 0) skewX(-18deg);
+will-change: transform;
+animation: card-shine 2.5s ease-in-out infinite;
+animation-delay: 1s;
+pointer-events: none;
+}
+
+.project-card.featured:hover {
+background: linear-gradient(135deg, rgba(74,143,212,0.18) 50%, var(--surface-3) 100%);
+border-color: rgba(74,143,212,0.55);
+box-shadow: 0 0 16px rgba(74,143,212,0.18), inset 0 0 0 1px rgba(74,143,212,0.14);
+}
+
+.project-card.featured .project-card-title-link {
+font-size: 1.15em;
+font-weight: 700;
+}
+
+.project-card:last-of-type {
+border-bottom: none;
+padding-bottom: 0;
+}
+
+.project-card-hero {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+width: 4rem;
+padding: 0.6rem;
+}
+
+.project-card-hero img {
+width: 55px;
+height: 55px;
+object-fit: contain;
+display: block;
+border-radius: 0.35rem;
+transition: opacity var(--t), transform 0.3s ease;
+}
+
+.project-card:hover .project-card-hero img {
+opacity: 0.85;
+transform: scale(1.08);
+}
+
+.project-card-body {
+padding: 0.6rem 1rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 0.2rem;
+flex: 1;
+min-width: 0;
+}
+
+.project-card-header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 0.5rem;
+}
+
+.project-card-title-group {
+display: flex;
+align-items: baseline;
+gap: 0.5rem;
+flex-wrap: wrap;
+}
+
+.project-card-date {
+color: var(--text-4);
+font-size: 0.78rem;
+white-space: nowrap;
+}
+
+.project-card h2 {
+font-size: 1.25rem;
+font-weight: 600;
+margin: 0;
+line-height: 1.3;
+letter-spacing: 0;
+}
+
+.project-card-title-link {
+color: var(--link);
+transition: color var(--t);
+}
+.project-card-title-link:visited {
+color: var(--link);
+}
+
+/* stretch-link: makes the entire card clickable via the title anchor */
+.project-card-title-link::before {
+content: '';
+position: absolute;
+inset: 0;
+z-index: 0;
+}
+
+.project-card:hover .project-card-title-link {
+color: var(--link-hover);
+}
+
+.project-card-desc {
+color: var(--text-3);
+font-size: 0.9rem;
+line-height: 1.5;
+margin: 0;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+/* tag and other in-card links sit above the stretch-link layer */
+.project-card .tag {
+position: relative;
+z-index: 1;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+
+@media only screen and (max-width: 750px) {
+.title {
+flex: 0 0 100%;
+text-align: center;
+margin-left: 0;
+margin-right: 0;
+}
+}
+
+@media only screen and (max-width: 500px) {
+article {
+margin: 1.5rem 1rem 2.5rem;
+font-size: 0.9rem;
+}
+
+article .thumb {
+display: none;
+}
+
+.hideIfSmall { display: none; }
+
+.lmedia,
+.rmedia {
+float: none;
+max-width: 100%;
+display: block;
+margin: 0.75rem auto;
+}
+
+/* project cards on small phones */
+.project-card-hero {
+width: 3.25rem;
+padding: 0.45rem;
+}
+
+.project-card-hero img {
+width: 44px;
+height: 44px;
+}
+
+.project-card-body {
+padding: 0.5rem 0.65rem;
+gap: 0.15rem;
+}
+
+.project-card h2 {
+font-size: 1rem;
+}
+
+.project-card-header {
+flex-wrap: nowrap;
+align-items: flex-start;
+gap: 0.3rem;
+}
+
+.project-card-title-group {
+flex: 1;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.1rem;
+}
+
+.project-card-date {
+font-size: 0.72rem;
+}
+
+.project-card-desc {
+font-size: 0.82rem;
+}
+
+.project-card .tag {
+font-size: 0.72rem;
+white-space: nowrap;
+}
+}
+
+@media only screen and (max-width: 300px) {
+.lmedia,
+.rmedia {
+display: none;
+}
+}
+
+
+
+</style>
+<link rel="icon" type="image/png" href="favicon/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon/16x16.png" sizes="16x16">
+<link rel="stylesheet" href="/mediabox/mediabox.css">
+<script defer src="/mediabox/mediabox.js"></script>
+</head>
+<body>
+<nav>
+<div class="title">
+<h1>djoslin</h1>
+</div>
+<div class="links">
+<a class="active" href="news/">news</a> <a class="" href="projects/">projects</a> <a class="" href="socials/">socials</a>
+</div>
+</nav>
+<div>
+<section>
+<article>
+<aside>
+<a class="tag" href="news/nitro-thrash/">Nitro Thrash</a>
+</aside>
+<h2>Nitro Thrash Status 12
+<br>
+<time datetime="2026-10-24">24 Oct 2026</time></h2>
+<p>Since the last devlog I made 322 commits.</p>
+<div class="mediabox">
+<div class="aspect-ratio" style="padding-bottom: 56%;">
+<img class="mediabox-media" id="mediabox-19-image" src="projects/nitro-thrash/media/nt-status-12/1-bruiser.png"> <img class=
+"mediabox-fullscreen" id="mediabox-19-fullscreen" src="/mediabox/fullscreen.png" onclick="fullscreenImage('19')"> <video class=
+"mediabox-media" id="mediabox-19-webm" autoplay="" loop="" controls="" muted="" style="visibility:hidden"></video>
+<iframe class="mediabox-media" id="mediabox-19-youtube" frameborder="0" allowfullscreen style="visibility:hidden" name=
+"mediabox-19-youtube"></iframe>
+</div>
+<div class="mediabox-thumbbox" id="mediabox-19-thumbbox"><img class="mediabox-thumb mediabox-thumb-selected" src=
+"projects/nitro-thrash/media/nt-status-12/thumbs/1-bruiser.png" width="640" height="640" loading="eager" decoding="async"
+onclick="mediaboxImage('19', 'projects/nitro-thrash/media/nt-status-12/1-bruiser.png', this)"> <img class="mediabox-thumb" src=
+"projects/nitro-thrash/media/nt-status-12/thumbs/2-falconer.png" width="640" height="640" loading="lazy" decoding="async"
+onclick="mediaboxImage('19', 'projects/nitro-thrash/media/nt-status-12/2-falconer.png', this)"> <img class="mediabox-thumb"
+src="projects/nitro-thrash/media/nt-status-12/thumbs/3-boardwalk.png" width="640" height="640" loading="lazy" decoding="async"
+onclick="mediaboxImage('19', 'projects/nitro-thrash/media/nt-status-12/3-boardwalk.png', this)"> <img class="mediabox-thumb"
+src="projects/nitro-thrash/media/nt-status-12/thumbs/4-mod.png" width="640" height="640" loading="lazy" decoding="async"
+onclick="mediaboxImage('19', 'projects/nitro-thrash/media/nt-status-12/4-mod.png', this)"></div>
+</div>
+<p>This is a big one, so I'll start with the highlights.</p>
+<p>I've made significant progress on what will be the final level before release: the boardwalk. It's a seaside theme park with
+working rides loosely based on the one in Santa Cruz. There are gondolas you can ride (or knock off their wire), two roller
+coasters, a turning ferris wheel with swinging carts, a pirate ship ride and a drop tower that free-falls. You can drive onto
+all of them, grind them, and they stay in sync online and in replays. Getting a car to drive properly on top of something
+that's moving took a lot of work, but it's really fun now.</p>
+<p>The game now supports mods. You can make your own cars, wheels, toppers, horns, engine sounds, paint jobs, music and maps in
+Blender, or replace any of the stock textures and models. Modded maps can have props, smashable debris, lights, sounds and
+their own skies. These mods can be published to the Steam Workshop from inside the game, and if you join a game on a map you
+don't have, it downloads automatically. The same goes for other players' modded cars.</p>
+<p>Multiplayer got a lot of attention too. Lobbies now hold up to 16 players, and there's text chat, Steam voice chat,
+spectating, ping bars, and kicking/banning. There's a new Flag Tag gamemode, and every gamemode received more polish.</p>
+<p>Bulletpoints:</p>
+<p>Levels:</p>
+<ul>
+<li>started the boardwalk level (still a work in progress), with gondolas, two roller coasters, a ferris wheel, a pirate ship
+and a drop tower</li>
+<li>Added a cinematic flyover when you enter each level</li>
+<li>Level 2's fountain now splashes and ripples when you drive through it</li>
+<li>Added flags that wave in the wind</li>
+<li>Every level now has reverb based on its surroundings, so alleys echo and open areas don't</li>
+<li>Skidmarks on grass are now muddy</li>
+<li>Fixed chain-link fence visual artifacts</li>
+</ul>
+<p>Vehicles:</p>
+<ul>
+<li>Added two new cars, the "Bruiser" and the "Falconer"</li>
+<li>Added horns as a garage cosmetic, with eight to choose from</li>
+<li>Engine sounds can now be picked in the garage, and they're a lot more realistic</li>
+<li>Engines react to what the car is doing: climbing hills, coasting, hard landings, hitting the rev limiter in the air</li>
+<li>Added 3 car slots to the garage so you can switch between so you can store a few different designs at a time</li>
+<li>Retook every garage photo with a new photo tool</li>
+<li>The garage now plays a sound when you change a part or the paint</li>
+</ul>
+<p>Gameplay:</p>
+<ul>
+<li>Added new tricks: Drop In, Transfer, Fakie, Drifting and Smash</li>
+<li>Grinds are named much more accurately and no longer flicker between tricks</li>
+<li>Grinds sound different depending on material</li>
+<li>Landing a big combo now plays a sound</li>
+<li>Going out of bounds now looks like a bail, with a puff of smoke and a random taunt like "Where are you going?"</li>
+<li>There's always a save point now, starting at the spawn point</li>
+<li>Added camera shake for landings and crashes</li>
+<li>Added a far camera toggle so you can see over ledges</li>
+<li>Fixed cars bouncing off walls when hit at a slight angle</li>
+<li>Fixed cars creeping down slopes when parked</li>
+<li>Fixed cars getting thrown off thin geometry</li>
+</ul>
+<p>Cheats:</p>
+<ul>
+<li>Added unlockable cheat codes, entered while driving</li>
+<li>Hid graffiti hints for each cheat around the levels</li>
+<li>Cheats so far: Infinite Nitro, Moon Physics, Monster Truck, RC Car, Air Nitro, Sticky Tires, Infinite Air Jump, No Speed
+Cap, Low Friction, No Out of Bounds, a cash cheat, and a secret ice cream truck</li>
+<li>In multiplayer the host controls which cheats are on</li>
+</ul>
+<p>Missions / Gamemodes:</p>
+<ul>
+<li>Added a Flag Tag gamemode: bump the flag holder to steal it, and hold it to score</li>
+<li>Races show your live position and the 3d arrow points to the next checkpoint</li>
+<li>Every gamemode now ends with a TIME'S UP banner and a big 1ST/2ND/3RD banner</li>
+<li>Online races no longer wait forever for the last player to finish</li>
+<li>Finished the tutorial: nitro, balancing, save points and more missions</li>
+</ul>
+<p>Multiplayer:</p>
+<ul>
+<li>Lobbies now hold up to 16 players</li>
+<li>Added text chat</li>
+<li>Added voice chat with per-player muting</li>
+<li>Added spectating other players</li>
+<li>Added kicking and banning</li>
+<li>Added ping bars to the lobby and scoreboard</li>
+<li>Players now spawn spread out instead of on top of each other</li>
+<li>Remote cars are much smoother now instead of jumping between packets</li>
+<li>Players who join mid-game now stay in the running gamemode</li>
+</ul>
+<p>HUD:</p>
+<ul>
+<li>Notifications are now banners that stack instead of overwriting each other</li>
+<li>Restyled the scoreboard to match the HUD</li>
+<li>Added an air jump indicator to the speedometer</li>
+<li>The speedometer flashes when you gain nitro or lose speed suddenly</li>
+<li>Redrew the HUD so it stays sharp at high resolutions</li>
+<li>The HUD now fades in and out behind menus</li>
+<li>Speed lines now show at high speeds, not just with nitro</li>
+</ul>
+<p>Menus:</p>
+<ul>
+<li>Added a career menu with a ton more stats</li>
+<li>Added multiple save slots</li>
+<li>Added a camera settings menu (distance, sensitivity, invert Y, shake)</li>
+<li>Added keyboard turn sensitivity</li>
+<li>Added bind presets, including a Car Soccer one</li>
+<li>Added a shoutouts menu to credit the assets used</li>
+<li>Fixed a bunch of menu navigation bugs</li>
+</ul>
+<p>Performance / Settings:</p>
+<ul>
+<li>Added a particle quality setting</li>
+<li>Added a high level of detail setting</li>
+<li>Default video settings are now picked from your graphics card</li>
+<li>Shadows blend between distances now, so there's less pop-in</li>
+<li>Music now streams instead of loading all at once, which fixes a stutter when songs change</li>
+<li>Fixed a number of memory leaks when changing cars</li>
+</ul>
+<p>Misc:</p>
+<ul>
+<li>Fixed a bunch of replay viewer bugs</li>
+<li>Pausing now stops rumble</li>
+<li>Lots of build pipeline work for the demo</li>
+</ul>
+<p>That's a lot of changes, and there are plenty more I didn't list. Still working away at it. I may have underestimated how
+much work it takes to finish a game :P</p><a class="perma" title="permanent link" href=
+"news/nitro-thrash/nitro-thrash-status-12/">🔗</a>
+</article>
+</section>
+<footer>
+<p><a href="news/">↶ News</a></p>
+</footer>
+</div>
+<div></div>
+</body>
+</html>
